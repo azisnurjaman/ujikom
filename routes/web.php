@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 // Auth::resource(['register'=>'false']);
 
-Route::group(['prefix' => 'admin', 'middleware' =>['auth']], function () {
+Route::group(['prefix' => 'admin', 'middleware' =>['auth', 'role:admin']], function () {
     Route::resource('user', 'UserController');
 });
 Auth::routes();
