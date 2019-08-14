@@ -20,6 +20,5 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'middleware' =>['auth', 'role:admin']], function () {
     Route::resource('user', 'UserController');
 });
-Auth::routes();
-
+Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');

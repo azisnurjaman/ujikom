@@ -27,7 +27,7 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @guest
-
+                
                 @role('admin')
                 
                 @endguest
