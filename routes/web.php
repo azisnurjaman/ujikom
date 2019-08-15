@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin', 'middleware' =>['auth', 'role:admin']], function () {
     Route::resource('user', 'UserController');
+    Route::resource('petugas', 'PetugasController');
 });
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
