@@ -4,27 +4,27 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Halaman kategori</div>
+                <div class="card-header">Halaman User</div>
                 <br>
-                <center><a href="{{ route('kategori.create') }}" class="btn btn-primary">Tambah</a></center>
+                <center><a href="{{ route('user.create') }}" class="btn btn-primary">Tambah</a></center>
                     <br>
                     <div class="table-responsive">
                         <table class="table">
                             <tr>
                                 <th>No</th>
-                                <th>Kode Kategori</th>
-                                <th>Nama Kategori</th>
+                                <th>Name</th>
+                                <th>Email</th>
                                 <th clospan="3" style="text-align: center;">Aksi</th>
                             </tr>
                 @php $no =1; @endphp
-                @foreach($kategori as $data)
+                @foreach($user as $data)
                 <tr>
                     <td>{{ $no++ }}</td>
-                    <td>{{ $data->kategori_kode }}</td>
-                     <td>{{ $data->kategori_nama }}</td>       
-                    <td><a href="{{ route('kategori.edit', $data->id) }}" class="btn btn-warning">Edit</a></td>
-                    <td><a href="{{ route('kategori.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
-                    <td><form action="{{ route('kategori.destroy', $data->id) }}" method="post">
+                    <td>{{ $data->name }}</td>
+                     <td>{{ $data->email }}</td>        
+                    <td><a href="{{ route('user.edit', $data->id) }}" class="btn btn-warning">Edit</a></td>
+                    <td><a href="{{ route('user.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
+                    <td><form action="{{ route('user.destroy', $data->id) }}" method="post">
                         @csrf
                         <input type="hidden" name="_method" value="DELETE">
                         <button class="btn btn -sm btn-danger" type="submit">Hapus Data</button>

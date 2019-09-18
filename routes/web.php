@@ -17,9 +17,16 @@ Route::get('/', function () {
 
 // Auth::resource(['register'=>'false']);
 
-Route::group(['prefix' => 'admin', 'middleware' =>['auth', 'role:admin']], function () {
+Route::group(['prefix' => 'backend', 'middleware' =>['auth', 'role:admin']], function () {
+    // Route::get('/', function () {
+    //     return view("home");
+    // });
+    Route::resource('index', 'HomeController');
     Route::resource('user', 'UserController');
     Route::resource('petugas', 'PetugasController');
+    Route::resource('kategori', 'KategoriController');
+    Route::resource('penerbit', 'PenerbitController');
+    Route::resource('buku', 'BukuController');
 });
 Auth::routes(['register' => false]);
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

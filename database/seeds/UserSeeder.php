@@ -14,15 +14,27 @@ class UserSeeder extends Seeder
     public function run()
     {
         $adminRole = new Role();
-        $adminRole->name = "admin";
+        $adminRole->name = "Admin";
         $adminRole->display_name = "admin";
         $adminRole->save();
 
+        $memberRole = new Role();
+        $memberRole->name = "Peminjam";
+        $memberRole->display_name = "peminjam";
+        $memberRole->save();
+
         $admin = new User();
-        $admin->name = "Admin";
-        $admin->email = "admin@gmail.com";
+        $admin->name = 'Azis Nurjaman';
+        $admin->email = 'admin@gmail.com';
         $admin->password = bcrypt('rahasia');
         $admin->save();
-        // $admin->attachRole($adminRole);
+        $admin->attachRole($adminRole);
+
+        $member = new User();
+        $member->name ='peminjam';
+        $member->email ='peminjam@gmail.com';
+        $member->password = bcrypt('rahasiapisan');
+        $member->save();
+        $member->attachRole($memberRole);
     }
 }

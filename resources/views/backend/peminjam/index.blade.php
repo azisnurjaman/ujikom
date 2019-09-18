@@ -27,9 +27,9 @@
                      <td>{{ $data->peminjam_nama }}</td>
                       <td>{{ $data->peminjam_alamat }}</td>
                        <td>{{ $data->peminjam_telp }}</td>
-                    <td><img src="{{ asset('assets/img/artikel/'.$data->foto) }}" alt="" height="500px" width="500px"></td>         
-                    <td><a href="{{ route('peminjam.edit', $data->id) }}" class="btn btn-warning">Edit</a></td>
-                    <td><a href="{{ route('peminjam.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
+                    <td><img src="{{ asset('assets/img/peminjam/'.$data->foto) }}" alt="" height="100px" width="100px"></td>         
+                    <td><a href="{{ route('peminjam.edit', $data->id) }}" class="btn btn-warning">Edit</a>
+                    <td><a href="{{ route('peminjam.show', $data->id) }}" class="btn btn-success">Detail Data</a>
                     <td><form action="{{ route('peminjam.destroy', $data->id) }}" method="post">
                         @csrf
                         <input type="hidden" name="_method" value="DELETE">
