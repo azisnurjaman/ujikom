@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 // Auth::resource(['register'=>'false']);
 
-Route::group(['prefix' => 'backend', 'middleware' =>['auth', 'role:admin']], function () {
+Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], function () {
     // Route::get('/', function () {
     //     return view("home");
     // });
