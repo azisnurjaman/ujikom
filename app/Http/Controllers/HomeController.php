@@ -24,18 +24,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Laratrust::hasRole('admin')){
+        if (Laratrust::hasRole('admin')) {
             return $this->adminDashboard();
         }
-        if (Laratrust::hasRole('peminjam')){
+        if (Laratrust::hasRole('peminjam')) {
             return $this->memberDashboard();
         }
         return view('home');
     }
-    protected function adminDashboard(){
-        return redirect('backend.index');
+    protected function adminDashboard()
+    {
+        return redirect('home');
     }
-      protected function memberDashboard(){
+    protected function memberDashboard()
+    {
         return redirect('home');
     }
 }
