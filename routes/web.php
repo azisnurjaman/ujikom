@@ -12,12 +12,13 @@
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/admin', function () {
+    return view('admin');
 });
 
-// Auth::resource(['register'=>'false']);
-
-Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], function () {
+Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], function () {
     Route::get('/', function () {
         return view("home");
     });
@@ -30,3 +31,5 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], fu
 });
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
+
+

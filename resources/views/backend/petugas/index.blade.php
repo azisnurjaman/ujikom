@@ -24,11 +24,12 @@
                      <td>{{ $data->petugas_nama }}</td>       
                     <td><a href="{{ route('petugas.edit', $data->id) }}" class="btn btn-warning">Edit</a></td>
                     <td><a href="{{ route('petugas.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
-                    <td><form action="{{ route('petugas.destroy', $data->id) }}" method="post">
-                        @csrf
-                        <input type="hidden" name="_method" value="DELETE">
-                        <button class="btn btn -sm btn-danger" type="submit">Hapus Data</button>
-                    </form>
+                    <td>
+                        <form action="{{ route('petugas.destroy', $data->id) }}" method="post">
+                            @csrf
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn btn -sm btn-danger" type="submit">Hapus Data</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
