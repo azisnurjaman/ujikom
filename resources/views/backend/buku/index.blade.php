@@ -1,16 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Halaman Buku</div>
                 <br>
-                <center><a href="{{ route('buku.create') }}" class="btn btn-primary">Tambah</a></center>
+                <center><a href="{{ route('buku.create') }}" class="btn btn-primary">Tambah Data</a></center>
                 <br>
                 <div class="table-responsive">
-                    <table class="table">
-                        <tr>
+                    <table class="table table-hover">
+                    <thead>
+                        <tr class="bg-black">
                             <th>No</th>
                             <th>Kode Buku</th>
                             <th>Kategori</th>
@@ -22,6 +22,8 @@
                             <th>Tahun Terbit Buku</th>
                             <th clospan="3" style="text-align: center;">Aksi</th>
                         </tr>
+                        </thead>
+                        <tbody>
                         @php $no =1; @endphp
                         @foreach($buku as $data)
                         <tr>
@@ -34,7 +36,7 @@
                             <td>{{ $data->buku_deskripsi }}</td>
                             <td>{{ $data->buku_pengarang }}</td>
                             <td>{{ $data->buku_tahun_terbit }}</td>
-                            <td><a href="{{ route('buku.edit', $data->id) }}" class="btn btn-warning">Edit</a></td>
+                            <td><a href="{{ route('buku.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                             <td><a href="{{ route('buku.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
                             <td><form action="{{ route('buku.destroy', $data->id) }}" method="post">
                                 @csrf
@@ -44,6 +46,7 @@
                             </td>
                         </tr>
                         @endforeach
+                        </tbody>
                     </table>
                 </div>
             </div>

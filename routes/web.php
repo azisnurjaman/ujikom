@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/admin', function () {
-    return view('admin');
+    return view('login');
 });
 
 Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], function () {
@@ -28,6 +28,10 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], fu
     Route::resource('kategori', 'KategoriController');
     Route::resource('penerbit', 'PenerbitController');
     Route::resource('buku', 'BukuController');
+    Route::resource('detailpinjam', 'DetailpinjamController');
+    Route::resource('peminjaman', 'PeminjamanController');
+    Route::resource('peminjam', 'PeminjamController');
+    Route::resource('kartupendaftaran', 'KartupendaftaranController');
 });
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
