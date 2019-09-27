@@ -5,18 +5,18 @@
         <div class="col-md-12">
             <div class="card">
                 <br>
-                <center><a href="{{ route('penerbit.create') }}" class="btn btn-primary">Tambah Data</a></center>
+                <center><a href="{{ route('penerbit.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
                     <br>
                     <div class="table-responsive">
                     <table class="table table-hover">
-                        <thead>
+                        <thead style="text-align:center;">
                             <tr class="bg-black">
                                 <th>No</th>
                                 <th>Kode Penerbit</th>
                                 <th>Nama Penerbit</th>
                                 <th>Alamat Penerbit</th>
                                 <th>Telp Penerbit</th>
-                                <th clospan="2" style="text-align: center;">Aksi</th>
+                                <th colspan="3"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,11 +27,11 @@
                                 <td>{{ $data->penerbit_kode }}</td>
                                 <td>{{ $data->penerbit_nama }}</td>
                                 <td>{{ $data->penerbit_alamat }}</td>
-                                <td>{{ $data->penerbit_telp }}</td>
-                                <td><img src="{{ asset('assets/img/artikel/'.$data->foto) }}" alt="" height="500px" width="500px"></td>         
+                                <td>{{ $data->penerbit_tlpn }}</td>
                                 <td><a href="{{ route('penerbit.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
+                                <td><a href="{{ route('penerbit.show', $data->id) }}" class="btn btn-info">Detail Data</a></td>
                                 <td>
-                                <form action="{{ route('penerbit.destroy', $data->id) }}" method="post">
+                                    <form action="{{ route('penerbit.destroy', $data->id) }}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button class="btn btn -sm btn-danger" type="submit">Hapus Data</button>

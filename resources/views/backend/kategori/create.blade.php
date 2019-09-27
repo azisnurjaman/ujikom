@@ -21,10 +21,7 @@
                                 Simpan Data
                                 </button>
                             </div>
-                            <div class="form-group">
-                                <a href="{{ url('kategori') }}" class="btn btn-outline-info">Kembali</a>
-                            </div>
-                                </form>
+                            </form>
                           </div>
                         </div>
                       </div>

@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/admin', function () {
-    return view('login');
-});
+// Route::get('/admin', function () {
+//     return view('login');
+// });
 
 Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], function () {
     Route::get('/', function () {

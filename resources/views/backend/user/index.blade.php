@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <br>
-                <center><a href="{{ route('user.create') }}" class="btn btn-primary">Tambah Data</a></center>
+                <center><a href="{{ route('user.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
                 <br>
                 <div class="table-responsive">
                 <table class="table table-hover">
@@ -24,6 +24,7 @@
                         <td>{{ $no++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->email }}</td> 
+                        @role('Admin')
                         <td><a href="{{ route('user.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                         <td>
                             <form action="{{ route('user.destroy', $data->id) }}" method="post">
@@ -32,6 +33,7 @@
                             <button class="btn btn -sm btn-danger" type="submit">Hapus Data</button>
                         </form>
                         </td>
+                        @endrole
                     </tr>
                     @endforeach
                     </tbody>

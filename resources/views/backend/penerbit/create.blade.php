@@ -25,20 +25,21 @@
                                     <div class="form-group">
                                         <div class="form-line">
                                             <b>Alamat Penerbit</b>
-                                            <textarea class="form-control no-resize" name="penerbit_nama" id="" cols="30" rows="5" required></textarea>
+                                            <textarea class="form-control no-resize" name="penerbit_alamat" id="" cols="30" rows="5" required></textarea>
                                         </div>
                                     </div>
                                      <div class="form-group">  
                                         <div class="form-line">
                                             <b>Telepon Penerbit</b>
-                                            <input class="form-control mobile-phone-number" type="number" name="penerbit_telp">
+                                            <input class="form-control mobile-phone-number" type="number" name="penerbit_telp" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-outline-info">
-                                Simpan Data
+                            <div class="button-demo">
+                                <button type="submit" class="btn btn-success  btn-lg waves-effect">
+                                <i class="material-icons">save</i>
+                                <span>Simpan Data</span>
                                 </button>
                             </div>
                             <br>

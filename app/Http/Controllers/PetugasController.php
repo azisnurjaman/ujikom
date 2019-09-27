@@ -16,11 +16,11 @@ class PetugasController extends Controller
     public function index()
     {
         $petugas = Petugas::all();
-         Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil menampilkan"
         ]);
-        return view('backend.petugas.index',compact('petugas'));
+        return view('backend.petugas.index', compact('petugas'));
     }
 
     /**
@@ -30,7 +30,7 @@ class PetugasController extends Controller
      */
     public function create()
     {
-      return view('backend.petugas.create');
+        return view('backend.petugas.create');
     }
 
     /**
@@ -41,21 +41,21 @@ class PetugasController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'petugas_kode' => 'required|unique:petugas',
-            'petugas_nama' => 'required'
-        ]);
+
         $petugas = new Petugas;
-       $petugas->petugas_kode = $request->petugas_kode;
-       $petugas->petugas_nama = $request->petugas_nama;
-       $petugas->save();
-         Session::flash("flash_notification",[
+        $petugas->petugas_kode = $request->petugas_kode;
+        $petugas->petugas_nama = $request->petugas_nama;
+        $petugas->save(); // $request->validate([
+        //     'petugas_kode' => 'required|unique:petugas',
+        //     'petugas_nama' => 'required'
+        // ]);
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit <b>"
-                        .$petugas->petugas_nama."</b>"
+                . $petugas->petugas_nama . "</b>"
         ]);
             //6.tampilkan berhasil
-            return redirect()->route('petugas.index');
+        return redirect()->route('petugas.index');
     }
 
     /**
@@ -78,12 +78,12 @@ class PetugasController extends Controller
     public function edit($id)
     {
         $petugas = Petugas::findOrFail($id);
-        Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit <b>"
-                        .$petugas->petugas_nama."</b>"
+                . $petugas->petugas_nama . "</b>"
         ]);
-        return view('backend.petugas.edit',compact('petugas'));
+        return view('backend.petugas.edit', compact('petugas'));
     }
 
     /**
@@ -99,12 +99,12 @@ class PetugasController extends Controller
         $petugas->petugas_kode = $request->petugas_kode;
         $petugas->petugas_nama = $request->petugas_nama;
         $petugas->save();
-        Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit <b>"
-                        .$petugas->petugas_nama."</b>"
+                . $petugas->petugas_nama . "</b>"
         ]);
-           return redirect()->route('petugas.index');
+        return redirect()->route('petugas.index');
     }
 
     /**
@@ -115,11 +115,11 @@ class PetugasController extends Controller
      */
     public function destroy($id)
     {
-         $petugas =Petugas::destroy($id);
-           Session::flash("flash_notification",[
+        $petugas = Petugas::destroy($id);
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit"
         ]);
-            return redirect()->route('petugas.index');
+        return redirect()->route('petugas.index');
     }
 }

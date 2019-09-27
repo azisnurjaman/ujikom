@@ -17,12 +17,12 @@ class PenerbitController extends Controller
     {
         $penerbit = Penerbit::all();
         $response = [
-            'success'=>true,
-            'data'=>$penerbit,
-            'massage'=>'berhasil'
-        
+            'success' => true,
+            'data' => $penerbit,
+            'massage' => 'berhasil'
+
         ];
-        return view('backend.penerbit.index',compact('penerbit'));
+        return view('backend.penerbit.index', compact('penerbit'));
     }
 
     /**
@@ -32,7 +32,7 @@ class PenerbitController extends Controller
      */
     public function create()
     {
-         return view('backend.penerbit.create');
+        return view('backend.penerbit.create');
     }
 
     /**
@@ -51,15 +51,15 @@ class PenerbitController extends Controller
         $penerbit->penerbit_kode = $request->penerbit_kode;
         $penerbit->penerbit_nama = $request->penerbit_nama;
         $penerbit->penerbit_alamat = $request->penerbit_alamat;
-        $penerbit->penerbit_telp = $request->penerbit_telp;
+        $penerbit->penerbit_tlpn = $request->penerbit_telp;
         $penerbit->save();
-         Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit <b>"
-                        .$penerbit->penerbit_nama."</b>"
+                . $penerbit->penerbit_nama . "</b>"
         ]);
             //6.tampilkan berhasil
-            return redirect()->route('penerbit.index');
+        return redirect()->route('penerbit.index');
     }
 
     /**
@@ -70,7 +70,8 @@ class PenerbitController extends Controller
      */
     public function show($id)
     {
-        //
+        $penerbit = Penerbit::findOrFail($id);
+        return view('backend.penerbit.show', compact('penerbit'));
     }
 
     /**
@@ -82,12 +83,7 @@ class PenerbitController extends Controller
     public function edit($id)
     {
         $penerbit = Penerbit::findOrFail($id);
-        Session::flash("flash_notification",[
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                        .$penerbit->penerbit_nama."</b>"
-        ]);
-        return view('backend.penerbit.edit',compact('penerbit'));
+        return view('backend.penerbit.edit', compact('penerbit'));
     }
 
     /**
@@ -103,14 +99,14 @@ class PenerbitController extends Controller
         $penerbit->penerbit_kode = $request->penerbit_kode;
         $penerbit->penerbit_nama = $request->penerbit_nama;
         $penerbit->penerbit_alamat = $request->penerbit_alamat;
-        $penerbit->penerbit_telp = $request->penerbit_telp;
+        $penerbit->penerbit_tlpn = $request->penerbit_telp;
         $penerbit->save();
-        Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit <b>"
-                        .$penerbit->penerbit_nama."</b>"
+                . $penerbit->penerbit_nama . "</b>"
         ]);
-           return redirect()->route('penerbit.index');
+        return redirect()->route('penerbit.index');
     }
 
     /**
@@ -121,11 +117,11 @@ class PenerbitController extends Controller
      */
     public function destroy($id)
     {
-        $penerbit =Penerbit::destroy($id);
-        Session::flash("flash_notification",[
+        $penerbit = Penerbit::destroy($id);
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit"
         ]);
-            return redirect()->route('penerbit.index');
+        return redirect()->route('penerbit.index');
     }
 }

@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <div class="card">
                 <br>
-                <center><a href="{{ route('buku.create') }}" class="btn btn-primary">Tambah Data</a></center>
+                <center><a href="{{ route('buku.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
                 <br>
                 <div class="table-responsive">
                     <table class="table table-hover">
