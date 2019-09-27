@@ -28,6 +28,8 @@
     <!-- Custom Css -->
     <link href="/admin/css/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="/admin/css/themes/all-themes.css" rel="stylesheet" />
 </head>
@@ -382,6 +384,8 @@
     <!-- Custom Js -->
     <script src="/admin/js/admin.js"></script>
     <script src="/admin/js/pages/index.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 
     <!-- Demo Js -->
     <script src="/admin/js/demo.js"></script>
