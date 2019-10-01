@@ -13,12 +13,12 @@
                         <tr class="bg-black">
                             <th>No</th>
                             <th>Kode Buku</th>
-                            <th>Kategori</th>
-                            <th>Penerbit</th>
                             <th>Judul Buku</th>
-                            <th>Jumlah Buku</th>
+                            <th>Kategori</th>
                             <th>Deskripsi Buku</th>
                             <th>Pengarang Buku</th>
+                            <th>Penerbit</th>
+                            <th>Jumlah Buku</th>
                             <th>Tahun Terbit Buku</th>
                             <th clospan="3" style="text-align: center;">Aksi</th>
                         </tr>
@@ -29,12 +29,12 @@
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td>{{ $data->buku_kode }}</td>
-                            <td>{{ $data->kategori->kategori_nama }}</td>
-                            <td>{{ $data->penerbit->penerbit_nama }}</td>
                             <td>{{ $data->buku_judul }}</td>
-                            <td>{{ $data->buku_jumlah }}</td>
+                            <td>{{ $data->kategori->kategori_nama }}</td>
                             <td>{{ $data->buku_deskripsi }}</td>
                             <td>{{ $data->buku_pengarang }}</td>
+                            <td>{{ $data->penerbit->penerbit_nama }}</td>
+                            <td>{{ $data->buku_jumlah }}</td>
                             <td>{{ $data->buku_tahun_terbit }}</td>
                             <td><a href="{{ route('buku.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                             <td><a href="{{ route('buku.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>

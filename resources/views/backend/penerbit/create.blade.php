@@ -10,29 +10,33 @@
                         <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <br>
-                                    <div class="form-group">
+                                    <div class="input-group">
                                         <div class="form-line">
                                             <b>Kode Penerbit</b>
                                             <input name="penerbit_kode" type="text" class="form-control" required/>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group">
                                         <div class="form-line">
                                             <b>Nama Penerbit</b>
                                             <input name="penerbit_nama" type="text" class="form-control" required/>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group">
                                         <div class="form-line">
                                             <b>Alamat Penerbit</b>
                                             <textarea class="form-control no-resize" name="penerbit_alamat" id="" cols="30" rows="5" required></textarea>
                                         </div>
                                     </div>
-                                     <div class="form-group">  
+                                    <b>Telepon Penerbit</b>
+                                     <div class="input-group">  
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">phone</i>
+                                        </span>
                                         <div class="form-line">
-                                            <b>Telepon Penerbit</b>
                                             <input class="form-control mobile-phone-number" type="number" name="penerbit_telp" required>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>

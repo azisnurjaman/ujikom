@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="firefox"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Admin Dashboard</title>
+    <!-- Favicon-->
+    <link rel="icon" href="http://ujikom.test/admin/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="Admin%20Dashboard_files/css.css" rel="stylesheet" type="text/css">
+    <link href="Admin%20Dashboard_files/icon.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="Admin%20Dashboard_files/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="Admin%20Dashboard_files/waves.css" rel="stylesheet">
+
+    <!-- Animation Css -->
+    <link href="Admin%20Dashboard_files/animate.css" rel="stylesheet">
+
+    <!-- Morris Chart Css-->
+    <link href="Admin%20Dashboard_files/morris.css" rel="stylesheet">
+
+    <!-- Custom Css -->
+    <link href="Admin%20Dashboard_files/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="Admin%20Dashboard_files/jquery.css">
+
+    <link rel="stylesheet" href="Admin%20Dashboard_files/jquery_002.css">
+
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="Admin%20Dashboard_files/all-themes.css" rel="stylesheet">
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper" style="display: none;">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars" style="display: none;"></a>
+                <a class="navbar-brand" href="http://ujikom.test/">BOOK</a>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="Admin%20Dashboard_files/user.png" alt="User" width="48" height="48">
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+                    <div class="email"></div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                                <a class="dropdown-item waves-effect waves-block" href="http://ujikom.test/logout" onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                                    <i class="material-icons">input</i>
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="http://ujikom.test/logout" method="POST" style="display: none;">
+                                    <input type="hidden" name="_token" value="Vl3kukZRPGjiAnbqa8EtOSbKzvrnBcWLbsry1fJB">                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 339px;"><ul class="list" style="overflow: hidden; width: auto; height: 339px;">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="active">
+                        <a href="http://ujikom.test/home" class="toggled waves-effect waves-block">
+                            <i class="material-icons">home</i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block">
+                            <i class="material-icons">assignment</i>
+                            <span>Forms</span>
+                        </a>
+                        <ul class="ml-menu">
+                                                        <li>
+                                <a href="http://ujikom.test/backend/peminjam" class=" waves-effect waves-block">Peminjam</a>
+                            </li>
+                            <li>
+                                <a href="http://ujikom.test/backend/peminjaman" class=" waves-effect waves-block">Peminjaman</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                </ul><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%; width: 4px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 0px; z-index: 99; right: 1px; height: 339px;"></div><div class="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    © 2019 <a href="https://azisnurjaman50.blogspot.com/">Team Grizi</a>.
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <br>
+                                    <br>
+                   
+                    <div class="table-responsive">
+                    <table class="table table-hover" id="tab" style="width:100%">
+                        <thead>
+                            <tr class="bg-black">
+                                <th>No</th>
+                                <th>Kode Penerbit</th>
+                                <th>Nama Penerbit</th>
+                                <th>Alamat Penerbit</th>
+                                <th>Telp Penerbit</th>
+                                <th colspan="3"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                                                    <tr>
+                                <td>1</td>
+                                <td>A215</td>
+                                <td>Azis Nurjaman</td>
+                                <td>Jl. Sayati-Palasari, Bandung</td>
+                                <td>1234567890</td>
+                                                            </tr>
+                                                        <tr>
+                                <td>2</td>
+                                <td>4215N</td>
+                                <td>Azis N</td>
+                                <td>Bandung</td>
+                                <td>62897654321</td>
+                                                            </tr>
+                                                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script async="" src="Admin%20Dashboard_files/analytics.js"></script><script src="Admin%20Dashboard_files/jquery_011.js"></script>
+    <script src="Admin%20Dashboard_files/jquery-3.js"></script>
+    <script src="Admin%20Dashboard_files/jquery_007.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="Admin%20Dashboard_files/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="Admin%20Dashboard_files/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="Admin%20Dashboard_files/jquery_012.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="Admin%20Dashboard_files/waves.js"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="Admin%20Dashboard_files/jquery_010.js"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="Admin%20Dashboard_files/raphael.js"></script>
+    <script src="Admin%20Dashboard_files/morris.js"></script>
+
+    <!-- ChartJs -->
+    <script src="Admin%20Dashboard_files/Chart.js"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="Admin%20Dashboard_files/jquery_009.js"></script>
+    <script src="Admin%20Dashboard_files/jquery_004.js"></script>
+    <script src="Admin%20Dashboard_files/jquery_003.js"></script>
+    <script src="Admin%20Dashboard_files/jquery_002.js"></script>
+    <script src="Admin%20Dashboard_files/jquery.js"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="Admin%20Dashboard_files/jquery_005.js"></script>
+
+    <!-- Custom Js -->
+    <script src="Admin%20Dashboard_files/admin.js"></script>
+    <script src="Admin%20Dashboard_files/index.js"></script>
+
+    
+
+    <!-- Demo Js -->
+    <script src="Admin%20Dashboard_files/demo.js"></script>
+
+    <script src="Admin%20Dashboard_files/jquery_008.js"></script>
+    <script src="Admin%20Dashboard_files/jquery_006.js"></script>
+        <script>
+        $(function() {
+            $('#tab').DataTable({
+                responsive: true,
+                processing: true,
+                serverSide: true,
+            });
+        });
+    </script>
+    
+
+
+
+</body></html>

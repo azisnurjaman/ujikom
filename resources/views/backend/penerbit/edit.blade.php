@@ -1,3 +1,4 @@
+@role('Admin')
 @extends('layouts.admin')
 @section('content')
 <div class="container">
@@ -29,7 +30,10 @@
                                             <textarea class="form-control no-resize" name="penerbit_alamat" id="" cols="30" rows="5" required>{{ $penerbit->penerbit_alamat }}</textarea>
                                         </div>
                                     </div>
-                                     <div class="form-group">  
+                                     <div class="form-group">
+                                         <span class="input-group-addon">
+                                            <i class="material-icons">phone</i>
+                                        </span> 
                                         <div class="form-line">
                                             <b>Telepon Penerbit</b>
                                             <input class="form-control mobile-phone-number" type="number" name="penerbit_telp" required value="{{ $penerbit->penerbit_tlpn }}">
@@ -51,3 +55,4 @@
                     </div>
                   </div>
 @endsection
+@endrole

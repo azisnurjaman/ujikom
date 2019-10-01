@@ -52,7 +52,7 @@ class UserController extends Controller
         $role = Role::where('name', 'superadmin')->first();
         $user->attachRole($role);
 
-        return response()->json('berhasil');
+        return redirect()->route('user.index');
     }
 
     /**
@@ -64,19 +64,19 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        if (!$user) {
-            $response = [
-                'success' => false,
-                'data' => 'gagal menampilkan',
-                'massage' => 'data tidak di temukan'
-            ];
-            return response()->json($response, 404);
-        }
-        $response = [
-            'success' => true,
-            'data' => $user,
-            'massage' => 'berhasil menampilkan.'
-        ];
+        // if (!$user) {
+        //     $response = [
+        //         'success' => false,
+        //         'data' => 'gagal menampilkan',
+        //         'massage' => 'data tidak di temukan'
+        //     ];
+        //     return response()->json($response, 404);
+        // }
+        // $response = [
+        //     'success' => true,
+        //     'data' => $user,
+        //     'massage' => 'berhasil menampilkan.'
+        // ];
         return response()->json($response, 200);
     }
 
@@ -88,12 +88,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil menampilkan"
         ]);
-        return response()->json($response, 200);
+        return view('backend.user.edit', compact('user'));
     }
 
     /**

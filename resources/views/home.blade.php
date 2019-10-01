@@ -11,7 +11,7 @@
                 </div>
             @endif
             <center>
-                <img src="/admin/images/welcome.png" alt="" >
+                <img src="/admin/images/welcome.png" alt="" width="100%">
             </center>
         </div>
     </div>

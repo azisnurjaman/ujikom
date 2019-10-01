@@ -36,4 +36,3 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Admin']], fu
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
 
-

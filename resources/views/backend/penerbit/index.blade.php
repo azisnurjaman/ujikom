@@ -1,4 +1,31 @@
 @extends('layouts.admin')
+@section('js')
+    <script>
+        $(function() {
+            $('#tab').DataTable({
+                responsive: true,
+                processing: true,
+                serverSide: true,
+            });
+        });
+    </script>
+    {{--  <script>
+        $(document).ready(function() {
+            $('#tab').DataTable({
+                responsive: true,
+                processing: true,
+                serverSide: true,
+                ajax: '{!! route('penerbit.data') !!}',
+                columns: [
+                    { data: 'penerbit_kode', name: 'penerbit_kode' },
+                    { data: 'penerbit_nama', name: 'penerbit_nama' },
+                    { data: 'penerbit_alamat', name: 'penerbit_alamat' },
+                    { data: 'penerbit_tlpn', name: 'penerbit_tlpn' },
+                ]
+            });
+        });
+    </script>  --}}
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -7,9 +34,10 @@
                 <br>
                 <center><a href="{{ route('penerbit.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
                     <br>
+                   
                     <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead style="text-align:center;">
+                    <table class="table table-hover" id="tab" style="width:100%">
+                        <thead>
                             <tr class="bg-black">
                                 <th>No</th>
                                 <th>Kode Penerbit</th>

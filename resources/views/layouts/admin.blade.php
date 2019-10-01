@@ -28,7 +28,18 @@
     <!-- Custom Css -->
     <link href="/admin/css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css"/>
+
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css"/>
+
+    <!-- Bootstrap Select Css -->
+    <link href="/admin/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="/admin/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+
+    <!-- Bootstrap DatePickaer Css -->
+    <link href="/admin/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="/admin/css/themes/all-themes.css" rel="stylesheet" />
@@ -56,8 +67,8 @@
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="/admin/javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                <a href="/admin/javascript:void(0);" class="bars"></a>
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="/">BOOK</a>
             </div>
         </div>
@@ -156,6 +167,7 @@
                             <span>Forms</span>
                         </a>
                         <ul class="ml-menu">
+                            @role('Admin')
                             <li>
                                 <a href="/backend/buku">Buku</a>
                             </li>
@@ -168,12 +180,14 @@
                             <li>
                                 <a href="/backend/kategori">Kategori</a>
                             </li>
+                            @endrole
                             <li>
                                 <a href="/backend/peminjam">Peminjam</a>
                             </li>
                             <li>
                                 <a href="/backend/peminjaman">Peminjaman</a>
                             </li>
+                            @role('Admin')
                             <li>
                                 <a href="/backend/penerbit">Penerbit</a>
                             </li>
@@ -183,6 +197,7 @@
                             <li>
                                 <a href="/backend/user">User</a>
                             </li>
+                            @endrole
                         </ul>
                     </li>
                 </ul>
@@ -347,6 +362,8 @@
     </section>
 
     <!-- Jquery Core Js -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="/js/jquery-3.3.1.js"></script>
     <script src="/admin/plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
@@ -385,10 +402,20 @@
     <script src="/admin/js/admin.js"></script>
     <script src="/admin/js/pages/index.js"></script>
 
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="/admin/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
+    <!-- Bootstrap Datepicker Plugin Js -->
+    <script src="/admin/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+    {{--  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>  --}}
 
     <!-- Demo Js -->
     <script src="/admin/js/demo.js"></script>
+
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    @yield('js')
 </body>
 
 </html>

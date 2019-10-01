@@ -8,7 +8,7 @@
                 <center><a href="{{ route('kartupendaftaran.create') }}" class="btn bg-purple waves-effect">Tambah</a></center>
                     <br>
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-hover display responsive nowrap">
                         <thead>
                         <tr class="bg-black">
                                 <th>No</th>

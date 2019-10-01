@@ -4,10 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Penerbit;
+use Yajra\Datatables\Datatables;
 use Session;
 
 class PenerbitController extends Controller
 {
+    public function getIndex()
+    {
+        return view('penerbit.index');
+    }
+    public function anyData()
+    {
+        return Datatables::of(Penerbit::query())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *
