@@ -17,7 +17,7 @@ class CreatePenerbitsTable extends Migration
             $table->bigIncrements('id');
             $table->String('penerbit_kode')->unique();
             $table->String('penerbit_nama');
-            $table->String('penerbit_alamat');
+            $table->text('penerbit_alamat');
             $table->bigInteger('penerbit_tlpn');
             $table->timestamps();
         });

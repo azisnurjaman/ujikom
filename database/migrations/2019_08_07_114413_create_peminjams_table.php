@@ -17,7 +17,7 @@ class CreatePeminjamsTable extends Migration
             $table->bigIncrements('id');
             $table->String('peminjam_kode')->unique();
             $table->String('peminjam_nama');
-            $table->String('peminjam_alamat');
+            $table->text('peminjam_alamat');
             $table->bigInteger('peminjam_tlpn');
             $table->String('peminjam_foto');
             $table->timestamps();

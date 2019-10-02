@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Basic Form Elements | Bootstrap Based Admin Template - Material Design</title>
+    <title>Admin Dashboard</title>
     <!-- Favicon-->
     <link rel="icon" href="/admin/favicon.ico" type="image/x-icon">
 

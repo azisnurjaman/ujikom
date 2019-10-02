@@ -20,7 +20,7 @@
                             <th>Penerbit</th>
                             <th>Jumlah Buku</th>
                             <th>Tahun Terbit Buku</th>
-                            <th clospan="3" style="text-align: center;">Aksi</th>
+                            <th colspan="3"th>
                         </tr>
                         </thead>
                         <tbody>
@@ -37,7 +37,7 @@
                             <td>{{ $data->buku_jumlah }}</td>
                             <td>{{ $data->buku_tahun_terbit }}</td>
                             <td><a href="{{ route('buku.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
-                            <td><a href="{{ route('buku.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
+                            <td><a href="{{ route('buku.show', $data->id) }}" class="btn btn-info">Detail Data</a></td>
                             <td><form action="{{ route('buku.destroy', $data->id) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">

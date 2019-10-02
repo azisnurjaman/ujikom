@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Penerbit extends Model
 {
-     public function buku()
+    public function buku()
     {
-        return $this->hasMany('App\Buku');
+        return $this->hasMany('App\Buku', 'penerbit_kode');
     }
 }

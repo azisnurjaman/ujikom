@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Buku;
+use App\Penerbit;
 use App\Kategori;
 use Session;
 
@@ -17,11 +18,13 @@ class BukuController extends Controller
     public function index()
     {
         $buku = Buku::all();
+        $penerbit = Penerbit::all();
+        $kategori = Kategori::all();
         Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil menampilkan"
         ]);
-        return view('backend.buku.index', compact('buku'));
+        return view('backend.buku.index', compact('buku', 'penerbit', 'kategori'));
     }
 
     /**
@@ -33,7 +36,8 @@ class BukuController extends Controller
     {
         $kategori = Kategori::all();
         $buku = Buku::all();
-        return view('backend.buku.create', compact('buku', 'kategori'));
+        $penerbit = Penerbit::all();
+        return view('backend.buku.create', compact('buku', 'kategori', 'penerbit'));
     }
 
     /**
@@ -47,8 +51,12 @@ class BukuController extends Controller
         $buku = new Buku;
         $buku->buku_kode = $request->buku_kode;
         $buku->buku_judul = $request->buku_judul;
-        $buku->buku_penerbit = $request->buku_penerbit;
         $buku->buku_jumlah = $request->buku_jumlah;
+        $buku->buku_pengarang = $request->buku_pengarang;
+        $buku->buku_tahun_terbit = $request->buku_tahun_terbit;
+        $buku->buku_deskripsi = $request->buku_deskripsi;
+        $buku->kategori_kode = $request->kategori_nama;
+        $buku->penerbit_kode = $request->penerbit_nama;
         $buku->save();
         Session::flash("flash_notification", [
             "level" => "success",

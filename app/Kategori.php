@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kategori extends Model
 {
-      public function buku()
+
+    public function buku()
     {
-        return $this->hasMany('App\Buku');
+        return $this->hasMany('App\Buku', 'kategori_kode');
     }
 }

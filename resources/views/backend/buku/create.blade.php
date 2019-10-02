@@ -52,10 +52,21 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                         <b>Kategori Buku</b>
-                                        <select class="form-control">
+                                        <select class="form-control" name="kategori_nama">
                                             <option value="">-- Please select --</option>
                                             @foreach($kategori as $data)
-                                            <option value="{{ $data->kategori_nama }}">{{ $data->kategori_nama }}</option>
+                                            <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
+                                            @endforeach
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                        <b>Penerbit Buku</b>
+                                        <select class="form-control" name="penerbit_nama">
+                                            <option value="">-- Please select --</option>
+                                            @foreach($penerbit as $data)
+                                            <option value="{{ $data->id }}">{{ $data->penerbit_nama }}</option>
                                             @endforeach
                                         </select>
                                         </div>
