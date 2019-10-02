@@ -86,7 +86,10 @@ class BukuController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kategori = Kategori::all();
+        $buku = Buku::findOrFail($id);
+        $penerbit = Penerbit::all();
+        return view('backend.buku.edit', compact('buku', 'kategori', 'penerbit'));
     }
 
     /**

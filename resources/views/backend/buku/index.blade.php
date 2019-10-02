@@ -31,7 +31,7 @@
                             <td>{{ $data->buku_kode }}</td>
                             <td>{{ $data->buku_judul }}</td>
                             <td>{{ $data->kategori->kategori_nama }}</td>
-                            <td>{{ $data->buku_deskripsi }}</td>
+                            <td>{!! substr($data->buku_deskripsi, 0, 100) !!}</td>
                             <td>{{ $data->buku_pengarang }}</td>
                             <td>{{ $data->penerbit->penerbit_nama }}</td>
                             <td>{{ $data->buku_jumlah }}</td>

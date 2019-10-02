@@ -221,6 +221,9 @@
 
     <!-- Demo Js -->
     <script src="/admin/js/demo.js"></script>
+
+    <script src="/ckeditor/ckeditor/ckeditor.js"></script>
+    @yield('js')
 </body>
 
 </html>

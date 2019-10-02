@@ -25,7 +25,7 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                             <b>Deskripsi Buku</b>
-                                            <textarea class="form-control no-resize" name="buku_deskripsi" id="" cols="30" rows="5" required></textarea>
+                                            <textarea class="form-control no-resize" name="buku_deskripsi" id="ck" cols="30" rows="5" required></textarea>
                                         </div>
                                     </div>
                                      <div class="input-group">  
@@ -86,4 +86,9 @@
                       </div>
                     </div>
                   </div>
+@endsection
+@section('js')
+    <script>
+    CKEDITOR.replace( 'ck' );
+    </script>
 @endsection
