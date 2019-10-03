@@ -52,7 +52,7 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                         <b>Kategori Buku</b>
-                                        <select class="form-control" name="kategori_nama">
+                                        <select class="form-control" name="kategori_nama" id="1">
                                             <option value="">-- Please select --</option>
                                             @foreach($kategori as $data)
                                             <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
@@ -63,7 +63,7 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                         <b>Penerbit Buku</b>
-                                        <select class="form-control" name="penerbit_nama">
+                                        <select class="form-control" name="penerbit_nama" id="2">
                                             <option value="">-- Please select --</option>
                                             @foreach($penerbit as $data)
                                             <option value="{{ $data->id }}">{{ $data->penerbit_nama }}</option>
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="button-demo">
-                                <button type="submit" class="btn btn-success  btn-lg waves-effect">
+                                <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
                                 <i class="material-icons">save</i>
                                 <span>Simpan Data</span>
                                 </button>
@@ -89,6 +89,18 @@
 @endsection
 @section('js')
     <script>
-    CKEDITOR.replace( 'ck' );
+        CKEDITOR.replace( 'ck' );
+    </script>
+    <script>
+        $("#1").select2({
+            placeholder: "Select a State",
+            allowClear: true
+        });
+    </script>
+    <script>
+        $("#2").select2({
+            placeholder: "Select a State",
+            allowClear: true
+        });
     </script>
 @endsection

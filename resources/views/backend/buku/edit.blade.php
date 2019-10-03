@@ -26,7 +26,7 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                             <b>Deskripsi Buku</b>
-                                            <textarea class="form-control no-resize" name="buku_deskripsi" id="" cols="30" rows="5" required>{{ $buku->buku_deskripsi}}</textarea>
+                                            <textarea class="form-control no-resize" name="buku_deskripsi" id="ck" cols="30" rows="5" required>{{ $buku->buku_deskripsi}}</textarea>
                                         </div>
                                     </div>
                                      <div class="input-group">  
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             <div class="button-demo">
-                                <button type="submit" class="btn btn-success  btn-lg waves-effect">
+                                <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
                                 <i class="material-icons">save</i>
                                 <span>Simpan Data</span>
                                 </button>
@@ -87,4 +87,9 @@
                       </div>
                     </div>
                   </div>
+@endsection
+@section('js')
+    <script>
+        CKEDITOR.replace( 'ck' );
+    </script>
 @endsection

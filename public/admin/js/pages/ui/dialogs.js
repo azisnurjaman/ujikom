@@ -3,32 +3,23 @@ $(function () {
         var type = $(this).data('type');
         if (type === 'basic') {
             showBasicMessage();
-        }
-        else if (type === 'with-title') {
+        } else if (type === 'with-title') {
             showWithTitleMessage();
-        }
-        else if (type === 'success') {
+        } else if (type === 'success') {
             showSuccessMessage();
-        }
-        else if (type === 'confirm') {
+        } else if (type === 'confirm') {
             showConfirmMessage();
-        }
-        else if (type === 'cancel') {
+        } else if (type === 'cancel') {
             showCancelMessage();
-        }
-        else if (type === 'with-custom-icon') {
+        } else if (type === 'with-custom-icon') {
             showWithCustomIconMessage();
-        }
-        else if (type === 'html-message') {
+        } else if (type === 'html-message') {
             showHtmlMessage();
-        }
-        else if (type === 'autoclose-timer') {
+        } else if (type === 'autoclose-timer') {
             showAutoCloseTimerMessage();
-        }
-        else if (type === 'prompt') {
+        } else if (type === 'prompt') {
             showPromptMessage();
-        }
-        else if (type === 'ajax-loader') {
+        } else if (type === 'ajax-loader') {
             showAjaxLoaderMessage();
         }
     });
@@ -50,21 +41,21 @@ function showSuccessMessage() {
 function showConfirmMessage() {
     swal({
         title: "Are you sure?",
-        text: "You will not be able to recover this imaginary file!",
+        text: "You will not be able to recover this data!",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
         confirmButtonText: "Yes, delete it!",
         closeOnConfirm: false
     }, function () {
-        swal("Deleted!", "Your imaginary file has been deleted.", "success");
+        swal("Deleted!", "Your data has been deleted.", "success");
     });
 }
 
 function showCancelMessage() {
     swal({
         title: "Are you sure?",
-        text: "You will not be able to recover this imaginary file!",
+        text: "You will not be able to recover this data!",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
@@ -74,9 +65,9 @@ function showCancelMessage() {
         closeOnCancel: false
     }, function (isConfirm) {
         if (isConfirm) {
-            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            swal("Deleted!", "Your data has been deleted.", "success");
         } else {
-            swal("Cancelled", "Your imaginary file is safe :)", "error");
+            swal("Cancelled", "Your data is safe :)", "error");
         }
     });
 }
@@ -118,7 +109,8 @@ function showPromptMessage() {
     }, function (inputValue) {
         if (inputValue === false) return false;
         if (inputValue === "") {
-            swal.showInputError("You need to write something!"); return false
+            swal.showInputError("You need to write something!");
+            return false
         }
         swal("Nice!", "You wrote: " + inputValue, "success");
     });

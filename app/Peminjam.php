@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Peminjam extends Model
 {
-     public function peminjaman()
+    public function peminjaman()
     {
-        return $this->hasMany('App\Peminjaman');
+        return $this->hasMany('App\Peminjaman', 'peminjam_kode');
     }
-     public function kartupendaftaran()
+    public function kartupendaftaran()
     {
         return $this->hasMany('App\KartuPendaftaran');
     }

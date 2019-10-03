@@ -1,34 +1,40 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Mengubah Data Kategori</div>
                 <div class="card-body">
-                    <form action="{{ route('kategori.update', $kategori->id) }}" method="post">
+                    <form action="{{ route('kategori.update', $kategori->id) }}" method="post" enctype="multipart/form-data">
                         <input name="_method" type="hidden" value="PATCH">
-                        {{ csrf_field() }}
-    <div class="form-group">
-        <label for="">Kode kategori</label>
-        <input class="form-control" value="{{ $kategori->kategori_kode }}" type="text" name="kategori_kode">
-    </div>
-     <div class="form-group">
-        <label for="">Nama kategori</label>
-        <input class="form-control" value="{{ $kategori->kategori_nama }}" type="text" name="kategori_nama">
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-outline-info">
-        Simpan Data
-        </button>
-    </div>
-    <div class="form-group">
-        <a href="{{ url('kategori.index') }}" class="btn btn-outline-info">Kembali</a>
-    </div>
-        </form>
-            </div>
-                </div>
-                    </div>
-                        </div>
+                        @csrf
+                        <div class="row clearfix">
+                            <div class="col-sm-12">
+                                <br>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <b>Kode Kategori</b>
+                                        <input name="kategori_kode" type="text" class="form-control" required value="{{$kategori->kategori_kode}}"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <b>Nama Kategori</b>
+                                        <input name="kategori_nama" type="text" class="form-control" required value="{{$kategori->kategori_nama}}"/>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="button-demo">
+                            <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
+                            <i class="material-icons">save</i>
+                            <span>Simpan Data</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
 @endsection

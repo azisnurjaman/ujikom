@@ -18,13 +18,11 @@ class BukuController extends Controller
     public function index()
     {
         $buku = Buku::all();
-        $penerbit = Penerbit::all();
-        $kategori = Kategori::all();
         Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil menampilkan"
         ]);
-        return view('backend.buku.index', compact('buku', 'penerbit', 'kategori'));
+        return view('backend.buku.index', compact('buku'));
     }
 
     /**
@@ -58,13 +56,7 @@ class BukuController extends Controller
         $buku->kategori_kode = $request->kategori_nama;
         $buku->penerbit_kode = $request->penerbit_nama;
         $buku->save();
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                . $buku->buku_judul . "</b>"
-        ]);
-            //6.tampilkan berhasil
-        return redirect()->route('buku.index');
+        return redirect()->route('buku.index')->with('success', 'Berhasil ditambah');;
     }
 
     /**
@@ -75,7 +67,10 @@ class BukuController extends Controller
      */
     public function show($id)
     {
-        //
+        $kategori = Kategori::all();
+        $buku = Buku::findOrFail($id);
+        $penerbit = Penerbit::all();
+        return view('backend.buku.show', compact('buku', 'kategori', 'penerbit'));
     }
 
     /**
@@ -101,7 +96,17 @@ class BukuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $buku = Buku::findOrFail($id);
+        $buku->buku_kode = $request->buku_kode;
+        $buku->buku_judul = $request->buku_judul;
+        $buku->buku_jumlah = $request->buku_jumlah;
+        $buku->buku_pengarang = $request->buku_pengarang;
+        $buku->buku_tahun_terbit = $request->buku_tahun_terbit;
+        $buku->buku_deskripsi = $request->buku_deskripsi;
+        $buku->kategori_kode = $request->kategori_nama;
+        $buku->penerbit_kode = $request->penerbit_nama;
+        $buku->save();
+        return redirect()->route('buku.index')->with('success', 'Berhasil diedit');;
     }
 
     /**
@@ -112,6 +117,7 @@ class BukuController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $buku = Buku::destroy($id);
+        return redirect()->route('buku.index')->with('success', 'Berhasil dihapus');
     }
 }

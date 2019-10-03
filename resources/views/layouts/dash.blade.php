@@ -37,6 +37,7 @@
 
     <!-- Custom Css -->
     <link href="/admin/css/style.css" rel="stylesheet">
+    <link href="/select2/dist/css/select2.css" rel="stylesheet"/>
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="/admin/css/themes/all-themes.css" rel="stylesheet" />
@@ -218,6 +219,7 @@
     <!-- Custom Js -->
     <script src="/admin/js/admin.js"></script>
     <script src="/admin/js/pages/forms/basic-form-elements.js"></script>
+    <script src="/select2/dist/js/select2.js"></script>
 
     <!-- Demo Js -->
     <script src="/admin/js/demo.js"></script>

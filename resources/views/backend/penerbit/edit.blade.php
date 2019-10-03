@@ -12,25 +12,25 @@
                         <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <br>
-                                    <div class="form-group">
+                                    <div class="input-group">
                                         <div class="form-line">
                                             <b>Kode Penerbit</b>
                                             <input name="penerbit_kode" type="text" class="form-control" required value="{{ $penerbit->penerbit_kode }}"/>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group">
                                         <div class="form-line">
                                             <b>Nama Penerbit</b>
                                             <input name="penerbit_nama" type="text" class="form-control" required value="{{ $penerbit->penerbit_nama }}"/>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group">
                                         <div class="form-line">
                                             <b>Alamat Penerbit</b>
                                             <textarea class="form-control no-resize" name="penerbit_alamat" id="" cols="30" rows="5" required>{{ $penerbit->penerbit_alamat }}</textarea>
                                         </div>
                                     </div>
-                                     <div class="form-group">
+                                     <div class="input-group">
                                          <span class="input-group-addon">
                                             <i class="material-icons">phone</i>
                                         </span> 
@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                             <div class="button-demo">
-                                <button type="submit" class="btn btn-success  btn-lg waves-effect">
+                                <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to delete?')">
                                 <i class="material-icons">save</i>
                                 <span>Simpan Data</span>
                                 </button>

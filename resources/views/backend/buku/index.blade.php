@@ -3,6 +3,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            @include('flash')
             <div class="card">
                 <br>
                 <center><a href="{{ route('buku.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
@@ -14,10 +15,10 @@
                             <th>No</th>
                             <th>Kode Buku</th>
                             <th>Judul Buku</th>
-                            <th>Kategori</th>
+                            <th>Kategori Buku</th>
                             <th>Deskripsi Buku</th>
                             <th>Pengarang Buku</th>
-                            <th>Penerbit</th>
+                            <th>Penerbit Buku</th>
                             <th>Jumlah Buku</th>
                             <th>Tahun Terbit Buku</th>
                             <th colspan="3"th>
@@ -41,7 +42,7 @@
                             <td><form action="{{ route('buku.destroy', $data->id) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button class="btn btn -sm btn-danger" type="submit">Hapus Data</button>
+                                <button class="btn btn -sm btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete?')">Hapus Data</button>
                             </form>
                             </td>
                         </tr>

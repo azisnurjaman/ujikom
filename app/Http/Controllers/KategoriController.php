@@ -17,12 +17,12 @@ class KategoriController extends Controller
     {
         $kategori = Kategori::all();
         $response = [
-            'success'=>true,
-            'data'=>$kategori,
-            'massage'=>'berhasil'
-        
+            'success' => true,
+            'data' => $kategori,
+            'massage' => 'berhasil'
+
         ];
-        return view('backend.kategori.index',compact('kategori'));
+        return view('backend.kategori.index', compact('kategori'));
     }
 
     /**
@@ -32,7 +32,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-         return view('backend.kategori.create');
+        return view('backend.kategori.create');
     }
 
     /**
@@ -51,13 +51,13 @@ class KategoriController extends Controller
         $kategori->kategori_kode = $request->kategori_kode;
         $kategori->kategori_nama = $request->kategori_nama;
         $kategori->save();
-         Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit <b>"
-                        .$kategori->kategori_nama."</b>"
+                . $kategori->kategori_nama . "</b>"
         ]);
             //6.tampilkan berhasil
-            return redirect()->route('kategori.index');
+        return redirect()->route('kategori.index')->with('success', 'Berhasil ditambah');;
     }
 
     /**
@@ -80,12 +80,12 @@ class KategoriController extends Controller
     public function edit($id)
     {
         $kategori = Kategori::findOrFail($id);
-        Session::flash("flash_notification",[
+        Session::flash("flash_notification", [
             "level" => "success",
             "message" => "berhasil mengedit <b>"
-                        .$kategori->kategori_nama."</b>"
+                . $kategori->kategori_nama . "</b>"
         ]);
-        return view('backend.kategori.edit',compact('kategori'));
+        return view('backend.kategori.edit', compact('kategori'));
     }
 
     /**
@@ -101,12 +101,7 @@ class KategoriController extends Controller
         $kategori->kategori_kode = $request->kategori_kode;
         $kategori->kategori_nama = $request->kategori_nama;
         $kategori->save();
-        Session::flash("flash_notification",[
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                        .$kategori->kategori_nama."</b>"
-        ]);
-           return redirect()->route('kategori.index');
+        return redirect()->route('kategori.index')->with('success', 'Berhasil diedit');;
     }
 
     /**
@@ -117,11 +112,7 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        $kategori =Kategori::destroy($id);
-        Session::flash("flash_notification",[
-            "level" => "success",
-            "message" => "berhasil mengedit"
-        ]);
-            return redirect()->route('kategori.index');
+        $kategori = Kategori::destroy($id);
+        return redirect()->route('kategori.index')->with('success', 'Berhasil dihapus');
     }
 }

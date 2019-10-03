@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Peminjam;
+use App\Peminjaman;
+use App\Petugas;
 
 class PeminjamanController extends Controller
 {
@@ -13,7 +16,8 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        //
+        $peminjaman = Peminjaman::all();
+        return view('backend.peminjaman.index', compact('peminjaman'));
     }
 
     /**

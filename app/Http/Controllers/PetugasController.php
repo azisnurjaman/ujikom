@@ -45,17 +45,8 @@ class PetugasController extends Controller
         $petugas = new Petugas;
         $petugas->petugas_kode = $request->petugas_kode;
         $petugas->petugas_nama = $request->petugas_nama;
-        $petugas->save(); // $request->validate([
-        //     'petugas_kode' => 'required|unique:petugas',
-        //     'petugas_nama' => 'required'
-        // ]);
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                . $petugas->petugas_nama . "</b>"
-        ]);
-            //6.tampilkan berhasil
-        return redirect()->route('petugas.index');
+        $petugas->save();
+        return redirect()->route('petugas.index')->with('success', 'Berhasil ditambah');;
     }
 
     /**
@@ -78,11 +69,6 @@ class PetugasController extends Controller
     public function edit($id)
     {
         $petugas = Petugas::findOrFail($id);
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                . $petugas->petugas_nama . "</b>"
-        ]);
         return view('backend.petugas.edit', compact('petugas'));
     }
 
@@ -99,12 +85,7 @@ class PetugasController extends Controller
         $petugas->petugas_kode = $request->petugas_kode;
         $petugas->petugas_nama = $request->petugas_nama;
         $petugas->save();
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                . $petugas->petugas_nama . "</b>"
-        ]);
-        return redirect()->route('petugas.index');
+        return redirect()->route('petugas.index')->with('success', 'Berhasil diedit');;
     }
 
     /**
@@ -120,6 +101,6 @@ class PetugasController extends Controller
             "level" => "success",
             "message" => "berhasil mengedit"
         ]);
-        return redirect()->route('petugas.index');
+        return redirect()->route('petugas.index')->with('success', 'Berhasil dihapus');
     }
 }

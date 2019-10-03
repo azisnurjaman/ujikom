@@ -27,6 +27,8 @@
 
     <!-- Custom Css -->
     <link href="/admin/css/style.css" rel="stylesheet">
+    <link href="/admin/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+
 
     <link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css"/>
 
@@ -401,6 +403,9 @@
     <!-- Custom Js -->
     <script src="/admin/js/admin.js"></script>
     <script src="/admin/js/pages/index.js"></script>
+    <script src="/admin/js/pages/ui/dialogs.js"></script>
+    <script src="/admin/plugins/bootstrap-notify/bootstrap-notify.js"></script>
+    <script src="/admin/plugins/sweetalert/sweetalert.min.js"></script>
 
     <!-- Bootstrap Material Datetime Picker Plugin Js -->
     <script src="/admin/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>

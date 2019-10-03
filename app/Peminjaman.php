@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Peminjaman extends Model
 {
-     public function petugas()
+    protected $table = 'peminjaman';
+    public function petugas()
     {
-        return $this->belongsTo('App\Petugas');
+        return $this->belongsTo('App\Petugas', 'petugas_kode');
     }
 
-     public function peminjam()
+    public function peminjam()
     {
-        return $this->belongsTo('App\Peminjam');
+        return $this->belongsTo('App\Peminjam', 'peminjam_kode');
     }
 }
