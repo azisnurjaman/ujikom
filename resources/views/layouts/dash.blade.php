@@ -23,8 +23,7 @@
     <link href="/admin/plugins/animate-css/animate.css" rel="stylesheet" />
 
     <!-- Bootstrap Material Datetime Picker Css -->
-    <link href="/admin/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
-        rel="stylesheet" />
+    <link href="/admin/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
 
     <!-- Bootstrap DatePicker Css -->
     <link href="/admin/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
@@ -82,7 +81,7 @@
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="/admin/index.html">ADMINBSB - MATERIAL DESIGN</a>
+                <a class="navbar-brand" href="/admin/index.html">BOOK</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
             </div>
@@ -220,6 +219,7 @@
     <script src="/admin/js/admin.js"></script>
     <script src="/admin/js/pages/forms/basic-form-elements.js"></script>
     <script src="/select2/dist/js/select2.js"></script>
+    <script src="/admin/js/pages/forms/advanced-form-elements.js"></script>
 
     <!-- Demo Js -->
     <script src="/admin/js/demo.js"></script>

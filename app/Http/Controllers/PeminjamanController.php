@@ -27,7 +27,10 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
-        //
+        $petugas = Petugas::all();
+        $peminjaman = Peminjaman::all();
+        $peminjam = Peminjam::all();
+        return view('backend.peminjaman.create', compact('peminjaman', 'petugas', 'peminjam'));
     }
 
     /**
@@ -38,7 +41,14 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $peminjaman = new Peminjaman;
+        $peminjaman->peminjaman_kode = $request->peminjaman_kode;
+        $peminjaman->petugas_kode = $request->petugas_nama;
+        $peminjaman->peminjam_kode = $request->peminjam_nama;
+        $peminjaman->peminjaman_tgl = $request->peminjaman_tgl;
+        $peminjaman->peminjaman_tgl_kembali = $request->peminjaman_tgl_kembali;
+        $peminjaman->save();
+        return redirect()->route('peminjaman.index')->with('success', 'Berhasil ditambah');
     }
 
     /**
@@ -49,7 +59,10 @@ class PeminjamanController extends Controller
      */
     public function show($id)
     {
-        //
+        $petugas = Petugas::all();
+        $peminjaman = Peminjaman::all();
+        $peminjam = Peminjam::all();
+        return view('backend.peminjaman.show', compact('peminjaman', 'petugas', 'peminjam'));
     }
 
     /**
@@ -60,7 +73,10 @@ class PeminjamanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $petugas = Petugas::all();
+        $peminjaman = Peminjaman::findOrFail($id);
+        $peminjam = Peminjam::all();
+        return view('backend.peminjaman.edit', compact('peminjaman', 'petugas', 'peminjam'));
     }
 
     /**
@@ -72,7 +88,14 @@ class PeminjamanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $peminjaman = Peminjaman::findOrFail($id);
+        $peminjaman->peminjaman_kode = $request->peminjaman_kode;
+        $peminjaman->petugas_kode = $request->petugas_nama;
+        $peminjaman->peminjam_kode = $request->peminjam_nama;
+        $peminjaman->peminjaman_tgl = $request->peminjaman_tgl;
+        $peminjaman->peminjaman_tgl_kembali = $request->peminjaman_tgl_kembali;
+        $peminjaman->save();
+        return redirect()->route('peminjaman.index')->with('success', 'Berhasil ditambah');
     }
 
     /**
@@ -83,6 +106,7 @@ class PeminjamanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $peminjaman = Peminjaman::destroy($id);
+        return redirect()->route('peminjaman.index')->with('success', 'Berhasil dihapus');
     }
 }

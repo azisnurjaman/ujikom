@@ -59,24 +59,9 @@ class PeminjamController extends Controller
             $path = public_path() . '/assets/img/peminjam/';
             $filename = str_random(6) . '_' . $file->getClientOriginalName();
             $upload = $file->move($path, $filename);
-
-            if ($peminjam->peminjam_foto) {
-                $old_foto = $peminjam->peminjam_foto;
-                $filepath = public_path() . '/assets/img/peminjam/' . $peminjam->peminjam_foto;
-                try {
-                    File::delete($filepath);
-                } catch (FileNotFoundException $e) {
-                    //Exception $e;
-                }
-            }
             $peminjam->peminjam_foto = $filename;
         }
         $peminjam->save();
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                . $peminjam->peminjam_nama . "</b>"
-        ]);
             //6.tampilkan berhasil
         return redirect()->route('peminjam.index');
     }
@@ -89,7 +74,8 @@ class PeminjamController extends Controller
      */
     public function show($id)
     {
-        //
+        $peminjam = Peminjam::findOrFail($id);
+        return view('backend.peminjam.show', compact('peminjam'));
     }
 
     /**
@@ -101,11 +87,6 @@ class PeminjamController extends Controller
     public function edit($id)
     {
         $peminjam = Peminjam::findOrFail($id);
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                . $peminjam->peminjam_nama . "</b>"
-        ]);
         return view('backend.peminjam.edit', compact('peminjam'));
     }
 
@@ -126,21 +107,22 @@ class PeminjamController extends Controller
 
         if ($request->hasFile('peminjam_foto')) {
             $file = $request->file('peminjam_foto');
-            $destinationPath = public_path() . '/assets/img/peminjam/';
-            $filename = str_random(6) . '_' . '/assets/img/peminjam/';
-            $upload = $file->move($destinationPath, $filename);
-        }
+            $path = public_path() . '/assets/img/peminjam/';
+            $filename = str_random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($path, $filename);
 
-        if ($peminjam->peminjam_foto) {
-            $old_foto = $peminjam->peminjam_foto;
-            $filepath = public_path() . '/assets/img/' . $peminjam->peminjam_foto;
-            try {
-                File::delete($filepath);
-            } catch (FileNotFoundException $e) {
+            if ($peminjam->peminjam_foto) {
+                $old_foto = $peminjam->peminjam_foto;
+                $filepath = public_path() . '/assets/img/peminjam/' . $peminjam->peminjam_foto;
+                try {
+                    File::delete($filepath);
+                } catch (FileNotFoundException $e) {
+                }
             }
-            $peminjam->save();
-            return redirect()->route('peminjam.index')->with('success', 'Berhasil diedit');;
+            $peminjam->peminjam_foto = $filename;
         }
+        $peminjam->save();
+        return redirect()->route('peminjam.index')->with('success', 'Berhasil diedit');;
     }
 
     /**

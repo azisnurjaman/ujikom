@@ -57,7 +57,6 @@
                                             @foreach($kategori as $data)
                                             <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
                                             @endforeach
-                                            <option value="">-- Please select --</option>
                                         </select>
                                         </div>
                                     </div>
@@ -68,7 +67,6 @@
                                             @foreach($penerbit as $data)
                                             <option value="{{ $data->id }}">{{ $data->penerbit_nama }}</option>
                                             @endforeach
-                                            <option value="">-- Please select --</option>
                                         </select>
                                         </div>
                                     </div>

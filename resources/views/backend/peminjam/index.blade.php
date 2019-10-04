@@ -6,7 +6,7 @@
             @include('flash')
             <div class="card">
                 <br>
-                <center><a href="{{ route('peminjam.create') }}" class="btn bg-purple waves-effect">Tambah</a></center>
+                <center><a href="{{ route('peminjam.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
                     <br>
                     <div class="table-responsive">
                         <table class="table table-hover">
@@ -18,7 +18,7 @@
                                 <th>Alamat Peminjam</th>
                                 <th>Telp Peminjam</th>
                                 <th>Foto Peminjam</th>
-                                <th clospan="3">Aksi</th>
+                                <th colspan="3">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,9 +30,9 @@
                      <td>{{ $data->peminjam_nama }}</td>
                       <td>{{ $data->peminjam_alamat }}</td>
                        <td>{{ $data->peminjam_tlpn }}</td>
-                    <td><img src="{{ asset('assets/img/peminjam/'.$data->foto) }}" alt="" height="100px" width="100px"></td>         
-                    <td><a href="{{ route('peminjam.edit', $data->id) }}" class="btn btn-warning">Edit</a>
-                    <td><a href="{{ route('peminjam.show', $data->id) }}" class="btn btn-success">Detail Data</a>
+                    <td><img src="{{ asset('assets/img/peminjam/'.$data->peminjam_foto) }}" alt="" height="100px" width="150px"></td>         
+                    <td><a href="{{ route('peminjam.edit', $data->id) }}" class="btn btn-warning">Edit Data</a>
+                    <td><a href="{{ route('peminjam.show', $data->id) }}" class="btn btn-info">Detail Data</a>
                     <td><form action="{{ route('peminjam.destroy', $data->id) }}" method="post">
                         @csrf
                         <input type="hidden" name="_method" value="DELETE">
