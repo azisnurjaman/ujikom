@@ -18,6 +18,6 @@ class Buku extends Model
 
     public function detail()
     {
-        return $this->hasMany(' App\DetailPinjam');
+        return $this->hasMany(' App\DetailPinjam', 'buku_kode');
     }
 }

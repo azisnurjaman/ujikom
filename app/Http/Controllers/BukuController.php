@@ -18,10 +18,6 @@ class BukuController extends Controller
     public function index()
     {
         $buku = Buku::all();
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil menampilkan"
-        ]);
         return view('backend.buku.index', compact('buku'));
     }
 
@@ -56,7 +52,7 @@ class BukuController extends Controller
         $buku->kategori_kode = $request->kategori_nama;
         $buku->penerbit_kode = $request->penerbit_nama;
         $buku->save();
-        return redirect()->route('buku.index')->with('success', 'Berhasil ditambah');;
+        return redirect()->route('buku.index')->with('success', 'Berhasil ditambah');
     }
 
     /**

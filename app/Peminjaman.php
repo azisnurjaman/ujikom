@@ -16,4 +16,9 @@ class Peminjaman extends Model
     {
         return $this->belongsTo('App\Peminjam', 'peminjam_kode');
     }
+
+    public function detailpinjam()
+    {
+        return $this->belongsTo('App\DetailPeminjam', 'peminjaman_kode', 'detail_tgl_kembali');
+    }
 }

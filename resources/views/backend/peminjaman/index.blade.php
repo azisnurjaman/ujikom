@@ -18,7 +18,7 @@
                             <th>Peminjam</th>
                             <th>Tanggal Peminjaman</th>
                             <th>Tanggal Harus Kembali Peminjaman</th>
-                            <th colspan="3"></th>
+                            <th colspan="2"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,7 +32,6 @@
                                 <td>{{ $data->peminjaman_tgl }}</td>
                                 <td>{{ $data->peminjaman_tgl_kembali }}</td>
                                 <td><a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
-                                <td><a href="{{ route('peminjaman.show', $data->id) }}" class="btn btn-info">Detail Data</a></td>
                                 <td>
                                 <form action="{{ route('peminjaman.destroy', $data->id) }}" method="post">
                                     @csrf

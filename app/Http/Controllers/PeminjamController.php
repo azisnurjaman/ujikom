@@ -63,7 +63,7 @@ class PeminjamController extends Controller
         }
         $peminjam->save();
             //6.tampilkan berhasil
-        return redirect()->route('peminjam.index');
+        return redirect()->route('peminjam.index')->with('success', 'Berhasil ditambah');
     }
 
     /**
@@ -122,7 +122,7 @@ class PeminjamController extends Controller
             $peminjam->peminjam_foto = $filename;
         }
         $peminjam->save();
-        return redirect()->route('peminjam.index')->with('success', 'Berhasil diedit');;
+        return redirect()->route('peminjam.index')->with('success', 'Berhasil diedit');
     }
 
     /**

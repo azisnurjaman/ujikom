@@ -169,7 +169,7 @@
                             <span>Forms</span>
                         </a>
                         <ul class="ml-menu">
-                            @role('Admin')
+                            @role('admin')
                             <li>
                                 <a href="/backend/buku">Buku</a>
                             </li>
@@ -189,7 +189,7 @@
                             <li>
                                 <a href="/backend/peminjaman">Peminjaman</a>
                             </li>
-                            @role('Admin')
+                            @role('admin')
                             <li>
                                 <a href="/backend/penerbit">Penerbit</a>
                             </li>

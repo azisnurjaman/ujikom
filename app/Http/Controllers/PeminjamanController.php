@@ -59,10 +59,7 @@ class PeminjamanController extends Controller
      */
     public function show($id)
     {
-        $petugas = Petugas::all();
-        $peminjaman = Peminjaman::all();
-        $peminjam = Peminjam::all();
-        return view('backend.peminjaman.show', compact('peminjaman', 'petugas', 'peminjam'));
+        //
     }
 
     /**

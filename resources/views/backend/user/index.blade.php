@@ -24,7 +24,7 @@
                         <td>{{ $no++ }}</td>
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->email }}</td> 
-                        @role('Admin')
+                        @role('admin')
                         <td><a href="{{ route('user.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                         <td>
                             <form action="{{ route('user.destroy', $data->id) }}" method="post">

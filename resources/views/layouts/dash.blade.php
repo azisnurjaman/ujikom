@@ -81,7 +81,7 @@
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="/admin/index.html">BOOK</a>
+                <a class="navbar-brand" href="/">BOOK</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
             </div>
@@ -130,7 +130,7 @@
                             <span>Forms</span>
                         </a>
                         <ul class="ml-menu">
-                            @role('Admin')
+                            @role('admin')
                             <li>
                                 <a href="/backend/buku">Buku</a>
                             </li>
@@ -150,7 +150,7 @@
                             <li>
                                 <a href="/backend/peminjaman">Peminjaman</a>
                             </li>
-                            @role('Admin')
+                            @role('admin')
                             <li>
                                 <a href="/backend/penerbit">Penerbit</a>
                             </li>
