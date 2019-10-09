@@ -18,7 +18,7 @@ class CreateKartuPendaftaransTable extends Migration
             $table->String('kartupendaftaran_kode')->unique();
             $table->Date('kartu_tanggal_pembuatan');
             $table->Date('kartu_tanggal_akhir');
-            $table->Boolean('kartu_status_aktif');
+            $table->String('kartu_status_aktif');
             $table->unsignedBigInteger('petugas_kode');
             $table->foreign('petugas_kode')->references('id')->on('petugas')->ondelete('cascade');
             $table->unsignedBigInteger('peminjam_kode');

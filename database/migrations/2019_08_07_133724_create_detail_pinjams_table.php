@@ -19,7 +19,7 @@ class CreateDetailPinjamsTable extends Migration
             $table->unsignedBigInteger('detail_tgl_kembali');
             $table->foreign('detail_tgl_kembali')->references('id')->on('peminjaman')->ondelete('cascade');
             $table->double('detail_denda');
-            $table->boolean('detail_status_kembali');
+            $table->String('detail_status_kembali');
             $table->unsignedBigInteger('peminjaman_kode');
             $table->foreign('peminjaman_kode')->references('id')->on('peminjaman')->ondelete('cascade');
             $table->unsignedBigInteger('buku_kode');

@@ -53,7 +53,7 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                         <b>Kategori Buku</b>
-                                        <select class="form-control" name="kategori_nama">
+                                        <select class="form-control" name="kategori_nama" id="1">
                                             @foreach($kategori as $data)
                                             <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
                                             @endforeach
@@ -63,7 +63,7 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                         <b>Penerbit Buku</b>
-                                        <select class="form-control" name="penerbit_nama">
+                                        <select class="form-control" name="penerbit_nama" id="2">
                                             @foreach($penerbit as $data)
                                             <option value="{{ $data->id }}">{{ $data->penerbit_nama }}</option>
                                             @endforeach
@@ -89,5 +89,17 @@
 @section('js')
     <script>
         CKEDITOR.replace( 'ck' );
+    </script>
+    <script>
+        $("#1").select2({
+            placeholder: "Select a State",
+            allowClear: true
+        });
+    </script>
+    <script>
+        $("#2").select2({
+            placeholder: "Select a State",
+            allowClear: true
+        });
     </script>
 @endsection

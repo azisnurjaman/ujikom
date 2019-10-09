@@ -6,12 +6,12 @@
             @include('flash')
             <div class="card">
                 <br>
-                <center><a href="{{ route('kartupendaftaran.create') }}" class="btn bg-purple waves-effect">Tambah</a></center>
+                <center><a href="{{ route('kartupendaftaran.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
                     <br>
                     <div class="table-responsive">
                         <table class="table table-hover">
                         <thead>
-                        <tr class="bg-black">
+                            <tr class="bg-black">
                                 <th>No</th>
                                 <th>Kode kartu</th>
                                 <th>Petugas</th>
@@ -19,22 +19,21 @@
                                 <th>Tanggal Pembuatan Kartu</th>
                                 <th>Tanggal Akhir Kartu</th>
                                 <th>Status Aktif Kartu</th>
-                                <th clospan="3" style="text-align: center;">Aksi</th>
+                                <th colspan="2" style="text-align: center;"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @php $no =1; @endphp
-                            @foreach($kartu as $data)
+                            @php $no = 1; @endphp
+                            @foreach($kartupendaftaran as $data)
                             <tr>
                                 <td>{{ $no++ }}</td>
-                                <td>{{ $data->kartu_kode }}</td>
+                                <td>{{ $data->kartupendaftaran_kode }}</td>
                                 <td>{{ $data->petugas->petugas_nama }}</td>
                                 <td>{{ $data->peminjam->peminjam_nama }}</td>
-                                <td>{{ $data->kartu_tgl_pembuatan }}</td>
-                                <td>{{ $data->kartu_tgl_akhir }}</td>
+                                <td>{{ $data->kartu_tanggal_pembuatan }}</td>
+                                <td>{{ $data->kartu_tanggal_akhir }}</td>
                                 <td>{{ $data->kartu_status_aktif }}</td>
-                                <td><a href="{{ route('kartupendaftaran.edit', $data->id) }}" class="btn btn-warning">Edit</a></td>
-                                <td><a href="{{ route('kartupendaftaran.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
+                                <td><a href="{{ route('kartupendaftaran.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                                 <td><form action="{{ route('kartupendaftaran.destroy', $data->id) }}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">

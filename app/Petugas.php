@@ -12,6 +12,6 @@ class Petugas extends Model
     }
     public function kartupendaftaran()
     {
-        return $this->hasMany('App\KartuPendaftaran');
+        return $this->hasMany('App\KartuPendaftaran', 'petugas_kode');
     }
 }

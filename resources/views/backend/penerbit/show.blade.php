@@ -28,7 +28,7 @@
                                             <textarea class="form-control no-resize" name="penerbit_alamat" id="" cols="30" rows="5" disabled>{{ $penerbit->penerbit_alamat }}</textarea>
                                         </div>
                                     </div>
-                                     <div class="form-group">
+                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="material-icons">phone</i>
                                         </span>  
@@ -41,7 +41,7 @@
                             </div>
                             <form action="/backend/penerbit">
                             <div class="button-demo">
-                                <button type="submit" class="btn btn-danger  btn-lg waves-effect">
+                                <button type="submit" class="btn btn-danger  btn-lg waves-effect" onclick="return confirm('Are you sure you want to go back?')">
                                 Kembali
                                 </button>
                             </div>

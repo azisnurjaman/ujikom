@@ -39,15 +39,15 @@
                                         </div>
                                     </div>
                                     <b>Status Peminjaman</b>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <input type="radio" class="with-gap" id="ig_radio" value="1" name="detail_status_kembali">
-                                            <label for="ig_radio">Dipinjam</label>
-                                        </span>
-                                        <span class="input-group-addon">
-                                            <input type="radio" class="with-gap" id="ig_radio" value="0" name="detail_status_kembali">
-                                            <label for="ig_radio">Selesai</label>
-                                        </span>
+                                    <div class="form-group">
+                                        <input class="with-gap" type="radio" name="detail_status_kembali" id="exampleRadios1" value="Dipinjam">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Dipinjam
+                                        </label>
+                                        <input class="with-gap" type="radio" name="detail_status_kembali" id="exampleRadios2" value="Selesai">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Selesai
+                                        </label>
                                     </div>
                                     <b>Detail Tanggal Kembali</b>
                                     <div class="input-group">

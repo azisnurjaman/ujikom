@@ -12,6 +12,6 @@ class Peminjam extends Model
     }
     public function kartupendaftaran()
     {
-        return $this->hasMany('App\KartuPendaftaran');
+        return $this->hasMany('App\KartuPendaftaran', 'peminjam_kode');
     }
 }

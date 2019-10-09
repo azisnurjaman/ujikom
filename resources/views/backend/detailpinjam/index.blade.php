@@ -19,7 +19,7 @@
                                 <th>Detail Status Kembali</th>
                                 <th>Detail Tanggal Kembali</th>
                                 <th>Detail Denda</th>
-                                <th clospan="3" style="text-align: center;">Aksi</th>
+                                <th colspan="2"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,9 +31,9 @@
                                 <td>{{ $data->peminjaman->peminjaman_kode }}</td>
                                 <td>{{ $data->buku->buku_judul }}</td>
                                 <td>{{ $data->detail_status_kembali }}</td>
-                                <td>{{ $data->peminjaman->detail_tgl_kembali }}</td>
-                                <td><a href="{{ route('detailpinjamuku.edit', $data->id) }}" class="btn btn-warning">Edit</a></td>
-                                <td><a href="{{ route('detailpinjamku.show', $data->id) }}" class="btn btn-success">Detail Data</a></td>
+                                <td>{{ $data->peminjaman->peminjaman_tgl_kembali }}</td>
+                                <td>{{ $data->detail_denda }}</td>
+                                <td><a href="{{ route('detailpinjam.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                                 <td><form action="{{ route('detailpinjam.destroy', $data->id) }}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">

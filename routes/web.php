@@ -18,7 +18,7 @@ Route::get('/', function () {
 //     return view('login');
 // });
 
-Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], function () {
+Route::group(['prefix' => 'backend'], function () {
     Route::get('/', function () {
         return view("home");
     });
@@ -33,8 +33,5 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], fu
     Route::resource('buku', 'BukuController');
     Route::resource('detailpinjam', 'DetailpinjamController');
 });
-Route::resource('peminjaman', 'PeminjamanController');
-Route::resource('peminjam', 'PeminjamController');
-Route::resource('kartupendaftaran', 'KartupendaftaranController');
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');

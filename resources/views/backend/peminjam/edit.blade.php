@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <form action="{{ route('peminjam.update', $peminjam->id) }}" method="post" enctype="multipart/form-data">
                         <input name="_method" type="hidden" value="PATCH">
-                        {{ csrf_field() }}
+                        {{ csrf_field() }}  
                         <div class="input-group">
                             <b>Kode Peminjam</b>
                             <div class="form-line">
