@@ -26,13 +26,13 @@
     <link href="/admin/plugins/morrisjs/morris.css" rel="stylesheet" />
 
     <!-- Custom Css -->
+    <link rel="stylesheet" type="text/css" href="/DataTables/DT/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/DataTables/DT/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.min.css"/>
     <link href="/admin/css/style.css" rel="stylesheet">
     <link href="/admin/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
-
-
-    <link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css"/>
-
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css"/>
+    
+    {{--  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">  --}}
 
     <!-- Bootstrap Select Css -->
     <link href="/admin/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
@@ -45,6 +45,7 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="/admin/css/themes/all-themes.css" rel="stylesheet" />
+    @yield('css')
 </head>
 
 <body class="theme-red">
@@ -169,7 +170,6 @@
                             <span>Forms</span>
                         </a>
                         <ul class="ml-menu">
-                            @role('admin')
                             <li>
                                 <a href="/backend/buku">Buku</a>
                             </li>
@@ -179,6 +179,7 @@
                             <li>
                                 <a href="/backend/kartupendaftaran">Kartu Pendaftaran</a>
                             </li>
+                            @role('admin')
                             <li>
                                 <a href="/backend/kategori">Kategori</a>
                             </li>
@@ -215,148 +216,6 @@
         </aside>
         <!-- #END# Left Sidebar -->
         <!-- Right Sidebar -->
-        {{--  <aside id="rightsidebar" class="right-sidebar">
-            <ul class="nav nav-tabs tab-nav-right" role="tablist">
-                <li role="presentation" class="active"><a href="/admin/#skins" data-toggle="tab">SKINS</a></li>
-                <li role="presentation"><a href="/admin/#settings" data-toggle="tab">SETTINGS</a></li>
-            </ul>
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
-                    <ul class="demo-choose-skin">
-                        <li data-theme="red" class="active">
-                            <div class="red"></div>
-                            <span>Red</span>
-                        </li>
-                        <li data-theme="pink">
-                            <div class="pink"></div>
-                            <span>Pink</span>
-                        </li>
-                        <li data-theme="purple">
-                            <div class="purple"></div>
-                            <span>Purple</span>
-                        </li>
-                        <li data-theme="deep-purple">
-                            <div class="deep-purple"></div>
-                            <span>Deep Purple</span>
-                        </li>
-                        <li data-theme="indigo">
-                            <div class="indigo"></div>
-                            <span>Indigo</span>
-                        </li>
-                        <li data-theme="blue">
-                            <div class="blue"></div>
-                            <span>Blue</span>
-                        </li>
-                        <li data-theme="light-blue">
-                            <div class="light-blue"></div>
-                            <span>Light Blue</span>
-                        </li>
-                        <li data-theme="cyan">
-                            <div class="cyan"></div>
-                            <span>Cyan</span>
-                        </li>
-                        <li data-theme="teal">
-                            <div class="teal"></div>
-                            <span>Teal</span>
-                        </li>
-                        <li data-theme="green">
-                            <div class="green"></div>
-                            <span>Green</span>
-                        </li>
-                        <li data-theme="light-green">
-                            <div class="light-green"></div>
-                            <span>Light Green</span>
-                        </li>
-                        <li data-theme="lime">
-                            <div class="lime"></div>
-                            <span>Lime</span>
-                        </li>
-                        <li data-theme="yellow">
-                            <div class="yellow"></div>
-                            <span>Yellow</span>
-                        </li>
-                        <li data-theme="amber">
-                            <div class="amber"></div>
-                            <span>Amber</span>
-                        </li>
-                        <li data-theme="orange">
-                            <div class="orange"></div>
-                            <span>Orange</span>
-                        </li>
-                        <li data-theme="deep-orange">
-                            <div class="deep-orange"></div>
-                            <span>Deep Orange</span>
-                        </li>
-                        <li data-theme="brown">
-                            <div class="brown"></div>
-                            <span>Brown</span>
-                        </li>
-                        <li data-theme="grey">
-                            <div class="grey"></div>
-                            <span>Grey</span>
-                        </li>
-                        <li data-theme="blue-grey">
-                            <div class="blue-grey"></div>
-                            <span>Blue Grey</span>
-                        </li>
-                        <li data-theme="black">
-                            <div class="black"></div>
-                            <span>Black</span>
-                        </li>
-                    </ul>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="settings">
-                    <div class="demo-settings">
-                        <p>GENERAL SETTINGS</p>
-                        <ul class="setting-list">
-                            <li>
-                                <span>Report Panel Usage</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Email Redirect</span>
-                                <div class="switch">
-                                    <label><input type="checkbox"><span class="lever"></span></label>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>SYSTEM SETTINGS</p>
-                        <ul class="setting-list">
-                            <li>
-                                <span>Notifications</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Auto Updates</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>ACCOUNT SETTINGS</p>
-                        <ul class="setting-list">
-                            <li>
-                                <span>Offline</span>
-                                <div class="switch">
-                                    <label><input type="checkbox"><span class="lever"></span></label>
-                                </div>
-                            </li>
-                            <li>
-                                <span>Location Permission</span>
-                                <div class="switch">
-                                    <label><input type="checkbox" checked><span class="lever"></span></label>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </aside>  --}}
-        <!-- #END# Right Sidebar -->
     </section>
 
     <section class="content">
@@ -364,8 +223,6 @@
     </section>
 
     <!-- Jquery Core Js -->
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="/js/jquery-3.3.1.js"></script>
     <script src="/admin/plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
@@ -391,16 +248,17 @@
     <script src="/admin/plugins/chartjs/Chart.bundle.js"></script>
 
     <!-- Flot Charts Plugin Js -->
-    <script src="/admin/plugins/flot-charts/jquery.flot.js"></script>
+    {{--  <script src="/admin/plugins/flot-charts/jquery.flot.js"></script>
     <script src="/admin/plugins/flot-charts/jquery.flot.resize.js"></script>
     <script src="/admin/plugins/flot-charts/jquery.flot.pie.js"></script>
     <script src="/admin/plugins/flot-charts/jquery.flot.categories.js"></script>
-    <script src="/admin/plugins/flot-charts/jquery.flot.time.js"></script>
+    <script src="/admin/plugins/flot-charts/jquery.flot.time.js"></script>  --}}
 
     <!-- Sparkline Chart Plugin Js -->
     <script src="/admin/plugins/jquery-sparkline/jquery.sparkline.js"></script>
 
     <!-- Custom Js -->
+    {{--  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>  --}}
     <script src="/admin/js/admin.js"></script>
     <script src="/admin/js/pages/index.js"></script>
     <script src="/admin/js/pages/ui/dialogs.js"></script>
@@ -417,9 +275,8 @@
 
     <!-- Demo Js -->
     <script src="/admin/js/demo.js"></script>
-
-    <script src="/js/jquery.dataTables.min.js"></script>
-    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="/DataTables/DT/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/DataTables/datatables.min.js"></script>
     @yield('js')
 </body>
 

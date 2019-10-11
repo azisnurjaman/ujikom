@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @include('flash')
@@ -18,7 +18,7 @@
                                 <th>Alamat Peminjam</th>
                                 <th>Telp Peminjam</th>
                                 <th>Foto Peminjam</th>
-                                <th colspan="3">Aksi</th>
+                                <th colspan="3"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,15 +30,19 @@
                      <td>{{ $data->peminjam_nama }}</td>
                       <td>{{ $data->peminjam_alamat }}</td>
                        <td>{{ $data->peminjam_tlpn }}</td>
-                    <td><img src="{{ asset('assets/img/peminjam/'.$data->peminjam_foto) }}" alt="" height="100px" width="150px"></td>         
+                    <td><img src="{{ asset('assets/img/peminjam/'.$data->peminjam_foto) }}" alt="" height="100px" width="150px"></td>    
+                    @role('admin')     
                     <td><a href="{{ route('peminjam.edit', $data->id) }}" class="btn btn-warning">Edit Data</a>
+                    @endrole
                     <td><a href="{{ route('peminjam.show', $data->id) }}" class="btn btn-info">Detail Data</a>
+                    @role('admin')
                     <td><form action="{{ route('peminjam.destroy', $data->id) }}" method="post">
                         @csrf
                         <input type="hidden" name="_method" value="DELETE">
                         <button class="btn btn -sm btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete?')">Hapus Data</button>
                     </form>
                     </td>
+                    @endrole
                 </tr>
                 @endforeach
                         </tbody>

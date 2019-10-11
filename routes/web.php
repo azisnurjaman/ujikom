@@ -18,7 +18,7 @@ Route::get('/', function () {
 //     return view('login');
 // });
 
-Route::group(['prefix' => 'backend'], function () {
+Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::get('/', function () {
         return view("home");
     });
@@ -35,3 +35,11 @@ Route::group(['prefix' => 'backend'], function () {
 });
 Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('buku/json', 'BukuController@json');
+Auth::routes();
+Route::get('/data-buku', 'BukuController@dataBuku');
+Route::get('/home', 'HomeController@index')->name('home');
+// Route::controller('buku', 'BukuController', [
+//     'anyData' => 'backend.buku.index',
+//     'getIndex' => 'buku',
+// ]);

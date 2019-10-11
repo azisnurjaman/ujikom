@@ -1,8 +1,9 @@
+@role('admin')
 @extends('layouts.dash')
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
                     <form action="{{ route('buku.store') }}" method="post" enctype="multipart/form-data">
@@ -25,7 +26,7 @@
                                     <div class="input-group">
                                         <div class="form-line">
                                             <b>Deskripsi Buku</b>
-                                            <textarea class="form-control no-resize" name="buku_deskripsi" id="ck" cols="30" rows="5" required></textarea>
+                                            <textarea class="ckeditor" name="buku_deskripsi" id="ck" cols="30" rows="5" required></textarea>
                                         </div>
                                     </div>
                                      <div class="input-group">  
@@ -49,7 +50,7 @@
                                             <input name="buku_tahun_terbit" type="date" class="form-control" required/>
                                         </div>   
                                     </div>
-                                    <div class="input-group">
+                                    <div class="form-group">
                                         <div class="form-line">
                                         <b>Kategori Buku</b>
                                         <select class="form-control" name="kategori_nama" id="1">
@@ -60,7 +61,7 @@
                                         </select>
                                         </div>
                                     </div>
-                                    <div class="input-group">
+                                    <div class="form-group">
                                         <div class="form-line">
                                         <b>Penerbit Buku</b>
                                         <select class="form-control" name="penerbit_nama" id="2">
@@ -104,3 +105,4 @@
         });
     </script>
 @endsection
+@endrole

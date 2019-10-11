@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @include('flash')
@@ -18,7 +18,9 @@
                             <th>Peminjam</th>
                             <th>Tanggal Peminjaman</th>
                             <th>Tanggal Harus Kembali Peminjaman</th>
+                            @role('admin')
                             <th colspan="2"></th>
+                            @endrole
                         </tr>
                     </thead>
                     <tbody>
@@ -31,6 +33,7 @@
                                 <td>{{ $data->peminjam->peminjam_nama }}</td>
                                 <td>{{ $data->peminjaman_tgl }}</td>
                                 <td>{{ $data->peminjaman_tgl_kembali }}</td>
+                                @role('admin')
                                 <td><a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                                 <td>
                                 <form action="{{ route('peminjaman.destroy', $data->id) }}" method="post">
@@ -39,6 +42,7 @@
                                     <button class="btn btn -sm btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete?')">Hapus Data</button>
                                 </form>
                                 </td>
+                                @endrole
                             </tr>
                         @endforeach
                     </tbody>

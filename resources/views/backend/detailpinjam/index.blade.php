@@ -1,12 +1,14 @@
 @extends('layouts.admin')
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @include('flash')
             <div class="card">
                 <br>
+                @role('admin')
                 <center><a href="{{ route('detailpinjam.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
+                @endrole
                     <br>
                     <div class="table-responsive">
                        <table class="table table-hover">
@@ -19,7 +21,9 @@
                                 <th>Detail Status Kembali</th>
                                 <th>Detail Tanggal Kembali</th>
                                 <th>Detail Denda</th>
+                                @role('admin')
                                 <th colspan="2"></th>
+                                @endrole
                             </tr>
                         </thead>
                         <tbody>
@@ -33,6 +37,7 @@
                                 <td>{{ $data->detail_status_kembali }}</td>
                                 <td>{{ $data->peminjaman->peminjaman_tgl_kembali }}</td>
                                 <td>{{ $data->detail_denda }}</td>
+                                @role('admin')
                                 <td><a href="{{ route('detailpinjam.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                                 <td><form action="{{ route('detailpinjam.destroy', $data->id) }}" method="post">
                                     @csrf
@@ -40,6 +45,7 @@
                                     <button class="btn btn -sm btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete?')">Hapus Data</button>
                                 </form>
                                 </td>
+                                @endrole
                             </tr>
                             @endforeach
                         </tbody>

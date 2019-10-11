@@ -6,10 +6,18 @@ use Illuminate\Http\Request;
 use App\Buku;
 use App\Penerbit;
 use App\Kategori;
-use Session;
 
 class BukuController extends Controller
 {
+    /**
+     * Process datatables ajax request.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function json()
+    {
+        return Datatables::of(Buku::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *
