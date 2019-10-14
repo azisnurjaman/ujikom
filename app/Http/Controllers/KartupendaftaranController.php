@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\KartuPendaftaran;
 use App\Petugas;
 use App\Peminjam;
+use Yajra\Datatables\Datatables;
 
 class KartupendaftaranController extends Controller
 {
+    public function json()
+    {
+        return Datatables::of(KartuPendaftaran::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *

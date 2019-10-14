@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Buku;
 use App\Penerbit;
 use App\Kategori;
+use Yajra\Datatables\Datatables;
 
 class BukuController extends Controller
 {

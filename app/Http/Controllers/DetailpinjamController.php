@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\DetailPinjam;
 use App\Buku;
 use App\Peminjaman;
+use Yajra\Datatables\Datatables;
 
 class DetailpinjamController extends Controller
 {
+    public function json()
+    {
+        return Datatables::of(DetailPinjam::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *

@@ -34,9 +34,16 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::resource('detailpinjam', 'DetailpinjamController');
 });
 Auth::routes(['register' => false]);
+
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('buku/json', 'BukuController@json');
-Auth::routes();
+Route::get('/buku/json', 'BukuController@json');
+Route::get('/detailpinjam/json', 'DetailpinjamController@json');
+Route::get('/kartupendaftaran/json', 'KartupendaftaranController@json');
+Route::get('/kategori/json', 'KategoriController@json');
+Route::get('/peminjaman/json', 'PeminjamanController@json');
+Route::get('/peminjam/json', 'PeminjamController@json');
+Route::get('/penerbit/json', 'PenerbitController@json');
+Route::get('/petugas/json', 'PetugasController@json');
 Route::get('/data-buku', 'BukuController@dataBuku');
 Route::get('/home', 'HomeController@index')->name('home');
 // Route::controller('buku', 'BukuController', [

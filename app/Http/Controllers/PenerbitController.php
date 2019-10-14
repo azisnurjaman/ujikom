@@ -17,6 +17,11 @@ class PenerbitController extends Controller
     {
         return Datatables::of(Penerbit::query())->make(true);
     }
+
+    public function json()
+    {
+        return Datatables::of(Penerbit::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *

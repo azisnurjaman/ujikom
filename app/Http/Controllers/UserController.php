@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Role;
 use Session;
+use Yajra\Datatables\Datatables;
 
 class UserController extends Controller
 {
+    public function json()
+    {
+        return Datatables::of(User::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *

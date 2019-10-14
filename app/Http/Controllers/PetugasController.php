@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Petugas;
 use Session;
+use Yajra\Datatables\Datatables;
 
 class PetugasController extends Controller
 {
+    public function json()
+    {
+        return Datatables::of(Petugas::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *

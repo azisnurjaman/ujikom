@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\Peminjam;
 use App\Peminjaman;
 use App\Petugas;
+use Yajra\Datatables\Datatables;
 
 class PeminjamanController extends Controller
 {
+    public function json()
+    {
+        return Datatables::of(Peminjaman::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *

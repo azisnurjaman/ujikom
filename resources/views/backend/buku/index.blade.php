@@ -66,6 +66,9 @@
     <script>
         $(document).ready(function() {
             $('#tab').DataTable();
+            "ordering": true,
+            "searching": true,
+            "responsive": true,
         });
     </script>
 @endsection

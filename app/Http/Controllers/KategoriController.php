@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Kategori;
 use Session;
+use Yajra\Datatables\Datatables;
 
 class KategoriController extends Controller
 {
+    public function json()
+    {
+        return Datatables::of(Kategori::all())->make(true);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,12 +21,6 @@ class KategoriController extends Controller
     public function index()
     {
         $kategori = Kategori::all();
-        $response = [
-            'success' => true,
-            'data' => $kategori,
-            'massage' => 'berhasil'
-
-        ];
         return view('backend.kategori.index', compact('kategori'));
     }
 
@@ -80,11 +79,6 @@ class KategoriController extends Controller
     public function edit($id)
     {
         $kategori = Kategori::findOrFail($id);
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit <b>"
-                . $kategori->kategori_nama . "</b>"
-        ]);
         return view('backend.kategori.edit', compact('kategori'));
     }
 
