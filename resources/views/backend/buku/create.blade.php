@@ -11,76 +11,79 @@
                         <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <br>
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <b>Kode Buku</b>
+                                    <div class="from-group-inner">
+                                            <label>Kode Buku</label>
                                             <input name="buku_kode" type="text" class="form-control" required/>
-                                        </div>
                                     </div>
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <b>Judul Buku</b>
+                                    <br>
+                                    <div class="from-group-inner">
+                                            <label>Judul Buku</label>
                                             <input name="buku_judul" type="text" class="form-control" required/>
-                                        </div>
                                     </div>
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <b>Deskripsi Buku</b>
+                                    <br>
+                                    <div class="from-group-inner">
+                                            <label>Deskripsi Buku</label>
                                             <textarea class="ckeditor" name="buku_deskripsi" id="ck" cols="30" rows="5" required></textarea>
-                                        </div>
                                     </div>
-                                     <div class="input-group">  
-                                        <div class="form-line">
-                                            <b>Jumlah Buku</b>
+                                    <br>
+                                     <div class="from-group-inner">  
+                                            <label>Jumlah Buku</label>
                                             <input class="form-control mobile-phone-number" type="number" name="buku_jumlah" required>
-                                        </div>
                                     </div>
-                                     <div class="input-group">
-                                        <div class="form-line">
-                                            <b>Pengarang Buku</b>
+                                    <br>
+                                    <div class="from-group-inner">
+                                            <label>Pengarang Buku</label>
                                             <input name="buku_pengarang" type="text" class="form-control" required/>
-                                        </div>
                                     </div>
-                                    <b>Tahun Terbit Buku</b>
-                                    <div class="input-group"> 
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">date_range</i>
-                                        </span>                               
-                                        <div class="form-line">
+                                    <br>
+                                    <div class="from-group-inner">
+                                            <label>Tahun Terbit Buku</label>                                
                                             <input name="buku_tahun_terbit" type="date" class="form-control" required/>
-                                        </div>   
                                     </div>
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                        <b>Kategori Buku</b>
-                                        <select class="form-control" name="kategori_nama" id="1">
-                                            <option value="">-- Please select --</option>
-                                            @foreach($kategori as $data)
-                                            <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
-                                            @endforeach
-                                        </select>
-                                        </div>
+                                    <br>   
+                                    <div class="form-group-inner">
+                                        <label>Kategori Buku</label>
+                                            <select class="form-control" name="kategori_nama" id="1" required>
+                                                <option value=""></option>
+                                                @foreach($kategori as $data)
+                                                <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
+                                                @endforeach
+                                            </select>
+                                            <div class="row">
+                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                            <div class="i-checks pull-left">
+                                                                                <label>
+																						<input type="radio" value="option1" name="a"> <i></i> Option one </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                            <div class="i-checks pull-left">
+                                                                                <label>
+																						<input type="radio" checked="" value="option2" name="a"> <i></i> Option two checked </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                        <b>Penerbit Buku</b>
-                                        <select class="form-control" name="penerbit_nama" id="2">
-                                            <option value="">-- Please select --</option>
-                                            @foreach($penerbit as $data)
-                                            <option value="{{ $data->id }}">{{ $data->penerbit_nama }}</option>
-                                            @endforeach
-                                        </select>
+                                    <div class="form-group-inner">
+                                        <label>Penerbit Buku</label>
+                                            <select class="form-control" name="penerbit_nama" id="2" required>
+                                                <option value=""></option>
+                                                @foreach($penerbit as $data)
+                                                <option value="{{ $data->id }}">{{ $data->penerbit_nama }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <br>
                             <div class="button-demo">
-                                <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
-                                <i class="material-icons">save</i>
-                                <span>Simpan Data</span>
+                                <button type="submit" class="btn btn-success btn-lg" onclick="return confirm('Are you sure you want to save?')">
+                                Simpan Data
                                 </button>
                             </div>
-                            <br>
                             </form>
                           </div>
                         </div>

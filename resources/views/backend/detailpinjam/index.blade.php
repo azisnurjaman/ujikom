@@ -1,19 +1,13 @@
-@extends('layouts.admin')
+@extends('layouts.dash')
 @section('content')
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            @include('flash')
-            <div class="card">
-                <br>
                 @role('admin')
-                <center><a href="{{ route('detailpinjam.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
+                <center><a class="btn btn-primary" href="{{ route('detailpinjam.create') }}">Tambah Data</a></center>
                 @endrole
                     <br>
                     <div class="table-responsive">
-                       <table class="table table-hover">
+                       <table class="table table-hover" id="tab" style="width:100%">
                         <thead>
-                        <tr class="bg-black">
+                        <tr class="bg-info">
                                 <th>No</th>
                                 <th>Kode Detail Peminjaman</th>
                                 <th>Peminjaman Kode</th>
@@ -22,7 +16,8 @@
                                 <th>Detail Tanggal Kembali</th>
                                 <th>Detail Denda</th>
                                 @role('admin')
-                                <th colspan="2"></th>
+                                <th></th>
+                                <th></th>
                                 @endrole
                             </tr>
                         </thead>
@@ -50,8 +45,8 @@
                             @endforeach
                         </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
-</div>
+                    </div>
+@endsection
+@section('js')
+
 @endsection

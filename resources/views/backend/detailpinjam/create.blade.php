@@ -11,36 +11,33 @@
                         <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <br>
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                            <b>Kode Detail Peminjaman</b>
+                                    <div class="form-input-inner">
+                                            <label>Kode Detail Peminjaman</label>
                                             <input name="detail_kode" type="text" class="form-control" required/>
-                                        </div>
                                     </div>
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                        <b>Kode Peminjaman</b>
+                                    <br>
+                                    <div class="form-input-inner">
+                                        <label>Kode Peminjaman</label>
                                         <select class="form-control" name="peminjaman_kode" id="1">
-                                            <option value="">-- Please select --</option>
+                                            <option value=""></option>
                                             @foreach($peminjaman as $data)
                                                 <option value="{{ $data->id }}">{{ $data->peminjaman_kode }}</option>
                                             @endforeach
                                         </select>
-                                        </div>
                                     </div>
-                                    <div class="input-group">
-                                        <div class="form-line">
-                                        <b>Judul Buku</b>
+                                    <br>
+                                    <div class="form-input-inner">
+                                        <label>Judul Buku</label>
                                         <select class="form-control" name="buku_judul" id="2">
-                                            <option value="">-- Please select --</option>
+                                            <option value=""></option>
                                             @foreach($buku as $data)
                                                 <option value="{{ $data->id }}">{{ $data->buku_judul }}</option>
                                             @endforeach
                                         </select>
-                                        </div>
                                     </div>
-                                    <b>Status Peminjaman</b>
-                                    <div class="form-group">
+                                    <br>
+                                    <label>Status Peminjaman</label>
+                                    <div class="form-group-inner">
                                         <input class="with-gap" type="radio" name="detail_status_kembali" id="exampleRadios1" value="Dipinjam">
                                         <label class="form-check-label" for="exampleRadios1">
                                             Dipinjam
@@ -49,35 +46,30 @@
                                         <label class="form-check-label" for="exampleRadios2">
                                             Selesai
                                         </label>
+                                        <hr>
                                     </div>
-                                    <b>Detail Tanggal Kembali</b>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">date_range</i>
-                                        </span>            
+                                    <label>Detail Tanggal Kembali</label>
+                                    <div class="form-input-inner">
                                         <select class="form-control" name="detail_tgl_kembali" id="3">
-                                            <option value="">-- Please select --</option>
+                                            <option value=""></option>
                                             @foreach($peminjaman as $data)
                                                 <option value="{{ $data->id }}">{{ $data->peminjaman_tgl_kembali }}</option>
                                             @endforeach
                                         </select>
                                     </div>
-                                    <b>Detail Denda</b>
-                                     <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">attach_money</i>
-                                            </span> 
-                                            <div class="form-line">
+                                    <br>
+                                    <label>Detail Denda</label>
+                                     <div class="form-input-inner">
                                                 <input name="detail_denda" type="text" class="form-control" required/>
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="button-demo">
                                 <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
-                                <i class="material-icons">save</i>
-                                <span>Simpan Data</span>
+                                Simpan Data
                                 </button>
                             </div>
                             <br>
