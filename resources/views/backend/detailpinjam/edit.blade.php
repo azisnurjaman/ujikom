@@ -12,15 +12,15 @@
                         <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <br>
-                                    <div class="input-group">
+                                    <div class="form-group-inner">
                                         <div class="form-line">
-                                            <b>Kode Detail Peminjaman</b>
+                                            <label>Kode Detail Peminjaman</label>
                                             <input name="detail_kode" type="text" class="form-control" required value="{{ $detailpinjam->detailpinjam_kode }}"/>
                                         </div>
                                     </div>
-                                    <div class="input-group">
+                                    <div class="form-group-inner">
                                         <div class="form-line">
-                                        <b>Kode Peminjaman</b>
+                                        <label>Kode Peminjaman</label>
                                         <select class="form-control" name="peminjaman_kode" id="1">
                                             @foreach($peminjaman as $data)
                                                 <option value="{{ $data->id }}">{{ $data->peminjaman_kode }}</option>
@@ -28,9 +28,9 @@
                                         </select>
                                         </div>
                                     </div>
-                                    <div class="input-group">
+                                    <div class="form-group-inner">
                                         <div class="form-line">
-                                        <b>Judul Buku</b>
+                                        <label>Judul Buku</label>
                                         <select class="form-control" name="buku_judul" id="2">
                                             @foreach($buku as $data)
                                                 <option value="{{ $data->id }}">{{ $data->buku_judul }}</option>
@@ -38,7 +38,7 @@
                                         </select>
                                         </div>
                                     </div>
-                                    <b>Status Peminjaman</b>
+                                    <label>Status Peminjaman</label>
                                     <div class="form-group">
                                         <input class="with-gap" <?php echo ($detailpinjam->detail_status_kembali=='Dipinjam')?'checked':'' ?> type="radio" name="detail_status_kembali" id="exampleRadios1" value="Dipinjam">
                                         <label class="form-check-label" for="exampleRadios1">
@@ -49,22 +49,16 @@
                                             Selesai
                                         </label>
                                     </div>
-                                    <b>Detail Tanggal Kembali</b>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons">date_range</i>
-                                        </span>            
+                                    <label>Detail Tanggal Kembali</label>
+                                    <div class="form-group-inner">           
                                         <select class="form-control" name="detail_tgl_kembali" id="3">
                                             @foreach($peminjaman as $data)
                                                 <option value="{{ $data->id }}">{{ $data->peminjaman_tgl_kembali }}</option>
                                             @endforeach
                                         </select>
                                     </div>
-                                    <b>Detail Denda</b>
-                                     <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">attach_money</i>
-                                            </span> 
+                                    <label>Detail Denda</label>
+                                     <div class="form-group-inner">
                                             <div class="form-line">
                                                 <input name="detail_denda" type="text" class="form-control" required value="{{ $detailpinjam->detail_denda }}"/>
                                             </div>
@@ -72,10 +66,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
                             <div class="button-demo">
                                 <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
-                                <i class="material-icons">save</i>
-                                <span>Simpan Data</span>
+                                Simpan Data
                                 </button>
                             </div>
                             <br>

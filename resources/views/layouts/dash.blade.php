@@ -78,6 +78,10 @@
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="/kialap/style.css">
+    <!-- DataTable
+        ============================================ -->
+    <link rel="stylesheet" type="text/css" href="/DataTables/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.min.css"/>
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="/kialap/css/responsive.css">
@@ -272,9 +276,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="breadcome-list single-page-breadcome">
                                 <div class="row">
-                                    <div class="table-responsive">
-                                        @yield('content')
-                                    </div>
+                                    @yield('content')
                                 </div>
                             </div>
                         </div>

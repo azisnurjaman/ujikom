@@ -67,6 +67,9 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="/kialap/css/responsive.css">
+    <!-- select2 CSS
+		============================================ -->
+    <link rel="stylesheet" href="/kialap/css/select2/select2.min.css">
     <!-- modernizr JS
 		============================================ -->
     <script src="/kialap/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -256,14 +259,17 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list single-page-breadcome">   
-                                @yield('content')                                    
-                           </div>
+                            <div class="breadcome-list single-page-breadcome">
+                                <div class="row">
+                                    @yield('content')
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
                         
 
      <!-- jquery
@@ -301,12 +307,7 @@
     <script src="/kialap/js/metisMenu/metisMenu-active.js"></script>
     <!-- data table JS
         ============================================ -->
-    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#tab').DataTable();
-    });
-    </script>
+    <script src="/ckeditor/ckeditor/ckeditor.js"></script>
     <!-- Chart JS
 		============================================ -->
     <script src="/kialap/js/chart/jquery.peity.min.js"></script>
@@ -314,6 +315,18 @@
     <!-- plugins JS
 		============================================ -->
     <script src="/kialap/js/plugins.js"></script>
+    <script type="text/javascript" src="/DataTables/js/jquery.dataTables.js"></script> 
+    <script type="text/javascript" src="/DataTables/datatables.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#tab').DataTable();
+        
+    });
+    </script>
+    <!-- select2 JS
+		============================================ -->
+    <script src="/kialap/js/select2/select2.full.min.js"></script>
+    <script src="/kialap/js/select2/select2-active.js"></script>
     <!-- main JS
 		============================================ -->
     <script src="/kialap/js/main.js"></script>

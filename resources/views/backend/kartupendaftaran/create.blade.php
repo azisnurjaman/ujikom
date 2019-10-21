@@ -10,49 +10,43 @@
                         <div class="row clearfix">
                                 <div class="col-sm-12">
                                     <br>
-                                        <div class="input-group">
-                                            <div class="form-line">
-                                                <b>Kode Kartu</b>
+                                        <div class="form-group-inner">
+                                            
+                                                <label>Kode Kartu</label>
                                                 <input name="kartupendaftaran_kode" type="text" class="form-control" required/>
-                                            </div>
+                                            
                                         </div>
-                                        <div class="input-group">
-                                            <div class="form-line">
-                                            <b>Nama Petugas</b>
+                                        <div class="form-group-inner">
+                                            
+                                            <label>Nama Petugas</label>
                                             <select class="form-control" name="petugas_nama" id="1">
                                                 <option value="">-- Please select --</option>
                                                 @foreach($petugas as $data)
                                                     <option value="{{ $data->id }}">{{ $data->petugas_nama }}</option>
                                                 @endforeach
                                             </select>
-                                            </div>
+                                            
                                         </div>
-                                        <div class="input-group">
-                                            <div class="form-line">
-                                            <b>Nama Peminjam</b>
+                                        <div class="form-group-inner">
+                                            
+                                            <label>Nama Peminjam</label>
                                             <select class="form-control" name="peminjam_nama" id="2">
                                                 <option value="">-- Please select --</option>
                                                 @foreach($peminjam as $data)
                                                     <option value="{{ $data->id }}">{{ $data->peminjam_nama }}</option>
                                                 @endforeach
                                             </select>
-                                            </div>
+                                            
                                         </div>
-                                        <b>Tanggal Pembuatan Kartu</b>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">date_range</i>
-                                            </span>            
+                                        <label>Tanggal Pembuatan Kartu</label>
+                                        <div class="form-group-inner">            
                                             <input name="kartu_tgl_pembuatan" type="date" class="form-control" required/>
                                         </div>
-                                        <b>Tanggal Akhir Kartu</b>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="material-icons">date_range</i>
-                                            </span>            
+                                        <label>Tanggal Akhir Kartu</label>
+                                        <div class="form-group-inner">            
                                             <input name="kartu_tgl_akhir" type="date" class="form-control" required/>
                                         </div>
-                                        <b>Status Kartu</b>
+                                        <label>Status Kartu</label>
                                         <div class="form-group">
                                             <input class="with-gap" type="radio" name="kartu_status_aktif" id="on" value="Aktif">
                                             <label class="form-check-label" for="on">
@@ -68,8 +62,7 @@
                             </div>
                             <div class="button-demo">
                                 <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
-                                <i class="material-icons">save</i>
-                                <span>Simpan Data</span>
+                                Simpan Data
                                 </button>
                             </div>
                             <br>

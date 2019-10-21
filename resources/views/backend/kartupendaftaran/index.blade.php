@@ -1,17 +1,16 @@
-@extends('layouts.admin')
+@extends('layouts.dash')
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @include('flash')
             <div class="card">
-                <br>
-                <center><a href="{{ route('kartupendaftaran.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
+                <center><a href="{{ route('kartupendaftaran.create') }}" class="btn btn-primary">Tambah Data</a></center>
                     <br>
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-hover" id="tab">
                         <thead>
-                            <tr class="bg-black">
+                            <tr class="bg-info">
                                 <th>No</th>
                                 <th>Kode kartu</th>
                                 <th>Petugas</th>
@@ -20,7 +19,8 @@
                                 <th>Tanggal Akhir Kartu</th>
                                 <th>Status Aktif Kartu</th>
                                 @role('admin')
-                                <th colspan="2" style="text-align: center;"></th>
+                                <th></th>
+                                <th></th>
                                 @endrole
                             </tr>
                         </thead>

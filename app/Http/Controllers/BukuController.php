@@ -111,7 +111,7 @@ class BukuController extends Controller
         $buku->kategori_kode = $request->kategori_nama;
         $buku->penerbit_kode = $request->penerbit_nama;
         $buku->save();
-        return redirect()->route('buku.index')->with('success', 'Berhasil diedit');;
+        return redirect()->route('buku.index')->with('edit', 'Berhasil diedit');;
     }
 
     /**
@@ -123,6 +123,6 @@ class BukuController extends Controller
     public function destroy($id)
     {
         $buku = Buku::destroy($id);
-        return redirect()->route('buku.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('buku.index')->with('delete', 'Berhasil dihapus');
     }
 }

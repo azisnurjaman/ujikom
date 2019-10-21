@@ -95,7 +95,7 @@ class KategoriController extends Controller
         $kategori->kategori_kode = $request->kategori_kode;
         $kategori->kategori_nama = $request->kategori_nama;
         $kategori->save();
-        return redirect()->route('kategori.index')->with('success', 'Berhasil diedit');;
+        return redirect()->route('kategori.index')->with('edit', 'Berhasil diedit');;
     }
 
     /**
@@ -107,6 +107,6 @@ class KategoriController extends Controller
     public function destroy($id)
     {
         $kategori = Kategori::destroy($id);
-        return redirect()->route('kategori.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('kategori.index')->with('delete', 'Berhasil dihapus');
     }
 }

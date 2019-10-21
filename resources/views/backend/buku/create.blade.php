@@ -1,5 +1,5 @@
 @role('admin')
-@extends('layouts.dash')
+@extends('layouts.admin')
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -49,22 +49,7 @@
                                                 <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
                                                 @endforeach
                                             </select>
-                                            <div class="row">
-                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                                            <div class="i-checks pull-left">
-                                                                                <label>
-																						<input type="radio" value="option1" name="a"> <i></i> Option one </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row">
-                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                                            <div class="i-checks pull-left">
-                                                                                <label>
-																						<input type="radio" checked="" value="option2" name="a"> <i></i> Option two checked </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                            
                                     </div>
                                     <div class="form-group-inner">
                                         <label>Penerbit Buku</label>

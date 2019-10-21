@@ -10,37 +10,37 @@
                                     <br>
                                     <div class="from-group-inner">
                                             <label>Kode Buku</label>
-                                            <input name="buku_kode" type="text" class="form-control" required readonly value="{{$buku->buku_kode}}"/>
+                                            <input name="buku_kode" type="text" class="form-control" required readonly disabled value="{{$buku->buku_kode}}"/>
                                     </div>
                                     <br>
                                     <div class="from-group-inner">
                                             <label>Judul Buku</label>
-                                            <input name="buku_judul" type="text" class="form-control" required readonly value="{{$buku->buku_judul}}"/>
+                                            <input name="buku_judul" type="text" class="form-control" required readonly disabled value="{{$buku->buku_judul}}"/>
                                     </div>
                                     <br>
                                     <div class="from-group-inner">
                                             <label>Deskripsi Buku</label>
-                                            <textarea class="ckeditor" name="buku_deskripsi" id="ck" cols="30" rows="5" required readonly>{{$buku->buku_deskripsi}}</textarea>
+                                            <textarea class="ckeditor" name="buku_deskripsi" id="ck" cols="30" rows="5" required readonly disabled>{{$buku->buku_deskripsi}}</textarea>
                                     </div>
                                     <br>
                                      <div class="from-group-inner">  
                                             <label>Jumlah Buku</label>
-                                            <input class="form-control mobile-phone-number" type="number" name="buku_jumlah" required readonly value="{{$buku->buku_jumlah}}"/>
+                                            <input class="form-control mobile-phone-number" type="number" name="buku_jumlah" required readonly disabled value="{{$buku->buku_jumlah}}"/>
                                     </div>
                                     <br>
                                     <div class="from-group-inner">
                                             <label>Pengarang Buku</label>
-                                            <input name="buku_pengarang" type="text" class="form-control" required readonly value="{{$buku->buku_pengarang}}"/>
+                                            <input name="buku_pengarang" type="text" class="form-control" required readonly disabled value="{{$buku->buku_pengarang}}"/>
                                     </div>
                                     <br>
                                     <div class="from-group-inner">
                                             <label>Tahun Terbit Buku</label>                                
-                                            <input name="buku_tahun_terbit" type="date" class="form-control" required readonly value="{{$buku->buku_tahun_terbit}}"/>
+                                            <input name="buku_tahun_terbit" type="date" class="form-control" required readonly disabled value="{{$buku->buku_tahun_terbit}}"/>
                                     </div>
                                     <br>   
                                     <div class="form-group-inner">
                                         <label>Kategori Buku</label>
-                                            <select class="form-control" name="kategori_nama" id="1" required readonly>
+                                            <select class="form-control" name="kategori_nama" id="1" required readonly disabled>
                                                 @foreach($kategori as $data)
                                                 <option value="{{ $data->id }}">{{ $data->kategori_nama }}</option>
                                                 @endforeach
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="form-group-inner">
                                         <label>Penerbit Buku</label>
-                                            <select class="form-control" name="penerbit_nama" id="2" required readonly>
+                                            <select class="form-control" name="penerbit_nama" id="2" required readonly disabled>
                                                 @foreach($penerbit as $data)
                                                 <option value="{{ $data->id }}">{{ $data->penerbit_nama }}</option>
                                                 @endforeach
