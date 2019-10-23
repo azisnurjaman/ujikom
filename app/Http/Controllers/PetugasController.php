@@ -90,7 +90,7 @@ class PetugasController extends Controller
         $petugas->petugas_kode = $request->petugas_kode;
         $petugas->petugas_nama = $request->petugas_nama;
         $petugas->save();
-        return redirect()->route('petugas.index')->with('success', 'Berhasil diedit');;
+        return redirect()->route('petugas.index')->with('edit', 'Berhasil diedit');;
     }
 
     /**
@@ -106,6 +106,6 @@ class PetugasController extends Controller
             "level" => "success",
             "message" => "berhasil mengedit"
         ]);
-        return redirect()->route('petugas.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('petugas.index')->with('delete', 'Berhasil dihapus');
     }
 }

@@ -47,14 +47,19 @@
                                         </div>
                                         <label>Status Kartu</label>
                                         <div class="form-group">
+                                            <div class="i-checks">
                                             <input class="with-gap" type="radio" <?php echo ($kartupendaftaran->kartu_status_aktif=='Aktif')?'checked':'' ?> name="kartu_status_aktif" id="on" value="Aktif">
                                             <label class="form-check-label" for="on">
                                                 Aktif
                                             </label>
+                                            </div>
+                                            <div class="i-checks">
                                             <input class="with-gap" type="radio" <?php echo ($kartupendaftaran->kartu_status_aktif=='Tidak Aktif')?'checked':'' ?> name="kartu_status_aktif" id="off" value="Tidak Aktif">
                                             <label class="m-l-20" for="off">
                                                 Tidak Aktif
                                             </label>
+                                            </div>
+                                            <hr>
                                         </div>
                                     </div>
                                 </div>

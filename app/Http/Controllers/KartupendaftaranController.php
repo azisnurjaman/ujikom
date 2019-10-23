@@ -99,7 +99,7 @@ class KartupendaftaranController extends Controller
         $kartupendaftaran->kartu_tanggal_pembuatan = $request->kartu_tgl_pembuatan;
         $kartupendaftaran->kartu_status_aktif = $request->kartu_status_aktif;
         $kartupendaftaran->save();
-        return redirect()->route('kartupendaftaran.index')->with('success', 'Berhasil diedit');
+        return redirect()->route('kartupendaftaran.index')->with('edit', 'Berhasil diedit');
     }
 
     /**
@@ -111,6 +111,6 @@ class KartupendaftaranController extends Controller
     public function destroy($id)
     {
         $kartupendaftaran = KartuPendaftaran::destroy($id);
-        return redirect()->route('kartupendaftaran.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('kartupendaftaran.index')->with('delete', 'Berhasil dihapus');
     }
 }

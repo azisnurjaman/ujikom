@@ -1,20 +1,20 @@
-@extends('layouts.admin')
+@extends('layouts.dash')
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <br>
-                <center><a href="{{ route('user.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
+                <center><a href="{{ route('user.create') }}" class="btn btn-primary">Tambah Data</a></center>
                 <br>
                 <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover" id="tab">
                     <thead>
-                        <tr class="bg-black">
+                        <tr class="bg-info">
                             <th>No</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th colspan="2"></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

@@ -127,7 +127,7 @@ class PeminjamController extends Controller
             $peminjam->peminjam_foto = $filename;
         }
         $peminjam->save();
-        return redirect()->route('peminjam.index')->with('success', 'Berhasil diedit');
+        return redirect()->route('peminjam.index')->with('edit', 'Berhasil diedit');
     }
 
     /**
@@ -139,6 +139,6 @@ class PeminjamController extends Controller
     public function destroy($id)
     {
         $peminjam = Peminjam::destroy($id);
-        return redirect()->route('peminjam.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('peminjam.index')->with('delete', 'Berhasil dihapus');
     }
 }

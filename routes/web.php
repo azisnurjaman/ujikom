@@ -14,13 +14,23 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/admin', function () {
-    return view('admin');
-});
+// Route::get('/admin', function () {
+//     return view('admin');
+// });
 // Route::get('/admin', function () {
 //     return view('login');
 // });
 
+Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], function () {
+    Route::get('/', function () {
+        return view("home");
+    });
+    // Route::resource('index', 'HomeController');
+    Route::resource('user', 'UserController');
+    Route::resource('petugas', 'PetugasController');
+    Route::resource('kategori', 'KategoriController');
+    Route::resource('penerbit', 'PenerbitController');
+});
 Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::get('/', function () {
         return view("home");
@@ -29,10 +39,6 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::resource('peminjaman', 'PeminjamanController');
     Route::resource('peminjam', 'PeminjamController');
     Route::resource('kartupendaftaran', 'KartupendaftaranController');
-    Route::resource('user', 'UserController');
-    Route::resource('petugas', 'PetugasController');
-    Route::resource('kategori', 'KategoriController');
-    Route::resource('penerbit', 'PenerbitController');
     Route::resource('buku', 'BukuController');
     Route::resource('detailpinjam', 'DetailpinjamController');
 });

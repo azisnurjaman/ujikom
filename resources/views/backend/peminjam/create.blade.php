@@ -7,43 +7,38 @@
                 <div class="card-body">
                     <form action="{{ route('peminjam.store') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        <div class="input-group">
-                            <b>Kode Peminjam</b>
-                            <div class="form-line">
+                        <div class="form-group-inner">
+                            <label>Kode Peminjam</label>
                                 <input required class="form-control" type="text" name="peminjam_kode">
-                            </div>
                         </div>
-                        <div class="input-group">
-                            <b>Nama Peminjam</b>
-                            <div class="form-line">
+                        <div class="form-group-inner">
+                            <label>Nama Peminjam</label>
                                 <input required class="form-control" type="text" name="peminjam_nama">
-                            </div>
                         </div>
-                        <div class="input-group">
-                            <b>Alamat Peminjam</b>
-                            <div class="form-line">
+                        <div class="form-group-inner">
+                            <label>Alamat Peminjam</label>
                                 <textarea required id="" class="form-control" name="peminjam_alamat" rows="10" cols="50"></textarea>
-                            </div>
                         </div>
-                        <b>Telp Peminjam</b>
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="material-icons">phone</i>
-                            </span>
-                            <div class="form-line">
+                        <label>Telp Peminjam</label>
+                        <div class="form-group-inner">
                                 <input required class="form-control" type="number" name="peminjam_telp">
-                            </div>
                         </div>
-                        <div class="input-group">
-                            <b>Foto</b>
-                            <div class="form-line">
-                                <input required type="file" class="form-control" name="peminjam_foto">
+                        <label>Foto</label>
+                        <div class="file-upload-inner ts-forms">
+                            <div class="input prepend-big-btn">
+                                <label class="icon-right" for="prepend-big-btn">
+                                    <i class="fa fa-download"></i>
+                                </label>
+                            <div class="file-button">
+                                Chose Photo
+                                <input required type="file" class="form-control" name="peminjam_foto" onchange="document.getElementById('prepend-big-btn').value = this.value;">
                             </div>
+                            <input type="text" readonly id="prepend-big-btn" disabled>
                         </div>
+                        <br>
                         <div class="button-demo">
                             <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
-                            <i class="material-icons">save</i>
-                            <span>Simpan Data</span>
+                            Simpan Data
                             </button>
                         </div>
                     </form>

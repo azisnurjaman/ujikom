@@ -12,24 +12,20 @@
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <br>
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <b>Kode Kategori</b>
+                                <div class="form-group-inner">
+                                        <label>Kode Kategori</label>
                                         <input name="kategori_kode" type="text" class="form-control" required value="{{$kategori->kategori_kode}}"/>
-                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <b>Nama Kategori</b>
+                                <div class="form-group-inner">
+                                        <label>Nama Kategori</label>
                                         <input name="kategori_nama" type="text" class="form-control" required value="{{$kategori->kategori_nama}}"/>
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div class="button-demo">
                             <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
-                            <i class="material-icons">save</i>
-                            <span>Simpan Data</span>
+                            Simpan Data
                             </button>
                         </div>
                     </form>

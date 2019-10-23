@@ -24,8 +24,10 @@
                                 <th>Jumlah Buku</th>
                                 <th>Tahun Terbit</th>
                                 <th></th>
+                                @role('admin')
                                 <th></th>
                                 <th></th>
+                                @endrole
                             </tr>
                         </thead>
                         <tbody>

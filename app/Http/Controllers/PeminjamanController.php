@@ -97,7 +97,7 @@ class PeminjamanController extends Controller
         $peminjaman->peminjaman_tgl = $request->peminjaman_tgl;
         $peminjaman->peminjaman_tgl_kembali = $request->peminjaman_tgl_kembali;
         $peminjaman->save();
-        return redirect()->route('peminjaman.index')->with('success', 'Berhasil ditambah');
+        return redirect()->route('peminjaman.index')->with('edit', 'Berhasil ditambah');
     }
 
     /**
@@ -109,6 +109,6 @@ class PeminjamanController extends Controller
     public function destroy($id)
     {
         $peminjaman = Peminjaman::destroy($id);
-        return redirect()->route('peminjaman.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('peminjaman.index')->with('delete', 'Berhasil dihapus');
     }
 }

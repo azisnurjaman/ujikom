@@ -39,15 +39,19 @@
                                         </div>
                                     </div>
                                     <label>Status Peminjaman</label>
-                                    <div class="form-group">
-                                        <input class="with-gap" <?php echo ($detailpinjam->detail_status_kembali=='Dipinjam')?'checked':'' ?> type="radio" name="detail_status_kembali" id="exampleRadios1" value="Dipinjam">
-                                        <label class="form-check-label" for="exampleRadios1">
-                                            Dipinjam
-                                        </label>
-                                        <input class="with-gap" <?php echo ($detailpinjam->detail_status_kembali=='Selesai')?'checked':'' ?> type="radio" name="detail_status_kembali" id="exampleRadios2" value="Selesai">
-                                        <label class="form-check-label" for="exampleRadios2">
-                                            Selesai
-                                        </label>
+                                    <div class="form-group-inner">
+                                        <div class="i-checks">
+                                            <input <?php echo ($detailpinjam->detail_status_kembali=='Dipinjam')?'checked':'' ?> type="radio" name="detail_status_kembali" id="exampleRadios1" value="Dipinjam">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Dipinjam
+                                            </label>
+                                        </div>
+                                        <div class="i-checks">
+                                            <input <?php echo ($detailpinjam->detail_status_kembali=='Selesai')?'checked':'' ?> type="radio" name="detail_status_kembali" id="exampleRadios2" value="Selesai">
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                Selesai
+                                            </label>
+                                        </div>
                                     </div>
                                     <label>Detail Tanggal Kembali</label>
                                     <div class="form-group-inner">           

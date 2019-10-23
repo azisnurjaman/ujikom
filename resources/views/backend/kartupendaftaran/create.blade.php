@@ -9,7 +9,6 @@
                         {{ csrf_field() }}
                         <div class="row clearfix">
                                 <div class="col-sm-12">
-                                    <br>
                                         <div class="form-group-inner">
                                             
                                                 <label>Kode Kartu</label>
@@ -48,14 +47,18 @@
                                         </div>
                                         <label>Status Kartu</label>
                                         <div class="form-group">
+                                            <div class="i-checks">
                                             <input class="with-gap" type="radio" name="kartu_status_aktif" id="on" value="Aktif">
                                             <label class="form-check-label" for="on">
                                                 Aktif
                                             </label>
+                                            </div>
+                                            <div class="i-checks">
                                             <input class="with-gap" type="radio" name="kartu_status_aktif" id="off" value="Tidak Aktif">
                                             <label class="m-l-20" for="off">
                                                 Tidak Aktif
                                             </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -1,5 +1,5 @@
 @role('admin')
-@extends('layouts.admin')
+@extends('layouts.dash')
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">

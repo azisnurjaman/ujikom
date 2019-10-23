@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Data Table | Kiaalap - Kiaalap Admin Template</title>
+    <title>Admin Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -83,8 +83,8 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="/kialap/img/logo/logo.png" alt="" /></a>
-                <strong><a href="index.html"><img src="/kialap/img/logo/logosn.png" alt="" /></a></strong>
+                <a href="/home"><img class="main-logo" src="/kialap/img/logo/logo.png" alt="" /></a>
+                <strong><a href="/home"><img src="/kialap/img/logo/logosn.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
@@ -142,7 +142,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="/kialap/img/logo/logo.png" alt="" /></a>
+                        <a href="/home"><img class="main-logo" src="/kialap/img/logo/logo.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -179,7 +179,7 @@
                                                         <li>
                                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                                                 onclick="event.preventDefault();
-                                                                                document.getElementById('logout-form').submit();"><span class="edu-icon edu-locked author-log-ic"></span>
+                                                                                document.getElementById('logout-form').submit(); return confirm('Are you sure you want to save?'); "><span class="edu-icon edu-locked author-log-ic"></span>
                                                                 {{ __('Logout') }}
                                                             </a>
 
@@ -320,7 +320,7 @@
     <script>
     $(document).ready(function() {
         $('#tab').DataTable();
-        
+        responsive: true
     });
     </script>
     <!-- select2 JS

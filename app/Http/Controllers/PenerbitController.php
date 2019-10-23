@@ -30,12 +30,6 @@ class PenerbitController extends Controller
     public function index()
     {
         $penerbit = Penerbit::all();
-        $response = [
-            'success' => true,
-            'data' => $penerbit,
-            'massage' => 'berhasil'
-
-        ];
         return view('backend.penerbit.index', compact('penerbit'));
     }
 
@@ -109,7 +103,7 @@ class PenerbitController extends Controller
         $penerbit->penerbit_alamat = $request->penerbit_alamat;
         $penerbit->penerbit_tlpn = $request->penerbit_telp;
         $penerbit->save();
-        return redirect()->route('penerbit.index')->with('success', 'Berhasil diedit');
+        return redirect()->route('penerbit.index')->with('edit', 'Berhasil diedit');
     }
 
     /**
@@ -121,6 +115,6 @@ class PenerbitController extends Controller
     public function destroy($id)
     {
         $penerbit = Penerbit::destroy($id);
-        return redirect()->route('penerbit.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('penerbit.index')->with('delete', 'Berhasil dihapus');
     }
 }

@@ -1,24 +1,27 @@
-@extends('layouts.admin')
+@extends('layouts.dash')
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @include('flash')
             <div class="card">
-                <br>
-                <center><a href="{{ route('peminjam.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
+                <center><a href="{{ route('peminjam.create') }}" class="btn btn-primary">Tambah Data</a></center>
                     <br>
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-hover" id="tab">
                         <thead>
-                        <tr class="bg-black">
+                        <tr class="bg-info">
                                 <th>No</th>
                                 <th>Kode Peminjam</th>
                                 <th>Nama Peminjam</th>
                                 <th>Alamat Peminjam</th>
                                 <th>Telp Peminjam</th>
                                 <th>Foto Peminjam</th>
-                                <th colspan="3"></th>
+                                <th></th>
+                                @role('admin')
+                                <th></th>
+                                <th></th>
+                                @endrole
                             </tr>
                         </thead>
                         <tbody>

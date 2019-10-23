@@ -38,14 +38,18 @@
                                     <br>
                                     <label>Status Peminjaman</label>
                                     <div class="form-group-inner">
-                                        <input class="with-gap" type="radio" name="detail_status_kembali" id="exampleRadios1" value="Dipinjam">
-                                        <label class="form-check-label" for="exampleRadios1">
-                                            Dipinjam
-                                        </label>
-                                        <input class="with-gap" type="radio" name="detail_status_kembali" id="exampleRadios2" value="Selesai">
-                                        <label class="form-check-label" for="exampleRadios2">
-                                            Selesai
-                                        </label>
+                                        <div class="i-checks">
+                                            <input type="radio" name="detail_status_kembali" id="exampleRadios1" value="Dipinjam">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Dipinjam
+                                            </label>
+                                        </div>
+                                        <div class="i-checks">
+                                        <input type="radio" name="detail_status_kembali" id="exampleRadios2" value="Selesai">
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                Selesai
+                                            </label>
+                                        </div>
                                         <hr>
                                     </div>
                                     <label>Detail Tanggal Kembali</label>

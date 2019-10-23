@@ -10,25 +10,20 @@
                         @csrf
                     <div class="row clearfix">
                                 <div class="col-sm-12">
-                                    <br>
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <b>Kode Petugas</b>
+                                    <div class="form-group-inner">
+                                            <label>Kode Petugas</label>
                                             <input name="petugas_kode" type="text" class="form-control" required/>
-                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <b>Nama Petugas</b>
+                                    <div class="form-group-inner">
+                                            <label>Nama Petugas</label>
                                             <input name="petugas_nama" type="text" class="form-control" required/>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <br>
                             <div class="button-demo">
                                 <button type="submit" class="btn btn-success  btn-lg waves-effect" onclick="return confirm('Are you sure you want to save?')">
-                                <i class="material-icons">save</i>
-                                <span>Simpan Data</span>
+                                Simpan Data
                                 </button>
                             </div>
                     </form>

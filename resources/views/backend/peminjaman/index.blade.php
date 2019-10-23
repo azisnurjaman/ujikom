@@ -1,17 +1,16 @@
-@extends('layouts.admin')
+@extends('layouts.dash')
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
             @include('flash')
             <div class="card">
-                <br>
-                <center><a href="{{ route('peminjaman.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
+                <center><a href="{{ route('peminjaman.create') }}" class="btn btn-primary">Tambah Data</a></center>
                     <br>
                     <div class="table-responsive">
-                <table class="table table-hover display responsive nowrap">
+                <table class="table table-hover" id="tab">
                     <thead>
-                        <tr class="bg-black">
+                        <tr class="bg-info">
                             <th>No</th>
                             <th>Kode Peminjaman</th>
                             <th>Petugas</th>
@@ -19,7 +18,8 @@
                             <th>Tanggal Peminjaman</th>
                             <th>Tanggal Harus Kembali Peminjaman</th>
                             @role('admin')
-                            <th colspan="2"></th>
+                            <th></th>
+                            <th></th>
                             @endrole
                         </tr>
                     </thead>

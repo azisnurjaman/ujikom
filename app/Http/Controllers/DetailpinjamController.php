@@ -99,7 +99,7 @@ class DetailpinjamController extends Controller
         $detailpinjam->peminjaman_kode = $request->peminjaman_kode;
         $detailpinjam->buku_kode = $request->buku_judul;
         $detailpinjam->save();
-        return redirect()->route('detailpinjam.index')->with('success', 'Berhasil diedit');;
+        return redirect()->route('detailpinjam.index')->with('edit', 'Berhasil diedit');;
     }
 
     /**
@@ -111,6 +111,6 @@ class DetailpinjamController extends Controller
     public function destroy($id)
     {
         $detailpinjam = DetailPinjam::destroy($id);
-        return redirect()->route('detailpinjam.index')->with('success', 'Berhasil dihapus');
+        return redirect()->route('detailpinjam.index')->with('delete', 'Berhasil dihapus');
     }
 }

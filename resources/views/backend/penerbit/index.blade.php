@@ -6,19 +6,20 @@
         <div class="col-md-12">
             @include('flash')
             <div class="card">
-                <br>
-                <center><a href="{{ route('penerbit.create') }}" class="btn bg-purple waves-effect">Tambah Data</a></center>
+                <center><a href="{{ route('penerbit.create') }}" class="btn btn-primary">Tambah Data</a></center>
                 <br>
                 <div class="table-responsive">
-                    <table class="table table-hover" id="dt">
+                    <table class="table table-hover" id="tab">
                         <thead>
-                            <tr class="bg-black">
+                            <tr class="bg-info">
                                 <th>No</th>
                                 <th>Kode Penerbit</th>
                                 <th>Nama Penerbit</th>
                                 <th>Alamat Penerbit</th>
                                 <th>Telp Penerbit</th>
-                                <th colspan="3"></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,12 +49,5 @@
         </div>
     </div>
 </div>
-@endsection
-@section('js')
-    <script>
-        $(document).ready(function() {
-            $('#dt').DataTable();
-        });
-    </script>
 @endsection
 @endrole
