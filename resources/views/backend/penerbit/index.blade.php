@@ -27,7 +27,7 @@
                             @foreach($penerbit as $data)
                             <tr>
                                 <td>{{ $no++ }}</td>
-                                <td>{{ $data->penerbit_kode }}</td>
+                                <td>PT{{ $data->penerbit_kode }}</td>
                                 <td>{{ $data->penerbit_nama }}</td>
                                 <td>{{ $data->penerbit_alamat }}</td>
                                 <td>{{ $data->penerbit_tlpn }}</td>

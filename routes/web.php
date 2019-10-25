@@ -17,9 +17,9 @@ Route::get('/', function () {
 // Route::get('/admin', function () {
 //     return view('admin');
 // });
-// Route::get('/admin', function () {
-//     return view('login');
-// });
+Route::get('/admin', function () {
+    return view('admin');
+});
 
 Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], function () {
     Route::get('/', function () {
@@ -30,6 +30,14 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], fu
     Route::resource('petugas', 'PetugasController');
     Route::resource('kategori', 'KategoriController');
     Route::resource('penerbit', 'PenerbitController');
+    Route::get('/buku/json', 'BukuController@json');
+    Route::get('/detailpinjam/json', 'DetailpinjamController@json');
+    Route::get('/kartupendaftaran/json', 'KartupendaftaranController@json');
+    Route::get('/kategori/json', 'KategoriController@json');
+    Route::get('/peminjaman/json', 'PeminjamanController@json');
+    Route::get('/peminjam/json', 'PeminjamController@json');
+    Route::get('/penerbit/json', 'PenerbitController@json');
+    Route::get('/petugas/json', 'PetugasController@json');
 });
 Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::get('/', function () {
@@ -44,16 +52,6 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
 });
 Auth::routes(['register' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/buku/json', 'BukuController@json');
-Route::get('/detailpinjam/json', 'DetailpinjamController@json');
-Route::get('/kartupendaftaran/json', 'KartupendaftaranController@json');
-Route::get('/kategori/json', 'KategoriController@json');
-Route::get('/peminjaman/json', 'PeminjamanController@json');
-Route::get('/peminjam/json', 'PeminjamController@json');
-Route::get('/penerbit/json', 'PenerbitController@json');
-Route::get('/petugas/json', 'PetugasController@json');
-Route::get('/data-buku', 'BukuController@dataBuku');
 Route::get('/home', 'HomeController@index')->name('home');
 // Route::controller('buku', 'BukuController', [
 //     'anyData' => 'backend.buku.index',

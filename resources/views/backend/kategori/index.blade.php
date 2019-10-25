@@ -24,7 +24,7 @@
                         @foreach($kategori as $data)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            <td>{{ $data->kategori_kode }}</td>
+                            <td>K{{ $data->kategori_kode }}</td>
                             <td>{{ $data->kategori_nama }}</td>       
                             <td><a href="{{ route('kategori.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                             <td><form action="{{ route('kategori.destroy', $data->id) }}" method="post">

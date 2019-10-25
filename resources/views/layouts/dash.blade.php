@@ -193,8 +193,7 @@
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li>
                                                             <a class="dropdown-item" href="{{ route('logout') }}"
-                                                                onclick="event.preventDefault();
-                                                                                document.getElementById('logout-form').submit(); return confirm('Are you sure you want to logout?'); "><span class="edu-icon edu-locked author-log-ic"></span>
+                                                               onclick="return logout(event);"><span class="edu-icon edu-locked author-log-ic"></span>
                                                                 {{ __('Logout') }}
                                                             </a>
 
@@ -376,7 +375,16 @@
         $('#tab').DataTable();
         responsive: true
     });
-</script>
+    </script>
+    <script type="text/javascript">
+    function logout(event){
+            event.preventDefault();
+            var check = confirm("Do you really want to logout?");
+            if(check){ 
+               document.getElementById('logout-form').submit();
+            }
+     }
+    </script>
     @yield('js')
 </body>
 

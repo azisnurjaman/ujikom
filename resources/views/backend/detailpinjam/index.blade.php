@@ -27,7 +27,7 @@
             @foreach($detailpinjam as $data)
             <tr>
                 <td>{{ $no++ }}</td>
-                <td>{{ $data->detailpinjam_kode }}</td>
+                <td>DP{{ $data->detailpinjam_kode }}</td>
                 <td>{{ $data->peminjaman->peminjaman_kode }}</td>
                 <td>{{ $data->buku->buku_judul }}</td>
                 <td>{{ $data->detail_status_kembali }}</td>

@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.dash')
 {{--  @section('css')
 <link href="/assets/php-pdo-datatable-server-side-class-master/assets/css/dataTables.bootstrap.css" rel="stylesheet">
 @endsection  --}}
@@ -13,7 +13,7 @@
                     </div>
                 @endif
                 <center>
-                    <img src="/admin/images/welcome.png" alt="" width="100%"> 
+                    <img src="/admin/images/Welcome-PNG-Transparent.png" alt="" width="90%"> 
                 </center>
             </div>
         </div>

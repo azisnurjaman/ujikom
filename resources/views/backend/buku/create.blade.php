@@ -21,6 +21,19 @@
                                             <input name="buku_judul" type="text" class="form-control" required/>
                                     </div>
                                     <br>
+                                    <div class="file-upload-inner ts-forms">
+                                        <div class="input prepend-big-btn">
+                                            <label class="icon-right" for="prepend-big-btn">
+                                                <i class="fa fa-download"></i>
+                                            </label>
+                                        <div class="file-button">
+                                            Chose Photo
+                                            <input required type="file" class="form-control" name="buku_foto" onchange="document.getElementById('prepend-big-btn').value = this.value;">
+                                        </div>
+                                        <input type="text" readonly id="prepend-big-btn" disabled>
+                                        </div>
+                                    </div>
+                                    <br>
                                     <div class="from-group-inner">
                                             <label>Deskripsi Buku</label>
                                             <textarea class="ckeditor" name="buku_deskripsi" id="ck" cols="30" rows="5" required></textarea>
@@ -78,7 +91,15 @@
 @endsection
 @section('js')
     <script>
-        CKEDITOR.replace( 'ck' );
+    var options = {
+        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+    };
+    </script>
+    <script>
+       CKEDITOR.replace('ck', options);
     </script>
     <script>
         $("#1").select2({

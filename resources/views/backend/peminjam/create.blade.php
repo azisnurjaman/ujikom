@@ -34,6 +34,7 @@
                                 <input required type="file" class="form-control" name="peminjam_foto" onchange="document.getElementById('prepend-big-btn').value = this.value;">
                             </div>
                             <input type="text" readonly id="prepend-big-btn" disabled>
+                            </div>
                         </div>
                         <br>
                         <div class="button-demo">

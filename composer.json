@@ -13,6 +13,8 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "santigarcor/laratrust": "5.2.*",
+        "unisharp/laravel-filemanager": "~1.8",
+        "uxweb/sweet-alert": "^2.0",
         "yajra/laravel-datatables-oracle": "^9.6"
     },
     "require-dev": {

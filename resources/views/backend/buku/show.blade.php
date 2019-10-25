@@ -7,6 +7,11 @@
                 <div class="card-body">
                         <div class="row clearfix">
                                 <div class="col-sm-12">
+                                    <div class="form-group-inner">  
+                                        <center>
+                                            <img src="{{ asset('assets/img/buku/'.$buku->buku_foto) }}" alt="" height="25%" width="25%">
+                                        </center>
+                                    </div>
                                     <br>
                                     <div class="from-group-inner">
                                             <label>Kode Buku</label>

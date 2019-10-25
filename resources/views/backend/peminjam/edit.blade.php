@@ -25,20 +25,21 @@
                         <div class="form-group-inner">
                                 <input class="form-control" type="number" name="peminjam_telp" value="{{$peminjam->peminjam_tlpn}}">
                         </div>       
-                            <label>Foto</label>  
-                                <span class="input-group-addon">
-                                    <img src="{{ asset('assets/img/peminjam/'.$peminjam->peminjam_foto) }}" alt="" height="100px" width="150px">
-                                </span> 
-                                <div class="file-upload-inner ts-forms">
+                        <label>Foto</label>  
+                        <span class="input-group-addon">
+                            <img src="{{ asset('assets/img/peminjam/'.$peminjam->peminjam_foto) }}" alt="" height="100px" width="150px">
+                        </span> 
+                        <div class="file-upload-inner ts-forms">
                             <div class="input prepend-big-btn">
                                 <label class="icon-right" for="prepend-big-btn">
                                     <i class="fa fa-download"></i>
                                 </label>
-                            <div class="file-button">
-                                Chose Photo
-                                <input required type="file" class="form-control" name="peminjam_foto" onchange="document.getElementById('prepend-big-btn').value = this.value;">
+                                    <div class="file-button">
+                                        Chose Photo
+                                        <input required type="file" class="form-control" name="peminjam_foto" onchange="document.getElementById('prepend-big-btn').value = this.value;">
+                                    </div>
+                                <input type="text" readonly id="prepend-big-btn" disabled>
                             </div>
-                            <input type="text" readonly id="prepend-big-btn" disabled>
                         </div>
                         <br>
                         <div class="button-demo">

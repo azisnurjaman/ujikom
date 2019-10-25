@@ -24,7 +24,7 @@
                         @foreach($petugas as $data)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            <td>{{ $data->petugas_kode }}</td>
+                            <td>PS{{ $data->petugas_kode }}</td>
                             <td>{{ $data->petugas_nama }}</td>       
                             <td><a href="{{ route('petugas.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                             <td>

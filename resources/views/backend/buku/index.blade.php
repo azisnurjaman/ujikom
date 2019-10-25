@@ -16,6 +16,7 @@
                             <tr class="bg-info">
                                 <th>No</th>
                                 <th>Kode Buku</th>
+                                <th>Thumbnail Buku</th>
                                 <th>Judul Buku</th>
                                 <th>Kategori</th>
                                 <th>Deskripsi Buku</th>
@@ -35,10 +36,11 @@
                             @foreach($buku as $data)
                             <tr>
                                 <td>{{ $no++ }}</td>
-                                <td>{{ $data->buku_kode }}</td>
+                                <td>B{{ $data->buku_kode }}</td>
+                                <td><img src="{{ asset('assets/img/buku/'.$data->buku_foto) }}" alt="" height="100px" width="150px"></td>
                                 <td>{{ $data->buku_judul }}</td>
                                 <td>{{ $data->kategori->kategori_nama }}</td>
-                                <td>{!! substr($data->buku_deskripsi, 0, 100) !!}</td>
+                                <td>{!! substr($data->buku_deskripsi, 0, 80) !!}</td>
                                 <td>{{ $data->buku_pengarang }}</td>
                                 <td>{{ $data->penerbit->penerbit_nama }}</td>
                                 <td>{{ $data->buku_jumlah }}</td>

@@ -29,10 +29,10 @@
                 @foreach($peminjam as $data)
                 <tr>
                     <td>{{ $no++ }}</td>
-                    <td>{{ $data->peminjam_kode }}</td>
-                     <td>{{ $data->peminjam_nama }}</td>
-                      <td>{{ $data->peminjam_alamat }}</td>
-                       <td>{{ $data->peminjam_tlpn }}</td>
+                    <td>PM{{ $data->peminjam_kode }}</td>
+                    <td>{{ $data->peminjam_nama }}</td>
+                    <td>{{ $data->peminjam_alamat }}</td>
+                    <td>{{ $data->peminjam_tlpn }}</td>
                     <td><img src="{{ asset('assets/img/peminjam/'.$data->peminjam_foto) }}" alt="" height="100px" width="150px"></td>    
                     @role('admin')     
                     <td><a href="{{ route('peminjam.edit', $data->id) }}" class="btn btn-warning">Edit Data</a>

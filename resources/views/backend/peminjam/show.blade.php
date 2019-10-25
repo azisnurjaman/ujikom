@@ -7,7 +7,7 @@
                 <div class="card-body">
                         <div class="form-group-inner">  
                             <center>
-                                <img src="{{ asset('assets/img/peminjam/'.$peminjam->peminjam_foto) }}" alt="" height="50%" width="100%">
+                                <img src="{{ asset('assets/img/peminjam/'.$peminjam->peminjam_foto) }}" alt="" height="50%" width="50%">
                             </center>
                         </div>
                         <div class="form-group-inner">

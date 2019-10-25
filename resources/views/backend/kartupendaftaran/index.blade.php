@@ -29,7 +29,7 @@
                             @foreach($kartupendaftaran as $data)
                             <tr>
                                 <td>{{ $no++ }}</td>
-                                <td>{{ $data->kartupendaftaran_kode }}</td>
+                                <td>KP{{ $data->kartupendaftaran_kode }}</td>
                                 <td>{{ $data->petugas->petugas_nama }}</td>
                                 <td>{{ $data->peminjam->peminjam_nama }}</td>
                                 <td>{{ $data->kartu_tanggal_pembuatan }}</td>

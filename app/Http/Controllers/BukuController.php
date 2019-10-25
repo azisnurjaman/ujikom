@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Buku;
 use App\Penerbit;
 use App\Kategori;
+use File;
 use Yajra\Datatables\Datatables;
 
 class BukuController extends Controller
@@ -60,6 +61,13 @@ class BukuController extends Controller
         $buku->buku_deskripsi = $request->buku_deskripsi;
         $buku->kategori_kode = $request->kategori_nama;
         $buku->penerbit_kode = $request->penerbit_nama;
+        if ($request->hasFile('buku_foto')) {
+            $file = $request->file('buku_foto');
+            $path = public_path() . '/assets/img/buku/';
+            $filename = str_random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($path, $filename);
+            $buku->buku_foto = $filename;
+        }
         $buku->save();
         return redirect()->route('buku.index')->with('success', 'Berhasil ditambah');
     }
@@ -110,6 +118,22 @@ class BukuController extends Controller
         $buku->buku_deskripsi = $request->buku_deskripsi;
         $buku->kategori_kode = $request->kategori_nama;
         $buku->penerbit_kode = $request->penerbit_nama;
+        if ($request->hasFile('buku_foto')) {
+            $file = $request->file('buku_foto');
+            $path = public_path() . '/assets/img/buku/';
+            $filename = str_random(6) . '_' . $file->getClientOriginalName();
+            $upload = $file->move($path, $filename);
+
+            if ($buku->buku_foto) {
+                $old_foto = $buku->buku_foto;
+                $filepath = public_path() . '/assets/img/buku/' . $buku->buku_foto;
+                try {
+                    File::delete($filepath);
+                } catch (FileNotFoundException $e) {
+                }
+            }
+            $buku->buku_foto = $filename;
+        }
         $buku->save();
         return redirect()->route('buku.index')->with('edit', 'Berhasil diedit');;
     }

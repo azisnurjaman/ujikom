@@ -60,6 +60,7 @@
                                             </label>
                                             </div>
                                         </div>
+                                        <hr>
                                     </div>
                                 </div>
                             </div>

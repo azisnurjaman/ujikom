@@ -28,7 +28,7 @@
                         @foreach($peminjaman as $data)
                             <tr>
                                 <td>{{ $no++ }}</td>
-                                <td>{{ $data->peminjaman_kode }}</td>
+                                <td>PN{{ $data->peminjaman_kode }}</td>
                                 <td>{{ $data->petugas->petugas_nama }}</td>
                                 <td>{{ $data->peminjam->peminjam_nama }}</td>
                                 <td>{{ $data->peminjaman_tgl }}</td>

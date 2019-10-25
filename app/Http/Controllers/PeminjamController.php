@@ -109,7 +109,6 @@ class PeminjamController extends Controller
         $peminjam->peminjam_nama = $request->peminjam_nama;
         $peminjam->peminjam_alamat = $request->peminjam_alamat;
         $peminjam->peminjam_tlpn = $request->peminjam_telp;
-
         if ($request->hasFile('peminjam_foto')) {
             $file = $request->file('peminjam_foto');
             $path = public_path() . '/assets/img/peminjam/';

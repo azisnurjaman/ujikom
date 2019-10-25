@@ -323,6 +323,15 @@
         responsive: true
     });
     </script>
+    <script type="text/javascript">
+    function logout(event){
+            event.preventDefault();
+            var check = confirm("Do you really want to logout?");
+            if(check){ 
+               document.getElementById('logout-form').submit();
+            }
+     }
+    </script>
     <!-- select2 JS
 		============================================ -->
     <script src="/kialap/js/select2/select2.full.min.js"></script>
