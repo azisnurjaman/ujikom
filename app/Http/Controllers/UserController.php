@@ -22,12 +22,7 @@ class UserController extends Controller
     public function index()
     {
         $user = User::all();
-        $role = Role::all();
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil menampilkan"
-        ]);
-        return view('backend.user.index', compact('user', 'role'));
+        return view('backend.user.index', compact('user'));
     }
 
     /**
@@ -48,16 +43,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->save();
+        // $user = new User;
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = bcrypt($request->password);
+        // $user->save();
 
-        $role = Role::where('name', 'superadmin')->first();
-        $user->attachRole($role);
+        // $role = Role::where('name', 'superadmin')->first();
+        // $user->attachRole($role);
 
-        return redirect()->route('user.index');
+        // return redirect()->route('user.index');
     }
 
     /**
@@ -68,21 +63,21 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::findOrFail($id);
-        // if (!$user) {
-        //     $response = [
-        //         'success' => false,
-        //         'data' => 'gagal menampilkan',
-        //         'massage' => 'data tidak di temukan'
-        //     ];
-        //     return response()->json($response, 404);
-        // }
-        // $response = [
-        //     'success' => true,
-        //     'data' => $user,
-        //     'massage' => 'berhasil menampilkan.'
-        // ];
-        return response()->json($response, 200);
+        // $user = User::findOrFail($id);
+        // // if (!$user) {
+        // //     $response = [
+        // //         'success' => false,
+        // //         'data' => 'gagal menampilkan',
+        // //         'massage' => 'data tidak di temukan'
+        // //     ];
+        // //     return response()->json($response, 404);
+        // // }
+        // // $response = [
+        // //     'success' => true,
+        // //     'data' => $user,
+        // //     'massage' => 'berhasil menampilkan.'
+        // // ];
+        // return response()->json($response, 200);
     }
 
     /**
@@ -93,12 +88,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil menampilkan"
-        ]);
-        return view('backend.user.edit', compact('user'));
+        // $user = User::findOrFail($id);
+        // Session::flash("flash_notification", [
+        //     "level" => "success",
+        //     "message" => "berhasil menampilkan"
+        // ]);
+        // return view('backend.user.edit', compact('user'));
     }
 
     /**
@@ -110,16 +105,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->save();
+        // $user = User::findOrFail($id);
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = bcrypt($request->password);
+        // $user->save();
 
-        $role = Role::where('name', 'peminjam')->first();
-        $user->attachRole($role);
+        // $role = Role::where('name', 'peminjam')->first();
+        // $user->attachRole($role);
 
-        return response()->json('berhasil');
+        // return response()->json('berhasil');
     }
 
     /**
@@ -131,11 +126,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::findOrFail($id)->delete();
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil menampilkan"
-        ]);
-        return response()->json($response, 200);
+        return redirect()->route('user.index');
 
     }
 }

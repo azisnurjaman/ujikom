@@ -21,7 +21,7 @@
                         </div>
                         <label>Telp Peminjam</label>
                         <div class="form-group-inner">
-                                <input required class="form-control" type="number" name="peminjam_telp">
+                                <input required class="form-control" type="text" name="peminjam_telp">
                         </div>
                         <label>Foto</label>
                         <div class="file-upload-inner ts-forms">

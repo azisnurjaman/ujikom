@@ -26,8 +26,8 @@
                             <td>{{ $no++ }}</td>
                             <td>K{{ $data->kategori_kode }}</td>
                             <td>{{ $data->kategori_nama }}</td>       
-                            <td><a href="{{ route('kategori.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
-                            <td><form action="{{ route('kategori.destroy', $data->id) }}" method="post">
+                            <td style="text-align:center"><a href="{{ route('kategori.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
+                            <td style="text-align:center"><form action="{{ route('kategori.destroy', $data->id) }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button class="btn btn -sm btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete?')">Hapus Data</button>

@@ -26,8 +26,8 @@
                             <td>{{ $no++ }}</td>
                             <td>PS{{ $data->petugas_kode }}</td>
                             <td>{{ $data->petugas_nama }}</td>       
-                            <td><a href="{{ route('petugas.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
-                            <td>
+                            <td style="text-align:center"><a href="{{ route('petugas.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
+                            <td style="text-align:center">
                                 <form action="{{ route('petugas.destroy', $data->id) }}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">

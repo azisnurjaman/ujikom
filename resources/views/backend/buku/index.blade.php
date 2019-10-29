@@ -46,11 +46,11 @@
                                 <td>{{ $data->buku_jumlah }}</td>
                                 <td>{{ $data->buku_tahun_terbit }}</td>
                                 @role('admin')
-                                <td><a href="{{ route('buku.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
+                                <td style="text-align:center"><a href="{{ route('buku.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
                                 @endrole
-                                <td><a href="{{ route('buku.show', $data->id) }}" class="btn btn-info">Detail Data</a></td>
+                                <td style="text-align:center"><a href="{{ route('buku.show', $data->id) }}" class="btn btn-info">Detail Data</a></td>
                                 @role('admin')
-                                <td>
+                                <td style="text-align:center">
                                     <form action="{{ route('buku.destroy', $data->id) }}" method="post">
                                         @csrf
                                         <input type="hidden" name="_method" value="DELETE">

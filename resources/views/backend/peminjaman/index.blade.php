@@ -34,8 +34,8 @@
                                 <td>{{ $data->peminjaman_tgl }}</td>
                                 <td>{{ $data->peminjaman_tgl_kembali }}</td>
                                 @role('admin')
-                                <td><a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
-                                <td>
+                                <td style="text-align:center"><a href="{{ route('peminjaman.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
+                                <td style="text-align:center">
                                 <form action="{{ route('peminjaman.destroy', $data->id) }}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">

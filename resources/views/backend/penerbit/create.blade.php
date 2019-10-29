@@ -24,7 +24,7 @@
                                     </div>
                                     <label>Telepon Penerbit</label>
                                      <div class="form-group-inner">  
-                                            <input class="form-control mobile-phone-number" type="number" name="penerbit_telp" required>
+                                            <input class="form-control mobile-phone-number" type="text" name="penerbit_telp" required>
                                         
                                     </div>
                                 </div>

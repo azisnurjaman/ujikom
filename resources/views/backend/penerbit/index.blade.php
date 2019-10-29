@@ -31,9 +31,9 @@
                                 <td>{{ $data->penerbit_nama }}</td>
                                 <td>{{ $data->penerbit_alamat }}</td>
                                 <td>{{ $data->penerbit_tlpn }}</td>
-                                <td><a href="{{ route('penerbit.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
-                                <td><a href="{{ route('penerbit.show', $data->id) }}" class="btn btn-info">Detail Data</a></td>
-                                <td>
+                                <td style="text-align:center"><a href="{{ route('penerbit.edit', $data->id) }}" class="btn btn-warning">Edit Data</a></td>
+                                <td style="text-align:center"><a href="{{ route('penerbit.show', $data->id) }}" class="btn btn-info">Detail Data</a></td>
+                                <td style="text-align:center">
                                     <form action="{{ route('penerbit.destroy', $data->id) }}" method="post">
                                     @csrf
                                     <input type="hidden" name="_method" value="DELETE">

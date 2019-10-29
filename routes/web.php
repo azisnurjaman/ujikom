@@ -50,7 +50,7 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::resource('buku', 'BukuController');
     Route::resource('detailpinjam', 'DetailpinjamController');
 });
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 // Route::controller('buku', 'BukuController', [

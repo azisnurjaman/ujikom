@@ -102,10 +102,6 @@ class PetugasController extends Controller
     public function destroy($id)
     {
         $petugas = Petugas::destroy($id);
-        Session::flash("flash_notification", [
-            "level" => "success",
-            "message" => "berhasil mengedit"
-        ]);
-        return redirect()->route('petugas.index')->with('delete', 'Berhasil dihapus');
+        return redirect()->route('petugas.index');
     }
 }

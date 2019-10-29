@@ -25,7 +25,7 @@
                                     </div>
                                      <div class="form-group-inner">
                                             <label>Telepon Penerbit</label>
-                                            <input class="form-control mobile-phone-number" type="number" name="penerbit_telp" required value="{{ $penerbit->penerbit_tlpn }}">
+                                            <input class="form-control mobile-phone-number" type="text" name="penerbit_telp" required value="{{ $penerbit->penerbit_tlpn }}">
                                     </div>
                                 </div>
                             </div>

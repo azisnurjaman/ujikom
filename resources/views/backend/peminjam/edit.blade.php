@@ -23,7 +23,7 @@
                         </div>
                         <label>Telp Peminjam</label>
                         <div class="form-group-inner">
-                                <input class="form-control" type="number" name="peminjam_telp" value="{{$peminjam->peminjam_tlpn}}">
+                                <input class="form-control" type="text" name="peminjam_telp" value="{{$peminjam->peminjam_tlpn}}">
                         </div>       
                         <label>Foto</label>  
                         <span class="input-group-addon">

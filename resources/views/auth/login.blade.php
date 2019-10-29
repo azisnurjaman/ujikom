@@ -46,12 +46,20 @@
             {{ __('Login') }}
         </button>
     </div>
-
-    {{--  
-        <a class="txt1" href="/login/#">
-            Forgot Password?
-        </a>
+    {{--  <div class="text-center p-t-25">
+        @if (Route::has('register'))
+            <a class="txt1" href="{{ route('register') }}">
+                {{ __('Register') }}
+            </a>
+        @endif
     </div>  --}}
+    <div class="text-center p-t-25">
+        @if (Route::has('register'))
+            <a class="txt1" href="{{ route('register') }}">
+                {{ __('Register') }}
+            </a>
+        @endif
+    </div>
     <div class="text-center p-t-25">
     @if (Route::has('password.request'))
         <a class="txt1" href="{{ route('password.request') }}">

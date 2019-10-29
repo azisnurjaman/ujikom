@@ -138,6 +138,6 @@ class PeminjamController extends Controller
     public function destroy($id)
     {
         $peminjam = Peminjam::destroy($id);
-        return redirect()->route('peminjam.index')->with('delete', 'Berhasil dihapus');
+        return redirect()->route('peminjam.index');
     }
 }

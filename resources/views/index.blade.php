@@ -62,26 +62,26 @@
 				<div class="container">
 					<div class="row fullscreen d-flex align-items-center justify-content-start">
 						<div class="banner-content col-lg-7">
-							<h5 class="text-white text-uppercase">Developer : Azis Nurjaman</h5>
 							<h1 class="text-uppercase">
                 borrowing books
               </h1>
               <p class="text-white pt-20 pb-20">
 								Selamat datang di website peminjaman buku
 							</p>
+							@guest
               @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}" class="primary-btn text-uppercase">Home</a>
                     @else
                         <a href="{{ route('login') }}" class="primary-btn text-uppercase">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="primary-btn text-uppercase">Register</a>
-                        @endif
+										@if (Route::has('register'))
+												<a href="{{ route('register') }}" class="primary-btn text-uppercase">Register</a>
+										@endif
                     @endauth
-                </div>
-            @endif
+								</div>
+							@endif
+							@endguest
 						</div>
 						<div class="col-lg-5 banner-right">
 							<img class="img-fluid" src="/book/img/header-img.png" alt="">

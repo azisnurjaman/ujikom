@@ -115,6 +115,6 @@ class PenerbitController extends Controller
     public function destroy($id)
     {
         $penerbit = Penerbit::destroy($id);
-        return redirect()->route('penerbit.index')->with('delete', 'Berhasil dihapus');
+        return redirect()->route('penerbit.index');
     }
 }
