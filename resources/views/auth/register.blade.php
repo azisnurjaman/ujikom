@@ -1,9 +1,13 @@
 @extends('layouts.login')
-
+@section('head')
+    <title>Register</title>
+@endsection
 @section('content')
 <form method="POST" action="{{ route('register') }}">
     @csrf
-
+    <span class="login100-form-title p-b-34 p-t-27">
+        {{ __('Register') }}
+    </span>
     <div class="wrap-input100 validate-input">
             <input id="name" placeholder="Name" type="text" class="input100 @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name">
             @error('name')
