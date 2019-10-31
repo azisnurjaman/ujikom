@@ -29,7 +29,6 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], fu
     Route::resource('petugas', 'PetugasController');
     Route::resource('kategori', 'KategoriController');
     Route::resource('penerbit', 'PenerbitController');
-    Route::resource('kartupendaftaran', 'KartupendaftaranController');
     Route::resource('detailpinjam', 'DetailpinjamController');
     // Route::get('peminjaman', 'PeminjamanController');
     // Route::get('peminjam', 'PeminjamController');
@@ -53,13 +52,8 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::resource('peminjaman', 'PeminjamanController');
     Route::resource('peminjam', 'PeminjamController');
     Route::resource('buku', 'BukuController');
+    Route::resource('kartupendaftaran', 'KartupendaftaranController');
     Route::get('detailpinjam', 'DetailpinjamController@index');
-});
-Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Peminjam']], function () {
-    Route::get('/', function () {
-        return view("home");
-    });
-    Route::get('kartupendaftaran', 'KartupendaftaranController@index');
 });
 Auth::routes(['register' => true]);
 

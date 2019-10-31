@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\KartuPendaftaran;
 use App\Petugas;
 use App\Peminjam;
+use Auth;
 use Yajra\Datatables\Datatables;
 
 class KartupendaftaranController extends Controller
@@ -35,7 +36,11 @@ class KartupendaftaranController extends Controller
         $petugas = Petugas::all();
         $kartupendaftaran = KartuPendaftaran::all();
         $peminjam = Peminjam::all();
-        return view('backend.kartupendaftaran.create', compact('kartupendaftaran', 'petugas', 'peminjam'));
+        if (Auth::user()->id == ['role:admin']) {
+            return view('backend.kartupendaftaran.create', compact('kartupendaftaran', 'petugas', 'peminjam'));
+        } else {
+            return view('403');
+        }
     }
 
     /**
@@ -79,7 +84,11 @@ class KartupendaftaranController extends Controller
         $petugas = Petugas::all();
         $kartupendaftaran = KartuPendaftaran::findOrFail($id);
         $peminjam = Peminjam::all();
-        return view('backend.kartupendaftaran.edit', compact('kartupendaftaran', 'petugas', 'peminjam'));
+        if (Auth::user()->id == ['role:admin']) {
+            return view('backend.kartupendaftaran.edit', compact('kartupendaftaran', 'petugas', 'peminjam'));
+        } else {
+            return view('403');
+        }
     }
 
     /**

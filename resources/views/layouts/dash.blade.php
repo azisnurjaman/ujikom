@@ -119,11 +119,9 @@
                             <li>
                                 <a href="/backend/detailpinjam">Detail Pinjam</a>
                             </li>
-                            @role('Peminjam')
                             <li>
                                 <a href="/backend/kartupendaftaran">Kartu Pendaftaran</a>
                             </li>
-                            @endrole
                             @role('admin')
                             <li>
                                 <a href="/backend/kategori">Kategori</a>
