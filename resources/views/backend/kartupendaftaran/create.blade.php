@@ -1,4 +1,5 @@
 @extends('layouts.dash')
+@role('admin')
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -77,6 +78,7 @@
                     </div>
                   </div>
 @endsection
+@endrole
 @section('js')
     <script>
         $("#3").select2({

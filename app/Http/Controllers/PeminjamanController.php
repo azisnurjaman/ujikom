@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Peminjam;
 use App\Peminjaman;
 use App\Petugas;
+use Auth;
 use Yajra\Datatables\Datatables;
 
 class PeminjamanController extends Controller
@@ -78,7 +79,11 @@ class PeminjamanController extends Controller
         $petugas = Petugas::all();
         $peminjaman = Peminjaman::findOrFail($id);
         $peminjam = Peminjam::all();
-        return view('backend.peminjaman.edit', compact('peminjaman', 'petugas', 'peminjam'));
+        if (Auth::user()->id == ['role:admin']) {
+            return view('backend.peminjaman.edit', compact('peminjaman', 'petugas', 'peminjam'));
+        } else {
+            return view('403');
+        }
     }
 
     /**

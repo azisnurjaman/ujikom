@@ -18,7 +18,7 @@ class CreateBukusTable extends Migration
             $table->String('buku_kode')->unique();
             $table->string('buku_judul');
             $table->String('buku_foto');
-            $table->bigInteger('buku_jumlah');
+            $table->string('buku_jumlah');
             $table->text('buku_deskripsi');
             $table->string('buku_pengarang');
             $table->Date('buku_tahun_terbit');

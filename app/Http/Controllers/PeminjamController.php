@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Peminjam;
 use Session;
+use Auth;
 use File;
 use Yajra\Datatables\Datatables;
 
@@ -36,7 +37,11 @@ class PeminjamController extends Controller
      */
     public function create()
     {
-        return view('backend.peminjam.create');
+        if (Auth::user()->id == ['role:admin']) {
+            return view('backend.peminjam.create');
+        } else {
+            return view('403');
+        }  
     }
 
     /**
@@ -92,7 +97,11 @@ class PeminjamController extends Controller
     public function edit($id)
     {
         $peminjam = Peminjam::findOrFail($id);
-        return view('backend.peminjam.edit', compact('peminjam'));
+        if (Auth::user()->id == ['role:admin']) {
+            return view('backend.peminjam.edit', compact('peminjam'));
+        } else {
+            return view('403');
+        }
     }
 
     /**

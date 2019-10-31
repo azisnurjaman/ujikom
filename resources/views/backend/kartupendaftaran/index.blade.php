@@ -5,7 +5,9 @@
         <div class="col-md-12">
             @include('flash')
             <div class="card">
+                @role('admin')
                 <center><a href="{{ route('kartupendaftaran.create') }}" class="btn btn-primary">Tambah Data</a></center>
+                @endrole
                     <br>
                     <div class="table-responsive">
                         <table class="table table-hover" id="tab">

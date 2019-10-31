@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+
 	<html lang="zxx" class="no-js">
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -37,24 +37,9 @@
 				      <div id="logo">
 				        <a href="/"><img src="/book/img/logo.png" alt="" title="" /></a>
 				      </div>
-				      {{--  <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="/book/#home">Home</a></li>
-				          <li><a href="/book/#about">About</a></li>
-				          <li><a href="/book/#fact">Fact</a></li>
-				          <li><a href="/book/#price">Price</a></li>
-				          <li><a href="/book/#course">Course</a></li>
-				          <li class="menu-has-children"><a href="/book/">Pages</a>
-				            <ul>
-				              <li><a href="/book/generic.html">Generic</a></li>
-				              <li><a href="/book/elements.html">Elements</a></li>
-				            </ul>
-				          </li>
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		  --}}
 			    	</div>
 			    </div>
-			  </header><!-- #header -->
+			  </header>
 
 
 			<!-- start banner Area -->
@@ -68,7 +53,6 @@
               <p class="text-white pt-20 pb-20">
 								Selamat datang di website peminjaman buku
 							</p>
-							@guest
               @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -81,7 +65,6 @@
                     @endauth
 								</div>
 							@endif
-							@endguest
 						</div>
 						<div class="col-lg-5 banner-right">
 							<img class="img-fluid" src="/book/img/header-img.png" alt="">
@@ -89,38 +72,24 @@
 					</div>
 				</div>
 			</section>
-			<!-- End banner Area -->	
-
-			<!-- Start about Area -->
-			{{-- --}}
-			<!-- End about Area -->
-      <!-- Start fact Area -->
-      {{-- --}}
-			<!-- End fact Area -->
-			
-			<!-- Start counter Area -->
-      {{--  --}}
-			<!-- end counter Area -->
-			
-			<!-- Start price Area -->
-      {{--  --}}
-			<!-- End price Area -->
-			
-			<!-- Start course Area -->
-      {{--  --}}
-			<!-- End course Area -->
-			
-			<!-- Start call-to-action Area -->
-      {{--  --}}
-			<!-- End call-to-action Area -->
-
-			<!-- Start testomial Area -->
-      {{--  --}}
-			<!-- End testomial Area -->
-			
-			<!-- start footer Area -->		
-      {{-- --}}
-      <!-- End footer Area -->		
+			<section class="course-area section-gap" id="course">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-9">
+							<div class="title text-center">
+								<h1 class="mb-10">Our Books</h1>
+								<p>Just For Borrow</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="active-course-carusel">
+							@yield('content')
+						</div>
+					</div>																		
+				</div>
+			</section>
+			<!-- End banner Area -->			
 
 			<script src="/book/js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

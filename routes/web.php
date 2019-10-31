@@ -11,25 +11,31 @@
 |
  */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+// Route::get('/detail', function () {
+//     return view('detail');
+// });
 // Route::get('/admin', function () {
 //     return view('admin');
 // });
-Route::get('/admin', function () {
-    return view('admin');
-});
 
 Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], function () {
     Route::get('/', function () {
         return view("home");
     });
-    // Route::resource('index', 'HomeController');
     Route::resource('user', 'UserController');
     Route::resource('petugas', 'PetugasController');
     Route::resource('kategori', 'KategoriController');
     Route::resource('penerbit', 'PenerbitController');
+    Route::resource('kartupendaftaran', 'KartupendaftaranController');
+    Route::resource('detailpinjam', 'DetailpinjamController');
+    // Route::get('peminjaman', 'PeminjamanController');
+    // Route::get('peminjam', 'PeminjamController');
+    // Route::get('kartupendaftaran', 'KartupendaftaranController');
+    // Route::get('buku', 'BukuController');
+    // Route::get('detailpinjam', 'DetailpinjamController');
     Route::get('/buku/json', 'BukuController@json');
     Route::get('/detailpinjam/json', 'DetailpinjamController@json');
     Route::get('/kartupendaftaran/json', 'KartupendaftaranController@json');
@@ -46,13 +52,20 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     // Route::resource('index', 'HomeController');
     Route::resource('peminjaman', 'PeminjamanController');
     Route::resource('peminjam', 'PeminjamController');
-    Route::resource('kartupendaftaran', 'KartupendaftaranController');
     Route::resource('buku', 'BukuController');
-    Route::resource('detailpinjam', 'DetailpinjamController');
+    Route::get('detailpinjam', 'DetailpinjamController@index');
+});
+Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:Peminjam']], function () {
+    Route::get('/', function () {
+        return view("home");
+    });
+    Route::get('kartupendaftaran', 'KartupendaftaranController@index');
 });
 Auth::routes(['register' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/', 'FrontendController');
+Route::get('/detail/{id}', 'FrontendController@ShowDetail');
 // Route::controller('buku', 'BukuController', [
 //     'anyData' => 'backend.buku.index',
 //     'getIndex' => 'buku',

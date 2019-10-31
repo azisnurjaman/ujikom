@@ -7,6 +7,8 @@ use App\Buku;
 use App\Penerbit;
 use App\Kategori;
 use File;
+use App\Role;
+use Auth;
 use Yajra\Datatables\Datatables;
 
 class BukuController extends Controller
@@ -41,7 +43,11 @@ class BukuController extends Controller
         $kategori = Kategori::all();
         $buku = Buku::all();
         $penerbit = Penerbit::all();
-        return view('backend.buku.create', compact('buku', 'kategori', 'penerbit'));
+        if (Auth::user()->id == ['role:admin']) {
+            return view('backend.buku.create', compact('buku', 'kategori', 'penerbit'));
+        } else {
+            return view('403');
+        }
     }
 
     /**
@@ -97,7 +103,11 @@ class BukuController extends Controller
         $kategori = Kategori::all();
         $buku = Buku::findOrFail($id);
         $penerbit = Penerbit::all();
-        return view('backend.buku.edit', compact('buku', 'kategori', 'penerbit'));
+        if (Auth::user()->id == ['role:admin']) {
+            return view('backend.buku.edit', compact('buku', 'kategori', 'penerbit'));
+        } else {
+            return view('403');
+        }
     }
 
     /**

@@ -103,10 +103,10 @@
                             <li>
                                 <a href="/backend/detailpinjam">Detail Pinjam</a>
                             </li>
+                            @role('admin')
                             <li>
                                 <a href="/backend/kartupendaftaran">Kartu Pendaftaran</a>
                             </li>
-                            @role('admin')
                             <li>
                                 <a href="/backend/kategori">Kategori</a>
                             </li>

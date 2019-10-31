@@ -13,7 +13,7 @@
                 <th>Kode Detail Peminjaman</th>
                 <th>Peminjaman Kode</th>
                 <th>Judul Buku</th>
-                <th>Detail Status Kembali</th>
+                <th>Status</th>
                 <th>Detail Tanggal Kembali</th>
                 <th>Detail Denda</th>
                 @role('admin')
@@ -28,7 +28,7 @@
             <tr>
                 <td>{{ $no++ }}</td>
                 <td>DP{{ $data->detailpinjam_kode }}</td>
-                <td>{{ $data->peminjaman->peminjaman_kode }}</td>
+                <td>PN{{ $data->peminjaman->peminjaman_kode }}</td>
                 <td>{{ $data->buku->buku_judul }}</td>
                 <td>{{ $data->detail_status_kembali }}</td>
                 <td>{{ $data->peminjaman->peminjaman_tgl_kembali }}</td>
