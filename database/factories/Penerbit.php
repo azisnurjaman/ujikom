@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Penerbit;
+use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
 $factory->define(Penerbit::class, function (Faker $faker) {
