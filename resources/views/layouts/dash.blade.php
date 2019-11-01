@@ -363,7 +363,7 @@
     <!-- main JS
 		============================================ -->
     <script src="{{asset('kialap/js/main.js')}}"></script>
-    <script src="/ckeditor/ckeditor/ckeditor.js')}}"></script>
+    <script src="{{asset('ckeditor/ckeditor/ckeditor.js')}}"></script>
      <!-- icheck JS
 		============================================ -->
     <script src="{{asset('kialap/js/icheck/icheck.min.js')}}"></script>
