@@ -43,11 +43,12 @@ class BukuController extends Controller
         $kategori = Kategori::all();
         $buku = Buku::all();
         $penerbit = Penerbit::all();
-        if (Auth::user()->id == ['role:admin']) {
-            return view('backend.buku.create', compact('buku', 'kategori', 'penerbit'));
-        } else {
-            return view('403');
-        }
+        // if (Auth::user()->id == ['role:admin']) {
+        //    
+        // } else {
+        //     return view('403');
+        // } 
+        return view('backend.buku.create', compact('buku', 'kategori', 'penerbit'));
     }
 
     /**
@@ -103,11 +104,12 @@ class BukuController extends Controller
         $kategori = Kategori::all();
         $buku = Buku::findOrFail($id);
         $penerbit = Penerbit::all();
-        if (Auth::user()->id == ['role:admin']) {
-            return view('backend.buku.edit', compact('buku', 'kategori', 'penerbit'));
-        } else {
-            return view('403');
-        }
+        // if (Auth::user()->id == ['role:admin']) {
+        //     
+        // } else {
+        //     return view('403');
+        // }
+        return view('backend.buku.edit', compact('buku', 'kategori', 'penerbit'));
     }
 
     /**

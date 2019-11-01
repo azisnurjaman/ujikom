@@ -51,7 +51,9 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     // Route::resource('index', 'HomeController');
     Route::resource('peminjaman', 'PeminjamanController');
     Route::resource('peminjam', 'PeminjamController');
-    Route::resource('buku', 'BukuController');
+    Route::resource('buku', 'BukuController', ['only' => [
+        'index', 'show'
+     ]]);
     Route::resource('kartupendaftaran', 'KartupendaftaranController');
     Route::get('detailpinjam', 'DetailpinjamController@index');
 });
