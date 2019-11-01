@@ -31,6 +31,7 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], fu
     Route::resource('penerbit', 'PenerbitController');
     Route::resource('detailpinjam', 'DetailpinjamController');
     Route::resource('buku', 'BukuController');
+    Route::resource('peminjam', 'PeminjamController');
     // Route::get('peminjaman', 'PeminjamanController');
     // Route::get('peminjam', 'PeminjamController');
     // Route::get('kartupendaftaran', 'KartupendaftaranController');
@@ -51,7 +52,9 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     });
     // Route::resource('index', 'HomeController');
     Route::resource('peminjaman', 'PeminjamanController');
-    Route::resource('peminjam', 'PeminjamController');
+    Route::resource('peminjam', 'PeminjamController', ['only' => [
+        'index', 'create', 'show'
+    ]]);
     Route::resource('buku', 'BukuController', ['only' => [
         'index', 'show'
      ]]);

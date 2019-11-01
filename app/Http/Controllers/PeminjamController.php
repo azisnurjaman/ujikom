@@ -37,7 +37,7 @@ class PeminjamController extends Controller
      */
     public function create()
     {
-            return view('backend.peminjam.create');
+        return view('backend.peminjam.create');
  
     }
 
@@ -94,11 +94,12 @@ class PeminjamController extends Controller
     public function edit($id)
     {
         $peminjam = Peminjam::findOrFail($id);
-        if (Auth::user()->id == ['role:admin']) {
-            return view('backend.peminjam.edit', compact('peminjam'));
-        } else {
-            return view('403');
-        }
+        // if (Auth::user()->id == ['role:admin']) {
+        //     
+        // } else {
+        //     return view('403');
+        // }
+        return view('backend.peminjam.edit', compact('peminjam'));
     }
 
     /**

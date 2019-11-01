@@ -80,8 +80,8 @@
     <link rel="stylesheet" href="{{asset('kialap/style.css')}}">
     <!-- DataTable
         ============================================ -->
-    <link rel="stylesheet" type="text/css" href="/DataTables/css/jquery.dataTables.min.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('DataTables/css/jquery.dataTables.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('DataTables/datatables.min.css')}}"/>
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="{{asset('kialap/css/responsive.css')}}">
@@ -368,8 +368,8 @@
 		============================================ -->
     <script src="{{asset('kialap/js/icheck/icheck.min.js')}}"></script>
     <script src="{{asset('kialap/js/icheck/icheck-active.js')}}"></script>
-    <script type="text/javascript" src="/DataTables/js/jquery.dataTables.js')}}"></script> 
-    <script type="text/javascript" src="/DataTables/datatables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('DataTables/js/jquery.dataTables.js')}}"></script> 
+    <script type="text/javascript" src="{{asset('DataTables/datatables.min.js')}}"></script>
     <script>
     $(document).ready(function() {
         $('#tab').DataTable();

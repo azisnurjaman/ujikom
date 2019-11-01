@@ -13,7 +13,7 @@
                         </div>
                         <div class="form-group-inner">
                             <label>Nama Peminjam</label>
-                                <input required class="form-control" type="text" name="peminjam_nama">
+                                <input required class="form-control" type="text" name="peminjam_nama" value="{{Auth::user()->name}}">
                         </div>
                         <div class="form-group-inner">
                             <label>Alamat Peminjam</label>
