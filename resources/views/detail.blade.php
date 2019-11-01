@@ -57,16 +57,19 @@
 			<section class="testomial-area pt-100">
 				<div class="container">
 					<div class="row">
-                    <h3 class="mb-30">{{$buku->buku_judul}} <span class="badge badge-pill badge-info">{{$buku->kategori->kategori_nama}}</span></h3>
+					<h3 class="mb-30">{{$buku->buku_judul}} <span class="badge badge-pill badge-info">{{$buku->kategori->kategori_nama}}</span></h3>
 					<div class="row">
 						<div class="col-md-3">
-						<img src="{{ asset('assets/img/buku/'.$buku->buku_foto) }}" alt="" height="100%" width="100%">
+						<img src="{{ asset('assets/img/buku/'.$buku->buku_foto) }}" alt="" height="80%" width="100%">
+						<hr>
+						<p><b>Pengarang : {{$buku->buku_pengarang}}</b></p>
+						<p><b>Pengarang : {{$buku->penerbit->penerbit_nama}}</b></p>
 						</div>
 						<div class="col-md-9 mt-sm-20">
 							<p>{!! ($buku->buku_deskripsi) !!}</p>
 							<hr>
 							<div class="button-group-area mt-20">
-								<a href="{{ route('login') }}" class="genric-btn primary circle arrow">Login for Borrow
+								<a href="{{ route('login') }}" class="genric-btn primary circle arrow">Borrow
 								<span class="lnr lnr-arrow-right"></span></a>
 							</div>
 						</div>
