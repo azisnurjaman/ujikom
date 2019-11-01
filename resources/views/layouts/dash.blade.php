@@ -9,86 +9,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="/kialap/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('kialap/img/favicon.ico')}}">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/bootstrap.min.css')}}">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/font-awesome.min.css')}}">
     <!-- owl.carousel CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/owl.carousel.css">
-    <link rel="stylesheet" href="/kialap/css/owl.theme.css">
-    <link rel="stylesheet" href="/kialap/css/owl.transitions.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('kialap/css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{asset('kialap/css/owl.transitions.css')}}">
     <!-- animate CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/animate.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/animate.css')}}">
     <!-- normalize CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/normalize.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/normalize.css')}}">
     <!-- meanmenu icon CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/meanmenu.min.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/meanmenu.min.css')}}">
     <!-- main CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/main.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/main.css')}}">
     <!-- educate icon CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/educate-custon-icon.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/educate-custon-icon.css')}}">
     <!-- morrisjs CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/morrisjs/morris.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/morrisjs/morris.css')}}">
     <!-- mCustomScrollbar CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
     <!-- metisMenu CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="/kialap/css/metisMenu/metisMenu-vertical.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/metisMenu/metisMenu.min.css')}}">
+    <link rel="stylesheet" href="{{asset('kialap/css/metisMenu/metisMenu-vertical.css')}}">
     <!-- calendar CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/calendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="/kialap/css/calendar/fullcalendar.print.min.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/calendar/fullcalendar.min.css')}}">
+    <link rel="stylesheet" href="{{asset('kialap/css/calendar/fullcalendar.print.min.css')}}">
     <!-- touchspin CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/touchspin/jquery.bootstrap-touchspin.min.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/touchspin/jquery.bootstrap-touchspin.min.css')}}">
     <!-- datapicker CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/datapicker/datepicker3.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/datapicker/datepicker3.css')}}">
     <!-- forms CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/form/themesaller-forms.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/form/themesaller-forms.css')}}">
     <!-- colorpicker CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/colorpicker/colorpicker.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/colorpicker/colorpicker.css')}}">
     <!-- select2 CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/select2/select2.min.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/select2/select2.min.css')}}">
     <!-- chosen CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/chosen/bootstrap-chosen.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/chosen/bootstrap-chosen.css')}}">
     <!-- ionRangeSlider CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/ionRangeSlider/ion.rangeSlider.css">
-    <link rel="stylesheet" href="/kialap/css/ionRangeSlider/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/ionRangeSlider/ion.rangeSlider.css')}}">
+    <link rel="stylesheet" href="{{asset('kialap/css/ionRangeSlider/ion.rangeSlider.skinFlat.css')}}">
     <!-- style CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/style.css">
+    <link rel="stylesheet" href="{{asset('kialap/style.css')}}">
     <!-- DataTable
         ============================================ -->
-    <link rel="stylesheet" type="text/css" href="/DataTables/css/jquery.dataTables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/DataTables/css/jquery.dataTables.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.min.css')}}"/>
     <!-- responsive CSS
 		============================================ -->
-    <link rel="stylesheet" href="/kialap/css/responsive.css">
-    <link rel="stylesheet" href="/kialap/css/form/all-type-forms.css">
+    <link rel="stylesheet" href="{{asset('kialap/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('kialap/css/form/all-type-forms.css')}}">
     <!-- modernizr JS
 		============================================ -->
-    <script src="/kialap/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{{asset('kialap/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
 
 <body>
@@ -99,8 +99,8 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="/home"><img class="main-logo" src="/kialap/img/logo/logo.png" alt="" /></a>
-                <strong><a href="/home"><img src="/kialap/img/logo/logosn.png" alt="" /></a></strong>
+                <a href="/home"><img class="main-logo" src="{{asset('kialap/img/logo/logo.png')}}" alt="" /></a>
+                <strong><a href="/home"><img src="{{asset('kialap/img/logo/logosn.png')}}" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
@@ -158,7 +158,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="home"><img class="main-logo" src="/kialap/img/logo/logo.png" alt="" /></a>
+                        <a href="home"><img class="main-logo" src="{{asset('kialap/img/logo/logo.png')}}" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<img src="/kialap/img/product/pro4.jpg" alt="" />
+															<img src="{{asset('kialap/img/product/pro4.jpg')}}" alt="" />
 															<span class="admin-name">{{Auth::user()->name}}</span>
 															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
 														</a>
@@ -288,88 +288,88 @@
 
     <!-- jquery
 		============================================ -->
-    <script src="/kialap/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="{{asset('kialap/js/vendor/jquery-1.12.4.min.js')}}"></script>
     <!-- bootstrap JS
 		============================================ -->
-    <script src="/kialap/js/bootstrap.min.js"></script>
+    <script src="{{asset('kialap/js/bootstrap.min.js')}}"></script>
     <!-- wow JS
 		============================================ -->
-    <script src="/kialap/js/wow.min.js"></script>
+    <script src="{{asset('kialap/js/wow.min.js')}}"></script>
     <!-- price-slider JS
 		============================================ -->
-    <script src="/kialap/js/jquery-price-slider.js"></script>
+    <script src="{{asset('kialap/js/jquery-price-slider.js')}}"></script>
     <!-- meanmenu JS
 		============================================ -->
-    <script src="/kialap/js/jquery.meanmenu.js"></script>
+    <script src="{{asset('kialap/js/jquery.meanmenu.js')}}"></script>
     <!-- owl.carousel JS
 		============================================ -->
-    <script src="/kialap/js/owl.carousel.min.js"></script>
+    <script src="{{asset('kialap/js/owl.carousel.min.js')}}"></script>
     <!-- sticky JS
 		============================================ -->
-    <script src="/kialap/js/jquery.sticky.js"></script>
+    <script src="{{asset('kialap/js/jquery.sticky.js')}}"></script>
     <!-- scrollUp JS
 		============================================ -->
-    <script src="/kialap/js/jquery.scrollUp.min.js"></script>
+    <script src="{{asset('kialap/js/jquery.scrollUp.min.js')}}"></script>
     <!-- mCustomScrollbar JS
 		============================================ -->
-    <script src="/kialap/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="/kialap/js/scrollbar/mCustomScrollbar-active.js"></script>
+    <script src="{{asset('kialap/js/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{asset('kialap/js/scrollbar/mCustomScrollbar-active.js')}}"></script>
     <!-- metisMenu JS
 		============================================ -->
-    <script src="/kialap/js/metisMenu/metisMenu.min.js"></script>
-    <script src="/kialap/js/metisMenu/metisMenu-active.js"></script>
+    <script src="{{asset('kialap/js/metisMenu/metisMenu.min.js')}}"></script>
+    <script src="{{asset('kialap/js/metisMenu/metisMenu-active.js')}}"></script>
     <!-- touchspin JS
 		============================================ -->
-    <script src="/kialap/js/touchspin/jquery.bootstrap-touchspin.min.js"></script>
-    <script src="/kialap/js/touchspin/touchspin-active.js"></script>
+    <script src="{{asset('kialap/js/touchspin/jquery.bootstrap-touchspin.min.js')}}"></script>
+    <script src="{{asset('kialap/js/touchspin/touchspin-active.js')}}"></script>
     <!-- colorpicker JS
 		============================================ -->
-    <script src="/kialap/js/colorpicker/jquery.spectrum.min.js"></script>
-    <script src="/kialap/js/colorpicker/color-picker-active.js"></script>
+    <script src="{{asset('kialap/js/colorpicker/jquery.spectrum.min.js')}}"></script>
+    <script src="{{asset('kialap/js/colorpicker/color-picker-active.js')}}"></script>
     <!-- datapicker JS
 		============================================ -->
-    <script src="/kialap/js/datapicker/bootstrap-datepicker.js"></script>
-    <script src="/kialap/js/datapicker/datepicker-active.js"></script>
+    <script src="{{asset('kialap/js/datapicker/bootstrap-datepicker.js')}}"></script>
+    <script src="{{asset('kialap/js/datapicker/datepicker-active.js')}}"></script>
     <!-- input-mask JS
 		============================================ -->
-    <script src="/kialap/js/input-mask/jasny-bootstrap.min.js"></script>
+    <script src="{{asset('kialap/js/input-mask/jasny-bootstrap.min.js')}}"></script>
     <!-- chosen JS
 		============================================ -->
-    <script src="/kialap/js/chosen/chosen.jquery.js"></script>
-    <script src="/kialap/js/chosen/chosen-active.js"></script>
+    <script src="{{asset('kialap/js/chosen/chosen.jquery.js')}}"></script>
+    <script src="{{asset('kialap/js/chosen/chosen-active.js')}}"></script>
     <!-- select2 JS
 		============================================ -->
-    <script src="/kialap/js/select2/select2.full.min.js"></script>
-    <script src="/kialap/js/select2/select2-active.js"></script>
+    <script src="{{asset('kialap/js/select2/select2.full.min.js')}}"></script>
+    <script src="{{asset('kialap/js/select2/select2-active.js')}}"></script>
     <!-- ionRangeSlider JS
 		============================================ -->
-    <script src="/kialap/js/ionRangeSlider/ion.rangeSlider.min.js"></script>
-    <script src="/kialap/js/ionRangeSlider/ion.rangeSlider.active.js"></script>
+    <script src="{{asset('kialap/js/ionRangeSlider/ion.rangeSlider.min.js')}}"></script>
+    <script src="{{asset('kialap/js/ionRangeSlider/ion.rangeSlider.active.js')}}"></script>
     <!-- rangle-slider JS
 		============================================ -->
-    <script src="/kialap/js/rangle-slider/jquery-ui-1.10.4.custom.min.js"></script>
-    <script src="/kialap/js/rangle-slider/jquery-ui-touch-punch.min.js"></script>
-    <script src="/kialap/js/rangle-slider/rangle-active.js"></script>
+    <script src="{{asset('kialap/js/rangle-slider/jquery-ui-1.10.4.custom.min.js')}}"></script>
+    <script src="{{asset('kialap/js/rangle-slider/jquery-ui-touch-punch.min.js')}}"></script>
+    <script src="{{asset('kialap/js/rangle-slider/rangle-active.js')}}"></script>
     <!-- knob JS
 		============================================ -->
-    <script src="/kialap/js/knob/jquery.knob.js"></script>
-    <script src="/kialap/js/knob/knob-active.js"></script>
+    <script src="{{asset('kialap/js/knob/jquery.knob.js')}}"></script>
+    <script src="{{asset('kialap/js/knob/knob-active.js')}}"></script>
     <!-- tab JS
 		============================================ -->
-    <script src="/kialap/js/tab.js"></script>
+    <script src="{{asset('kialap/js/tab.js')}}"></script>
     <!-- plugins JS
 		============================================ -->
-    <script src="/kialap/js/plugins.js"></script>
+    <script src="{{asset('kialap/js/plugins.js')}}"></script>
     <!-- main JS
 		============================================ -->
-    <script src="/kialap/js/main.js"></script>
-    <script src="/ckeditor/ckeditor/ckeditor.js"></script>
+    <script src="{{asset('kialap/js/main.js')}}"></script>
+    <script src="/ckeditor/ckeditor/ckeditor.js')}}"></script>
      <!-- icheck JS
 		============================================ -->
-    <script src="/kialap/js/icheck/icheck.min.js"></script>
-    <script src="/kialap/js/icheck/icheck-active.js"></script>
-    <script type="text/javascript" src="/DataTables/js/jquery.dataTables.js"></script> 
-    <script type="text/javascript" src="/DataTables/datatables.min.js"></script>
+    <script src="{{asset('kialap/js/icheck/icheck.min.js')}}"></script>
+    <script src="{{asset('kialap/js/icheck/icheck-active.js')}}"></script>
+    <script type="text/javascript" src="/DataTables/js/jquery.dataTables.js')}}"></script> 
+    <script type="text/javascript" src="/DataTables/datatables.min.js')}}"></script>
     <script>
     $(document).ready(function() {
         $('#tab').DataTable();

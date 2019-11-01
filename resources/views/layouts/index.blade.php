@@ -4,7 +4,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="/book/img/fav.png">
+		<link rel="shortcut icon" href="{{asset('book/img/fav.png')}}">
 		<!-- Author Meta -->
 		<meta name="author" content="codepixer">
 		<!-- Meta Description -->
@@ -20,14 +20,14 @@
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="/book/css/linearicons.css">
-			<link rel="stylesheet" href="/book/css/font-awesome.min.css">
-			<link rel="stylesheet" href="/book/css/bootstrap.css">
-			<link rel="stylesheet" href="/book/css/magnific-popup.css">
-			<link rel="stylesheet" href="/book/css/nice-select.css">					
-			<link rel="stylesheet" href="/book/css/animate.min.css">
-			<link rel="stylesheet" href="/book/css/owl.carousel.css">
-			<link rel="stylesheet" href="/book/css/main.css">
+			<link rel="stylesheet" href="{{asset('book/css/linearicons.css')}}">
+			<link rel="stylesheet" href="{{asset('book/css/font-awesome.min.css')}}">
+			<link rel="stylesheet" href="{{asset('book/css/bootstrap.css')}}">
+			<link rel="stylesheet" href="{{asset('book/css/magnific-popup.css')}}">
+			<link rel="stylesheet" href="{{asset('book/css/nice-select.css')}}">					
+			<link rel="stylesheet" href="{{asset('book/css/animate.min.css')}}">
+			<link rel="stylesheet" href="{{asset('book/css/owl.carousel.css')}}">
+			<link rel="stylesheet" href="{{asset('book/css/main.css')}}">
 		</head>
 		<body>
 
@@ -35,7 +35,7 @@
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="/"><img src="/book/img/logo.png" alt="" title="" /></a>
+				        <a href="/"><img src="{{asset('book/img/logo.png')}}" alt="" title="" /></a>
 				      </div>
 			    	</div>
 			    </div>
@@ -67,7 +67,7 @@
 							@endif
 						</div>
 						<div class="col-lg-5 banner-right">
-							<img class="img-fluid" src="/book/img/header-img.png" alt="">
+							<img class="img-fluid" src="{{asset('book/img/header-img.png')}}" alt="">
 						</div>												
 					</div>
 				</div>
@@ -91,23 +91,23 @@
 			</section>
 			<!-- End banner Area -->			
 
-			<script src="/book/js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="/book/js/vendor/bootstrap.min.js"></script>			
+			<script src="{{asset('book/js/vendor/jquery-2.2.4.min.js')}}"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')}}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="{{asset('book/js/vendor/bootstrap.min.js')}}"></script>			
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  			<script src="/book/js/easing.min.js"></script>			
-			<script src="/book/js/hoverIntent.js"></script>
-			<script src="/book/js/superfish.min.js"></script>	
-			<script src="/book/js/jquery.ajaxchimp.min.js"></script>
-			<script src="/book/js/jquery.magnific-popup.min.js"></script>	
-			<script src="/book/js/owl.carousel.min.js"></script>			
-			<script src="/book/js/jquery.sticky.js"></script>
-			<script src="/book/js/jquery.nice-select.min.js"></script>			
-			<script src="/book/js/parallax.min.js"></script>	
-			<script src="/book/js/waypoints.min.js"></script>
-			<script src="/book/js/jquery.counterup.min.js"></script>			
-			<script src="/book/js/mail-script.js"></script>	
-			<script src="/book/js/main.js"></script>	
+  			<script src="{{asset('book/js/easing.min.js')}}"></script>			
+			<script src="{{asset('book/js/hoverIntent.js')}}"></script>
+			<script src="{{asset('book/js/superfish.min.js')}}"></script>	
+			<script src="{{asset('book/js/jquery.ajaxchimp.min.js')}}"></script>
+			<script src="{{asset('book/js/jquery.magnific-popup.min.js')}}"></script>	
+			<script src="{{asset('book/js/owl.carousel.min.js')}}"></script>			
+			<script src="{{asset('book/js/jquery.sticky.js')}}"></script>
+			<script src="{{asset('book/js/jquery.nice-select.min.js')}}"></script>			
+			<script src="{{asset('book/js/parallax.min.js')}}"></script>	
+			<script src="{{asset('book/js/waypoints.min.js')}}"></script>
+			<script src="{{asset('book/js/jquery.counterup.min.js')}}"></script>			
+			<script src="{{asset('book/js/mail-script.js')}}"></script>	
+			<script src="{{asset('book/js/main.js')}}"></script>	
 		</body>
 	</html>
 
