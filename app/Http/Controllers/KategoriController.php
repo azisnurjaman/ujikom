@@ -106,7 +106,10 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        $kategori = Kategori::destroy($id);
+        if(!Kategori::destroy($id)) return redirect()->back();
+        Session::flash("Delete", [
+        "level"=>"success",
+        ]);
         return redirect()->route('kategori.index');
     }
 }

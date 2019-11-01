@@ -54,10 +54,10 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     });
     // Route::resource('index', 'HomeController');
     Route::resource('peminjaman', 'PeminjamanController', ['only' => [
-        'index', 'create'
+        'index', 'create', 'store'
     ]]);
     Route::resource('peminjam', 'PeminjamController', ['only' => [
-        'index', 'create', 'show'
+        'index', 'create', 'store', 'show'
     ]]);
     Route::resource('buku', 'BukuController', ['only' => [
         'index', 'show'

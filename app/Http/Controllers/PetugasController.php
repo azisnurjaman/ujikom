@@ -101,7 +101,10 @@ class PetugasController extends Controller
      */
     public function destroy($id)
     {
-        $petugas = Petugas::destroy($id);
+        if(!Petugas::destroy($id)) return redirect()->back();
+        Session::flash("delete", [
+        "level"=>"success",
+        ]);
         return redirect()->route('petugas.index');
     }
 }

@@ -144,7 +144,10 @@ class PeminjamController extends Controller
      */
     public function destroy($id)
     {
-        $peminjam = Peminjam::destroy($id);
+        if(!Peminjam::destroy($id)) return redirect()->back();
+        Session::flash("delete", [
+        "level"=>"success",
+        ]);
         return redirect()->route('peminjam.index');
     }
 }

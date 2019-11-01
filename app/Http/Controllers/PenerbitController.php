@@ -114,7 +114,10 @@ class PenerbitController extends Controller
      */
     public function destroy($id)
     {
-        $penerbit = Penerbit::destroy($id);
+        if(!Penerbit::destroy($id)) return redirect()->back();
+        Session::flash("delete", [
+        "level"=>"success",
+        ]);
         return redirect()->route('penerbit.index');
     }
 }

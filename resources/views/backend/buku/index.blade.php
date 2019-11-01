@@ -40,7 +40,7 @@
                                 <td><img src="{{ asset('assets/img/buku/'.$data->buku_foto) }}" alt="" height="100px" width="150px"></td>
                                 <td>{{ $data->buku_judul }}</td>
                                 <td>{{ $data->kategori->kategori_nama }}</td>
-                                <td>{!! substr($data->buku_deskripsi, 0, 80) !!}</td>
+                                <td>{!! substr($data->buku_deskripsi, 0, 50) !!}</td>
                                 <td>{{ $data->buku_pengarang }}</td>
                                 <td>{{ $data->penerbit->penerbit_nama }}</td>
                                 <td>{{ $data->buku_jumlah }}</td>
