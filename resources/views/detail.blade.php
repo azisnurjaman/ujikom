@@ -63,7 +63,7 @@
 						<img src="{{ asset('assets/img/buku/'.$buku->buku_foto) }}" alt="" height="80%" width="100%">
 						<hr>
 						<p><b>Pengarang : {{$buku->buku_pengarang}}</b></p>
-						<p><b>Pengarang : {{$buku->penerbit->penerbit_nama}}</b></p>
+						<p><b>Penerbit : {{$buku->penerbit->penerbit_nama}}</b></p>
 						</div>
 						<div class="col-md-9 mt-sm-20">
 							<p>{!! ($buku->buku_deskripsi) !!}</p>
