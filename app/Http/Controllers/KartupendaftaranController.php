@@ -36,11 +36,12 @@ class KartupendaftaranController extends Controller
         $petugas = Petugas::all();
         $kartupendaftaran = KartuPendaftaran::all();
         $peminjam = Peminjam::all();
-        if (Auth::user()->id == ['role:admin']) {
-            return view('backend.kartupendaftaran.create', compact('kartupendaftaran', 'petugas', 'peminjam'));
-        } else {
-            return view('403');
-        }
+        // if (Auth::user()->id == ['role:admin']) {
+        //     return view('backend.kartupendaftaran.create', compact('kartupendaftaran', 'petugas', 'peminjam'));
+        // } else {
+        //     return view('403');
+        // }
+        return view('backend.kartupendaftaran.create', compact('kartupendaftaran', 'petugas', 'peminjam'));
     }
 
     /**
@@ -84,11 +85,12 @@ class KartupendaftaranController extends Controller
         $petugas = Petugas::all();
         $kartupendaftaran = KartuPendaftaran::findOrFail($id);
         $peminjam = Peminjam::all();
-        if (Auth::user()->id == ['role:admin']) {
-            return view('backend.kartupendaftaran.edit', compact('kartupendaftaran', 'petugas', 'peminjam'));
-        } else {
-            return view('403');
-        }
+        // if (Auth::user()->id == ['role:admin']) {
+        //     
+        // } else {
+        //     return view('403');
+        // }
+        return view('backend.kartupendaftaran.edit', compact('kartupendaftaran', 'petugas', 'peminjam'));
     }
 
     /**

@@ -79,11 +79,12 @@ class PeminjamanController extends Controller
         $petugas = Petugas::all();
         $peminjaman = Peminjaman::findOrFail($id);
         $peminjam = Peminjam::all();
-        if (Auth::user()->id == ['role:admin']) {
-            return view('backend.peminjaman.edit', compact('peminjaman', 'petugas', 'peminjam'));
-        } else {
-            return view('403');
-        }
+        // if (Auth::user()->id == ['role:admin']) {
+        //     
+        // } else {
+        //     return view('403');
+        // }
+        return view('backend.peminjaman.edit', compact('peminjaman', 'petugas', 'peminjam'));
     }
 
     /**

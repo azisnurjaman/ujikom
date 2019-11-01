@@ -32,6 +32,8 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth', 'role:admin']], fu
     Route::resource('detailpinjam', 'DetailpinjamController');
     Route::resource('buku', 'BukuController');
     Route::resource('peminjam', 'PeminjamController');
+    Route::resource('peminjaman', 'PeminjamanController');
+    Route::resource('kartupendaftaran', 'KartupendaftaranController');
     // Route::get('peminjaman', 'PeminjamanController');
     // Route::get('peminjam', 'PeminjamController');
     // Route::get('kartupendaftaran', 'KartupendaftaranController');
@@ -51,14 +53,18 @@ Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
         return view("home");
     });
     // Route::resource('index', 'HomeController');
-    Route::resource('peminjaman', 'PeminjamanController');
+    Route::resource('peminjaman', 'PeminjamanController', ['only' => [
+        'index', 'create'
+    ]]);
     Route::resource('peminjam', 'PeminjamController', ['only' => [
         'index', 'create', 'show'
     ]]);
     Route::resource('buku', 'BukuController', ['only' => [
         'index', 'show'
      ]]);
-    Route::resource('kartupendaftaran', 'KartupendaftaranController');
+    Route::resource('kartupendaftaran', 'KartupendaftaranController', ['only' => [
+        'index'
+     ]]);
     Route::get('detailpinjam', 'DetailpinjamController@index');
 });
 Auth::routes(['register' => true]);
