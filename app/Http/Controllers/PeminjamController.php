@@ -37,11 +37,8 @@ class PeminjamController extends Controller
      */
     public function create()
     {
-        if (Auth::user()->id == ['role:admin']) {
             return view('backend.peminjam.create');
-        } else {
-            return view('403');
-        }  
+ 
     }
 
     /**
