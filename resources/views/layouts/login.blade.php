@@ -30,7 +30,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('/login/images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('/log/images/bg-01.jpg');">
 			<div class="wrap-login100">
 				<section class="content">
 					@yield('content')
